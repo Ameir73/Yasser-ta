@@ -5347,7 +5347,7 @@ async def update_crypto_market_data():
             print(f"📦 جاري رفع {len(final_records)} عملة إلى سوبابيس...")
             for i in range(0, len(final_records), 50): 
                 batch = final_records[i:i + 50]
-                success = await async_manual_upsert("crypto_market_simulation", batch)
+                success = await async_manual_upsert("crypto_market_simulation_u", batch)
                 
                 if success:
                     logging.info(f"✅ تم حقن الدفعة {i//50 + 1} بنجاح")
