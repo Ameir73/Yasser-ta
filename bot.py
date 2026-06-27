@@ -378,7 +378,7 @@ async def intelligence_scanner():
 
             # 🧠 [ شروط الشراء ] 
             is_buy_pattern2_2 = (
-                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and في
+                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and
                 (pattern_name_1h == "قاع ثلاثي") and 
                 (pattern_class_1h == "انعكاسي صاعد") and 
                 (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
@@ -446,12 +446,7 @@ async def intelligence_scanner():
                 (patterns_4h == "ابتلاع_صاعد") and 
                 (patterns_1d == "ثلاثة_للخارج_صاعد")
             )
-
-            # --- is_buy_pattern_8 ---
-            is_buy_pattern_8 = (
-                (patterns_2h == "نجمة_الصباح_صاعد")
-            )
-
+            
             # --- is_buy_pattern_9 ---
             is_buy_pattern_9 = (
                 (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
@@ -544,8 +539,6 @@ async def intelligence_scanner():
 
             # 📉 [ شروط البيع ]
             
-
-
             # --- is_sell_pattern_1 ---
             is_sell_pattern_1 = (
                 (pattern_name_1h == "علم هابط") and 
@@ -873,11 +866,6 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نموذج شراء 7")
 
-            # --- تقييم_is_buy_pattern_8 ---
-            elif is_buy_pattern_8:
-                score += 50
-                reasons.append("نموذج شراء 8")
-
             # --- تقييم_is_buy_pattern_9 ---
             elif is_buy_pattern_9:
                 score += 50
@@ -919,8 +907,6 @@ async def intelligence_scanner():
                 reasons.append("نموذج شراء 16")
 
             # --- إدراج_تقييم_نماذج_شراء ---
-
-
             # --- تقييم_is_sell_pattern_1 ---
             elif is_sell_pattern_1:
                 score -= 50
@@ -1017,12 +1003,13 @@ async def intelligence_scanner():
                 reasons.append("نموذج بيع 19")
 
             # --- إدراج_تقييم_نماذج_بيع ---
+            
             # ==========================================
             # ⚡ [ التقييم النهائي وإطلاق الإشارة ]
             # ==========================================
             # طباعة مؤقتة لكشف الحقيقة في التيرمنال (لن ترسل للتلجرام)
             if score >= 30 or score <= -30:
-                print(f"🔍 [DEBUG {symbol}] Score: {score} | Uptrend: {is_uptrend} | Support: {is_near_support_general}")
+                print(f"🔍 [DEBUG {symbol}] Score: {score}")
 
             # إطلاق إشارة الشراء مباشرة بناءً على السكور
             if score >= 50:
@@ -1901,7 +1888,7 @@ async def intelligence_scanner2():
             # ==========================================
             # طباعة مؤقتة لكشف الحقيقة في التيرمنال (لن ترسل للتلجرام)
             if score >= 30 or score <= -30:
-                print(f"🔍 [DEBUG {symbol}] Score: {score} | Uptrend: {is_uptrend} | Support: {is_near_support_general}")
+                print(f"🔍 [DEBUG {symbol}] Score: {score}")
 
             # إطلاق إشارة الشراء مباشرة بناءً على السكور
             if score >= 50:
