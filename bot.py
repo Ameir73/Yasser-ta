@@ -566,11 +566,7 @@ async def intelligence_scanner():
                 (pattern_class_4h == "اختراق استمراري")
             )
 
-            # --- is_buy_pattern_20 ---
-            is_buy_pattern_20 = (
-                (patterns_4h == "ابتلاع_هابط")
-            )
-
+            
             # --- إدراج_شروط_نماذج_شراء ---
 
             # 📉 [ شروط البيع ]
@@ -964,10 +960,6 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نموذج شراء 19")
 
-            # --- تقييم_is_buy_pattern_20 ---
-            elif is_buy_pattern_20:
-                score += 50
-                reasons.append("نموذج شراء 20")
 
             # --- إدراج_تقييم_نماذج_شراء ---
 
@@ -1087,13 +1079,12 @@ async def intelligence_scanner():
             # إطلاق إشارة البيع مباشرة بناءً على السكور
             elif score <= -10:
                 signal_type = "SHORT"
-                    
-            # ==========================================
-            # 🚀 إطلاق إشارة التلجرام فوراً (مع حماية ضد التكرار)
+             # ==========================================
+            # 🚀 إطلاق إشارة التلجرام فوراً (مع حماية ضد التكرار لـ 6 ساعات)
             # ==========================================
             if signal_type != "NONE":  
                 
-                # 🛡️ جدار الحماية: فحص هل العملة قيد التتبع حالياً (لم تمر 24 ساعة)
+                # 🛡️ جدار الحماية: هل العملة قيد التتبع حالياً؟ (أي لم تنتهِ الـ 6 ساعات بعد)
                 is_tracking_res = supabase.table("radar_signals") \
                     .select("id") \
                     .eq("symbol", symbol) \
@@ -1101,12 +1092,11 @@ async def intelligence_scanner():
                     .execute()
 
                 if not is_tracking_res.data:
-                    # 1. توثيق الإشارة في القاعدة لبدء تتبعها فوراً
+                    # 1. توثيق الإشارة في القاعدة لبدء تتبعها (لمدة 6 ساعات)
                     await save_new_signal(
                         symbol=symbol, 
                         signal_type=signal_type, 
                         price=price, 
-                        fib_618=fib_618, 
                         reasons=reasons
                     )
                     
@@ -1115,19 +1105,18 @@ async def intelligence_scanner():
                         symbol=symbol, 
                         score=abs(score),
                         reasons=reasons, 
-                        fib_618=fib_618, 
+                        fib_618=0, # تم إزالته من الجدول لتبسيط الأمور
                         price=price, 
                         direction=signal_type 
                     )
                 else:
-                    # طباعة صامتة في التيرمنال لمعرفة أن الرادار التقطها ولكن منع التكرار
-                    print(f"⚠️ [منع التكرار] الإشارة للعملة {symbol} نشطة بالفعل، تم إيقاف الإشعار المكرر.")
+                    # طباعة صامتة في التيرمنال لمعرفة أن الرادار التقطها ولكنها لا تزال في فترة الـ 6 ساعات
+                    print(f"⚠️ [منع التكرار] الإشارة للعملة {symbol} نشطة ولم تنتهِ فترة الـ 6 ساعات.")
                 
             # ==========================================
-            # 👁️ التتبع المستمر (يُنفذ على كل عملة سواء كان لها إشارة جديدة أم لا)
+            # 👁️ التتبع المستمر (لحظياً)
             # ==========================================
-            # نمرر العملة لدالة التتبع لاصطياد قممها وقيعانها لحظياً إذا كانت تمتلك إشارة سابقة
-            await update_tracked_signals(symbol, price, reasons)
+            await update_tracked_signals(symbol, price)       
 
     except Exception as e: 
         import logging 
@@ -2080,13 +2069,12 @@ async def intelligence_scanner2():
             # إطلاق إشارة البيع مباشرة بناءً على السكور
             elif score <= -10:
                 signal_type = "SHORT"
-                    
-            # ==========================================
-            # 🚀 إطلاق إشارة التلجرام فوراً (مع حماية ضد التكرار)
+              # ==========================================
+            # 🚀 إطلاق إشارة التلجرام فوراً (مع حماية ضد التكرار لـ 6 ساعات)
             # ==========================================
             if signal_type != "NONE":  
                 
-                # 🛡️ جدار الحماية: فحص هل العملة قيد التتبع حالياً (لم تمر 24 ساعة)
+                # 🛡️ جدار الحماية: هل العملة قيد التتبع حالياً؟ (أي لم تنتهِ الـ 6 ساعات بعد)
                 is_tracking_res = supabase.table("radar_signals") \
                     .select("id") \
                     .eq("symbol", symbol) \
@@ -2094,12 +2082,11 @@ async def intelligence_scanner2():
                     .execute()
 
                 if not is_tracking_res.data:
-                    # 1. توثيق الإشارة في القاعدة لبدء تتبعها فوراً
+                    # 1. توثيق الإشارة في القاعدة لبدء تتبعها (لمدة 6 ساعات)
                     await save_new_signal(
                         symbol=symbol, 
                         signal_type=signal_type, 
                         price=price, 
-                        fib_618=fib_618, 
                         reasons=reasons
                     )
                     
@@ -2108,19 +2095,18 @@ async def intelligence_scanner2():
                         symbol=symbol, 
                         score=abs(score),
                         reasons=reasons, 
-                        fib_618=fib_618, 
+                        fib_618=0, # تم إزالته من الجدول لتبسيط الأمور
                         price=price, 
                         direction=signal_type 
                     )
                 else:
-                    # طباعة صامتة في التيرمنال لمعرفة أن الرادار التقطها ولكن منع التكرار
-                    print(f"⚠️ [منع التكرار] الإشارة للعملة {symbol} نشطة بالفعل، تم إيقاف الإشعار المكرر.")
+                    # طباعة صامتة في التيرمنال لمعرفة أن الرادار التقطها ولكنها لا تزال في فترة الـ 6 ساعات
+                    print(f"⚠️ [منع التكرار] الإشارة للعملة {symbol} نشطة ولم تنتهِ فترة الـ 6 ساعات.")
                 
             # ==========================================
-            # 👁️ التتبع المستمر (يُنفذ على كل عملة سواء كان لها إشارة جديدة أم لا)
+            # 👁️ التتبع المستمر (لحظياً)
             # ==========================================
-            # نمرر العملة لدالة التتبع لاصطياد قممها وقيعانها لحظياً إذا كانت تمتلك إشارة سابقة
-            await update_tracked_signals(symbol, price, reasons)
+            await update_tracked_signals(symbol, price)      
 
     except Exception as e: 
         import logging 
@@ -2177,38 +2163,30 @@ async def trigger_golden_signal(symbol, score, reasons, fib_618, price, directio
         clean_text = f"إشارة {trade_label} لعملة {symbol}\nالسعر: {price}\nالسكور: {score}"
         await bot.send_message(chat_id=ADMIN_ID, text=f"⚠️ خطأ في التنسيق، إليك البيانات الأساسية:\n\n{clean_text}")
         
-
 import json
-import hashlib
 
-async def save_new_signal(symbol, signal_type, price, fib_618, reasons):
+async def save_new_signal(symbol, signal_type, price, reasons):
     """
-    تخزين الإشارة الجديدة في سوبابيس فور رصدها لبدء التتبع
+    تخزين الإشارة الجديدة في سوبابيس فور رصدها لبدء التتبع لمدة 6 ساعات
     """
     try:
-        # إنشاء هاش فريد لتجنب تخزين نفس الإشارة في نفس اللحظة
-        reasons_str = json.dumps(reasons, ensure_ascii=False)
-        reasons_hash = hashlib.md5(f"{symbol}{signal_type}{price}".encode()).hexdigest()
-        
         data = {
             "symbol": symbol,
             "signal_type": signal_type,
             "price": price,
             "max_price_reached": price, # البداية هي السعر الحالي
             "min_price_reached": price, # البداية هي السعر الحالي
-            "fib_618": fib_618,
-            "reasons_hash": reasons_hash,
-            "initial_reasons": reasons,
+            "reasons": reasons,
             "status": "tracking"
         }
         
         supabase.table("radar_signals").insert(data).execute()
-        # print(f"💾 تم توثيق إشارة {symbol} بنجاح لبدء التتبع.")
         
     except Exception as e:
         import logging
         logging.error(f"❌ خطأ في توثيق الإشارة لـ {symbol}: {e}")
         
+
 # ==========================================
 # دالة مساعدة لتقييم النسبة المئوية
 # ==========================================
@@ -2243,9 +2221,9 @@ def get_signal_rating(direction: str, move_percent: float) -> str:
 # ==========================================
 # 2. دالة التحديث الديناميكية (تلتقط البيانات من الرادار مباشرة)
 # ==========================================
-async def update_tracked_signals(symbol, current_price, current_reasons):
+async def update_tracked_signals(symbol, current_price):
     """
-    تحديث أعلى/أدنى سعر لحظياً، وأخذ لقطات زمنية كل 4 ساعات
+    تحديث أعلى/أدنى سعر لحظياً، وإغلاق الصفقة وحسمها بعد مرور 6 ساعات تماماً
     """
     try:
         # جلب الإشارات قيد التتبع لهذه العملة فقط
@@ -2262,47 +2240,41 @@ async def update_tracked_signals(symbol, current_price, current_reasons):
             entry_price = float(sig['price'])
             direction = sig['signal_type']
             
-            # جلب أعلى وأدنى سعر مسجلين مسبقاً، أو استخدام سعر الدخول كبديل
             max_price = float(sig.get('max_price_reached') or entry_price)
             min_price = float(sig.get('min_price_reached') or entry_price)
             
             updates = {}
             
-            # 💡 [السر هنا]: تحديث القمم والقيعان لحظياً في كل دورة
+            # تحديث القمم والقيعان لحظياً
             if current_price > max_price:
                 updates['max_price_reached'] = current_price
+                max_price = current_price
             if current_price < min_price:
                 updates['min_price_reached'] = current_price
+                min_price = current_price
 
             # حساب كم ساعة مرت منذ انطلاق الإشارة
             created_at = datetime.fromisoformat(sig['created_at'].replace("Z", "+00:00"))
             hours_passed = (datetime.utcnow().replace(tzinfo=created_at.tzinfo) - created_at).total_seconds() / 3600
             
-            # حساب النسبة المئوية للسعر الحالي لحظة أخذ اللقطة
-            current_move_percent = ((current_price - entry_price) / entry_price) * 100
-            rating = get_signal_rating(direction, current_move_percent)
-            
-            # النطاقات الزمنية للقطات
-            time_windows = {
-                4: (3.5, 4.5), 8: (7.5, 8.5), 12: (11.5, 12.5),
-                16: (15.5, 16.5), 20: (19.5, 20.5), 24: (23.5, 24.5)
-            }
-            
-            for target_hour, (start_h, end_h) in time_windows.items():
-                col_change = f"change_{target_hour}h"
+            # ⏳ إذا انتهت مهلة الـ 6 ساعات: نحسم الصفقة ونفتح المجال لإشعارات جديدة!
+            if hours_passed >= 6.0:
+                updates["status"] = "completed" # إغلاق التتبع
                 
-                # إذا وصلنا للنافذة الزمنية والخانة لم تُسجل بعد
-                if start_h <= hours_passed <= end_h and sig.get(col_change) is None:
-                    updates[col_change] = round(current_move_percent, 2)
-                    updates[f"rating_{target_hour}h"] = rating
-                    updates[f"reasons_{target_hour}h"] = current_reasons
-                    break 
+                # حساب أفضل نسبة مئوية وصل لها السعر خلال الـ 6 ساعات بناءً على نوع الصفقة
+                if direction == "LONG":
+                    best_pct = ((max_price - entry_price) / entry_price) * 100
+                else: # SHORT
+                    best_pct = ((entry_price - min_price) / entry_price) * 100
                     
-            # إنهاء التتبع بعد 24.5 ساعة
-            if hours_passed > 24.5:
-                updates["status"] = "completed"
+                # تخزين النسبة النهائية
+                updates["final_change_pct"] = round(best_pct, 2)
                 
-            # إرسال التحديث لسوبابيس إذا كان هناك أي تغيير (قمة جديدة، قاع جديد، أو لقطة زمنية)
+                # تحديد النجاح (نعتبر الصفقة ناجحة إذا عكست ربح 2% أو أكثر خلال 6 ساعات كمثال)
+                # يمكنك تغيير رقم 2.0 إلى النسبة التي ترضاها لصفقاتك السريعة
+                updates["is_success"] = True if best_pct >= 10.0 else False
+
+            # إرسال التحديث للقاعدة إذا كان هناك أي تغيير
             if updates:
                 supabase.table("radar_signals").update(updates).eq("id", sig['id']).execute()
                 
