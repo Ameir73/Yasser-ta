@@ -1423,13 +1423,6 @@ async def intelligence_scanner2():
                 (ema_20_4h > ichimoku_cloud_top_4h)
             )
 
-            # --- is_buy_indicator_6 ---
-            is_buy_indicator_6 = (
-                (ema_20_1h > bb_middle_1h) and 
-                (ema_20_1h > kc_lower_1h) and 
-                (ichimoku_conversion_1h > ichimoku_base_1h) and 
-                (ema_20_1h > supertrend_1h)
-            )
 
             # --- is_buy_indicator_7 ---
             is_buy_indicator_7 = (
@@ -1668,22 +1661,6 @@ async def intelligence_scanner2():
             
             # --- إدراج_شروط_زخم_شراء ---
             
-            # --- is_sell_indicator_2 ---
-            is_sell_indicator_2 = (
-                (ema_20_1h < ema_50_1h < ema_100_1h) and 
-                (ema_20_1h < bb_middle_1h) and 
-                (ema_20_1h < kc_upper_1h) and 
-                (ichimoku_conversion_1h < ichimoku_base_1h) and 
-                (ema_20_1h < ichimoku_cloud_bottom_1h) and 
-                (ema_20_1h < supertrend_1h) and 
-                (ema_20_2h < bb_middle_2h) and 
-                (ema_20_2h < kc_upper_2h) and 
-                (ichimoku_conversion_2h < ichimoku_base_2h) and 
-                (ema_20_2h < ichimoku_cloud_bottom_2h) and 
-                (ema_20_4h < bb_middle_4h) and 
-                (ema_20_4h < kc_upper_4h) and 
-                (ema_20_4h < ichimoku_cloud_bottom_4h)
-            )
 
             # --- is_sell_indicator_3 ---
             is_sell_indicator_3 = (
@@ -2106,10 +2083,6 @@ async def intelligence_scanner2():
                 score += 50
                 reasons.append("مؤشرات شراء قوية 4")
 
-            # --- تقييم_is_buy_indicator_6 ---
-            elif is_buy_indicator_6:
-                score += 50
-                reasons.append("مؤشرات شراء قوية 6")
 
             # --- تقييم_is_buy_indicator_7 ---
             elif is_buy_indicator_7:
@@ -2162,7 +2135,6 @@ async def intelligence_scanner2():
                 reasons.append("مؤشرات شراء قوية 16")
 
 
-
             # --- تقييم_is_buy_indicator_18 ---
             elif is_buy_indicator_18:
                 score += 50
@@ -2182,11 +2154,6 @@ async def intelligence_scanner2():
             
             # --- إدراج_تقييم_زخم_شراء ---
             
-
-            # --- تقييم_is_sell_indicator_2 ---
-            elif is_sell_indicator_2:
-                score -= 50
-                reasons.append("مؤشرات بيع قوية 2")
 
             # --- تقييم_is_sell_indicator_3 ---
             elif is_sell_indicator_3:
