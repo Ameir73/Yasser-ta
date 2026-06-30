@@ -1705,24 +1705,7 @@ async def intelligence_scanner2():
                 (ema_20_4h < ichimoku_cloud_bottom_4h)
             )
 
-            # --- is_sell_indicator_5 ---
-            is_sell_indicator_5 = (
-                (ema_20_1h < ema_50_1h < ema_100_1h) and 
-                (ema_20_1h < kc_upper_1h) and 
-                (ichimoku_conversion_1h < ichimoku_base_1h) and 
-                (ema_20_1h < ichimoku_cloud_bottom_1h) and 
-                (ema_20_2h < bb_middle_2h) and 
-                (ema_20_2h < kc_upper_2h) and 
-                (ichimoku_conversion_2h < ichimoku_base_2h) and 
-                (ema_20_2h < ichimoku_cloud_bottom_2h) and 
-                (ema_20_2h < parabolic_sar_2h) and 
-                (ema_20_4h < bb_middle_4h) and 
-                (ema_20_4h < kc_upper_4h) and 
-                (ema_20_4h < ichimoku_cloud_bottom_4h) and 
-                (ema_20_4h < supertrend_4h) and 
-                (ema_20_4h < parabolic_sar_4h)
-            )
-
+            
             # --- is_sell_indicator_6 ---
             is_sell_indicator_6 = (
                 (ema_20_1h < ema_50_1h < ema_100_1h < ema_200_1h) and 
@@ -2164,11 +2147,6 @@ async def intelligence_scanner2():
             elif is_sell_indicator_4:
                 score -= 50
                 reasons.append("مؤشرات بيع قوية 4")
-
-            # --- تقييم_is_sell_indicator_5 ---
-            elif is_sell_indicator_5:
-                score -= 50
-                reasons.append("مؤشرات بيع قوية 5")
 
             # --- تقييم_is_sell_indicator_6 ---
             elif is_sell_indicator_6:
