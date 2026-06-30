@@ -404,10 +404,6 @@ async def intelligence_scanner():
                 (patterns_2h == "هارامي_صليب_هابط")
             )
 
-            # --- is_buy_pattern_3 ---
-            is_buy_pattern_3 = (
-                (patterns_4h == "ابتلاع_هابط")
-            )
 
             # --- is_buy_pattern_4 ---
             is_buy_pattern_4 = (
@@ -478,10 +474,6 @@ async def intelligence_scanner():
                 (patterns_1d == "ثلاثة_للخارج_صاعد")
             )
 
-            # --- is_buy_pattern_12 ---
-            is_buy_pattern_12 = (
-                (patterns_2h == "نجمة_الصباح_صاعد")
-            )
 
             # --- is_buy_pattern_13 ---
             is_buy_pattern_13 = (
@@ -555,11 +547,6 @@ async def intelligence_scanner():
                 (patterns_1d == "ابتلاع_هابط")
             )
 
-            # --- is_buy_pattern_19 ---
-            is_buy_pattern_19 = (
-                (patterns_1h == "نجمة_الصباح_صاعد")
-            )
-
             # --- is_buy_pattern_20 ---
             is_buy_pattern_20 = (
                 (patterns_1h == "ماروبوزو_صاعد") and 
@@ -603,10 +590,6 @@ async def intelligence_scanner():
                 (pattern_class_1d == "كسر استمراري")
             )
 
-            # --- is_sell_pattern_4 ---
-            is_sell_pattern_4 = (
-                (patterns_1h == "هارامي_صليب_هابط")
-            )
 
             # --- is_sell_pattern_5 ---
             is_sell_pattern_5 = (
@@ -883,11 +866,6 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نموذج شراء 2")
 
-            # --- تقييم_is_buy_pattern_3 ---
-            elif is_buy_pattern_3:
-                score += 50
-                reasons.append("نموذج شراء 3")
-
             # --- تقييم_is_buy_pattern_4 ---
             elif is_buy_pattern_4:
                 score += 50
@@ -928,11 +906,6 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نموذج شراء 11")
 
-            # --- تقييم_is_buy_pattern_12 ---
-            elif is_buy_pattern_12:
-                score += 50
-                reasons.append("نموذج شراء 12")
-
             # --- تقييم_is_buy_pattern_13 ---
             elif is_buy_pattern_13:
                 score += 50
@@ -963,10 +936,6 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نموذج شراء 18")
 
-            # --- تقييم_is_buy_pattern_19 ---
-            elif is_buy_pattern_19:
-                score += 50
-                reasons.append("نموذج شراء 19")
 
             # --- تقييم_is_buy_pattern_20 ---
             elif is_buy_pattern_20:
@@ -989,11 +958,6 @@ async def intelligence_scanner():
             elif is_sell_pattern_3:
                 score -= 50
                 reasons.append("نموذج بيع 3")
-
-            # --- تقييم_is_sell_pattern_4 ---
-            elif is_sell_pattern_4:
-                score -= 50
-                reasons.append("نموذج بيع 4")
 
             # --- تقييم_is_sell_pattern_5 ---
             elif is_sell_pattern_5:
