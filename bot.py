@@ -1598,22 +1598,6 @@ async def intelligence_scanner2():
                 (ichimoku_conversion_4h > ichimoku_base_4h)
             )
 
-            # --- is_buy_indicator_19 ---
-            is_buy_indicator_19 = (
-                (ema_20_1h > bb_middle_1h) and 
-                (ema_20_1h > kc_lower_1h) and 
-                (ema_20_1h > supertrend_1h) and 
-                (ema_20_1h > parabolic_sar_1h) and 
-                (ema_20_2h > bb_middle_2h) and 
-                (ema_20_2h > kc_lower_2h) and 
-                (ema_20_2h > supertrend_2h) and 
-                (ema_20_2h > parabolic_sar_2h) and 
-                (ema_20_4h > bb_middle_4h) and 
-                (ema_20_4h > kc_lower_4h) and 
-                (ichimoku_conversion_4h > ichimoku_base_4h) and 
-                (ema_20_4h > supertrend_4h) and 
-                (ema_20_4h > parabolic_sar_4h)
-            )
 
             # --- is_buy_indicator_20 ---
             is_buy_indicator_20 = (
@@ -2092,11 +2076,6 @@ async def intelligence_scanner2():
             elif is_buy_indicator_18:
                 score += 50
                 reasons.append("مؤشرات شراء قوية 18")
-
-            # --- تقييم_is_buy_indicator_19 ---
-            elif is_buy_indicator_19:
-                score += 50
-                reasons.append("مؤشرات شراء قوية 19")
 
             # --- تقييم_is_buy_indicator_20 ---
             elif is_buy_indicator_20:
