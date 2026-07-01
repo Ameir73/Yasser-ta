@@ -569,11 +569,6 @@ async def intelligence_scanner():
                 (pattern_class_1d == "انعكاسي صاعد")
             )
 
-            # --- is_sell_pattern_2 ---
-            is_sell_pattern_2 = (
-                (patterns_1h == "Spinning_Top") and 
-                (patterns_4h == "في_الرقبة_هابط")
-            )
 
             # --- is_sell_pattern_3 ---
             is_sell_pattern_3 = (
@@ -948,11 +943,6 @@ async def intelligence_scanner():
             elif is_sell_pattern_1:
                 score -= 50
                 reasons.append("نموذج بيع 1")
-
-            # --- تقييم_is_sell_pattern_2 ---
-            elif is_sell_pattern_2:
-                score -= 50
-                reasons.append("نموذج بيع 2")
 
             # --- تقييم_is_sell_pattern_3 ---
             elif is_sell_pattern_3:
