@@ -35,7 +35,7 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from supabase import create_client, Client
 
 # --- المفاتيح ---
-ADMIN_ID = 8806781380
+ADMIN_ID = 8695560834
 OWNER_USERNAME = ""
 
 # سحب التوكينات من Render (لن يعمل البوت بدونها في الإعدادات)
