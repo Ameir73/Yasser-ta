@@ -37,7 +37,7 @@ from supabase import create_client, Client
 # --- المفاتيح ---
 ADMIN_ID = 8695560834
 OWNER_USERNAME = ""
-
+#
 # سحب التوكينات من Render (لن يعمل البوت بدونها في الإعدادات)
 API_TOKEN = os.getenv('BOT_TOKEN')
 SUPABASE_URL = os.getenv('SUPABASE_URL')
