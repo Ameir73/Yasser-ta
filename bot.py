@@ -391,10 +391,589 @@ async def intelligence_scanner():
 
 
 
+            # --- is_buy_pattern_1 ---
+            is_buy_pattern_1 = (
+                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1h == "راية صاعدة") and 
+                (pattern_class_1h == "اختراق استمراري") and 
+                (patterns_4h == "ابتلاع_صاعد")
+            )
+
+            # --- is_buy_pattern_2 ---
+            is_buy_pattern_2 = (
+                (patterns_1h == "ابتلاع_صاعد") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_2h == "علم صاعد") and 
+                (pattern_class_2h == "اختراق استمراري") and 
+                (patterns_4h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_4h == "قاع ثلاثي") and 
+                (pattern_class_4h == "انعكاسي صاعد") and 
+                (patterns_1d == "ثلاثة_للداخل_صاعد")
+            )
+
+            # --- is_buy_pattern_3 ---
+            is_buy_pattern_3 = (
+                (patterns_1h == "خطوط_الانفصال_هابط") and 
+                (patterns_4h == "القيعان_المتطابقة_صاعد") and 
+                (pattern_name_4h == "رأس وكتفين مقلوب") and 
+                (pattern_class_4h == "انعكاسي صاعد") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد")
+            )
+
+            # --- is_buy_pattern_4 ---
+            is_buy_pattern_4 = (
+                (patterns_1h == "ابتلاع_صاعد") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_4h == "في_الرقبة_هابط") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد")
+            )
+
+            # --- is_buy_pattern_5 ---
+            is_buy_pattern_5 = (
+                (patterns_1h == "ابتلاع_هابط") and 
+                (patterns_2h == "ثلاثة_للداخل_هابط") and 
+                (pattern_name_2h == "رأس وكتفين مقلوب") and 
+                (pattern_class_2h == "انعكاسي صاعد") and 
+                (patterns_4h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_1d == "ثلاثة_للخارج_صاعد")
+            )
+
+            # --- is_buy_pattern_6 ---
+            is_buy_pattern_6 = (
+                (patterns_2h == "في_الرقبة_هابط") and 
+                (patterns_4h == "Neutral_Doji") and 
+                (pattern_name_1d == "سايفر بيعي") and 
+                (pattern_class_1d == "هارمونيك احترافي")
+            )
+
+            # --- is_buy_pattern_7 ---
+            is_buy_pattern_7 = (
+                (patterns_2h == "ابتلاع_صاعد") and 
+                (patterns_4h == "الرجل_المشنوق_هابط")
+            )
+
+            # --- is_buy_pattern_8 ---
+            is_buy_pattern_8 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_4h == "هارامي_هابط") and 
+                (pattern_name_4h == "وتد هابط") and 
+                (pattern_class_4h == "استمراري صاعد") and 
+                (patterns_1d == "ثلاثة_للداخل_صاعد")
+            )
+
+            # --- is_buy_pattern_9 ---
+            is_buy_pattern_9 = (
+                (patterns_1h == "ابتلاع_صاعد") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_4h == "ابتلاع_صاعد") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1d == "سايفر بيعي") and 
+                (pattern_class_1d == "هارمونيك احترافي")
+            )
+
+            # --- is_buy_pattern_10 ---
+            is_buy_pattern_10 = (
+                (patterns_1h == "القيعان_المتطابقة_صاعد") and 
+                (pattern_name_1h == "وتد صاعد") and 
+                (pattern_class_1h == "استمراري هابط") and 
+                (patterns_2h == "ثلاثة_للخارج_هابط") and 
+                (pattern_name_2h == "قاع مزدوج") and 
+                (pattern_class_2h == "انعكاسي صاعد") and 
+                (patterns_4h == "ثلاثة_للداخل_هابط")
+            )
+
+            # --- is_buy_pattern_11 ---
+            is_buy_pattern_11 = (
+                (pattern_name_2h == "بوق متسع صاعد") and 
+                (pattern_class_2h == "انفجار سعري") and 
+                (patterns_4h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_4h == "بوق متسع صاعد") and 
+                (pattern_class_4h == "انفجار سعري") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1d == "علم صاعد") and 
+                (pattern_class_1d == "اختراق استمراري")
+            )
+
+            # --- is_buy_pattern_12 ---
+            is_buy_pattern_12 = (
+                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_4h == "نجمة_الصباح_صاعد") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد")
+            )
+
+            # --- is_buy_pattern_13 ---
+            is_buy_pattern_13 = (
+                (patterns_1h == "الحزام_الممسوك_صاعد") and 
+                (patterns_2h == "ابتلاع_صاعد") and 
+                (patterns_4h == "في_الرقبة_هابط") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1d == "علم صاعد") and 
+                (pattern_class_1d == "اختراق استمراري")
+            )
+
+            # --- is_buy_pattern_14 ---
+            is_buy_pattern_14 = (
+                (patterns_1h == "هارامي_هابط") and 
+                (patterns_2h == "هارامي_صليب_هابط")
+            )
+
+            # --- is_buy_pattern_15 ---
+            is_buy_pattern_15 = (
+                (patterns_4h == "ابتلاع_هابط")
+            )
+
+            # --- is_buy_pattern_16 ---
+            is_buy_pattern_16 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "قمة مزدوجة") and 
+                (pattern_class_2h == "انعكاسي هابط") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1d == "راية هابطة") and 
+                (pattern_class_1d == "كسر استمراري")
+            )
+
+            # --- is_buy_pattern_17 ---
+            is_buy_pattern_17 = (
+                (patterns_1h == "ابتلاع_صاعد") and 
+                (pattern_name_1h == "وتد صاعد") and 
+                (pattern_class_1h == "استمراري هابط")
+            )
+
+            # --- is_buy_pattern_18 ---
+            is_buy_pattern_18 = (
+                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_4h == "راية صاعدة") and 
+                (pattern_class_4h == "اختراق استمراري") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد")
+            )
+
+            # --- is_buy_pattern_19 ---
+            is_buy_pattern_19 = (
+                (pattern_name_1h == "وتد صاعد") and 
+                (pattern_class_1h == "استمراري هابط") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1d == "بوق متسع صاعد") and 
+                (pattern_class_1d == "انفجار سعري")
+            )
+
+            # --- is_buy_pattern_20 ---
+            is_buy_pattern_20 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_2h == "نجمة_المساء_هابط") and 
+                (patterns_4h == "ابتلاع_هابط")
+            )
+
+            # --- is_buy_pattern_21 ---
+            is_buy_pattern_21 = (
+                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1h == "راية صاعدة") and 
+                (pattern_class_1h == "اختراق استمراري") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_2h == "بوق متسع صاعد") and 
+                (pattern_class_2h == "انفجار سعري") and 
+                (patterns_4h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (patterns_1d == "ابتلاع_صاعد")
+            )
+
+            # --- is_buy_pattern_22 ---
+            is_buy_pattern_22 = (
+                (patterns_2h == "ثلاثة_للداخل_صاعد") and 
+                (patterns_4h == "هارامي_صليب_صاعد")
+            )
+
+            # --- is_buy_pattern_23 ---
+            is_buy_pattern_23 = (
+                (patterns_1h == "الحزام_الممسوك_صاعد") and 
+                (patterns_2h == "ثلاثة_للخارج_صاعد") and 
+                (patterns_4h == "ابتلاع_صاعد") and 
+                (patterns_1d == "ثلاثة_للخارج_صاعد")
+            )
+
+            # --- is_buy_pattern_24 ---
+            is_buy_pattern_24 = (
+                (patterns_2h == "نجمة_الصباح_صاعد")
+            )
+
+            # --- is_buy_pattern_25 ---
+            is_buy_pattern_25 = (
+                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_1h == "قاع ثلاثي") and 
+                (pattern_class_1h == "انعكاسي صاعد") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_2h == "صندوق دارفاس صاعد") and 
+                (pattern_class_2h == "اختراق استمراري") and 
+                (pattern_name_4h == "صندوق دارفاس صاعد") and 
+                (pattern_class_4h == "اختراق استمراري") and 
+                (patterns_1d == "ابتلاع_صاعد")
+            )
+
+            # --- is_buy_pattern_26 ---
+            is_buy_pattern_26 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1h == "رأس وكتفين مقلوب") and 
+                (pattern_class_1h == "انعكاسي صاعد") and 
+                (patterns_2h == "ابتلاع_صاعد") and 
+                (pattern_name_2h == "سايفر شرائي") and 
+                (pattern_class_2h == "هارمونيك احترافي") and 
+                (patterns_1d == "الحزام_الممسوك_صاعد") and 
+                (trend_direction_1d == "هابط") and 
+                (trend_touches_1d == 3) and 
+                (channel_direction_1d == "هابط") and 
+                (channel_status_1d == "VALID") and 
+                (channel_touches_1d == 4)
+            )
+
+            # --- is_buy_pattern_27 ---
+            is_buy_pattern_27 = (
+                (patterns_1h == "ثلاثة_للداخل_هابط") and 
+                (patterns_2h == "نجمة_المساء_دوجي_هابط") and 
+                (patterns_4h == "الجنود_الثلاثة_البيض_صاعد") and 
+                (pattern_name_4h == "مثلث متماثل صاعد") and 
+                (pattern_class_4h == "استمراري صاعد") and 
+                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد")
+            )
+
+            # --- is_buy_pattern_28 ---
+            is_buy_pattern_28 = (
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (trend_direction_2h == "هابط") and 
+                (trend_touches_2h == 3) and 
+                (channel_direction_2h == "هابط") and 
+                (channel_status_2h == "VALID") and 
+                (channel_touches_2h == 4) and 
+                (pattern_name_4h == "بوق متسع هابط") and 
+                (pattern_class_4h == "انهيار سعري")
+            )
+
+            # --- is_buy_pattern_29 ---
+            is_buy_pattern_29 = (
+                (patterns_1h == "الحزام_الممسوك_صاعد") and 
+                (pattern_name_1h == "راية صاعدة") and 
+                (pattern_class_1h == "اختراق استمراري") and 
+                (patterns_1d == "ابتلاع_هابط")
+            )
+
+            # --- is_buy_pattern_30 ---
+            is_buy_pattern_30 = (
+                (patterns_1h == "نجمة_الصباح_صاعد") and 
+                (patterns_4h == "ابتلاع_صاعد") and 
+                (patterns_1d == "ابتلاع_صاعد")
+            )
+
+            # --- is_buy_pattern_31 ---
+            is_buy_pattern_31 = (
+                (patterns_1h == "ماروبوزو_صاعد") and 
+                (pattern_name_2h == "بوق متسع صاعد") and 
+                (pattern_class_2h == "انفجار سعري") and 
+                (pattern_name_4h == "علم صاعد") and 
+                (pattern_class_4h == "اختراق استمراري")
+            )
+
             # --- إدراج_شروط_نماذج_شراء ---
 
             # 📉 [ شروط البيع ]
 
+
+            # --- is_sell_pattern_1 ---
+            is_sell_pattern_1 = (
+                (patterns_1h == "Spinning_Top") and 
+                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد")
+            )
+
+            # --- is_sell_pattern_2 ---
+            is_sell_pattern_2 = (
+                (patterns_1h == "ثلاثة_للداخل_هابط") and 
+                (patterns_4h == "هارامي_صليب_هابط") and 
+                (pattern_name_1d == "قاع مزدوج") and 
+                (pattern_class_1d == "انعكاسي صاعد")
+            )
+
+            # --- is_sell_pattern_3 ---
+            is_sell_pattern_3 = (
+                (patterns_1h == "Spinning_Top") and 
+                (patterns_4h == "في_الرقبة_هابط")
+            )
+
+            # --- is_sell_pattern_4 ---
+            is_sell_pattern_4 = (
+                (pattern_name_1h == "علم هابط") and 
+                (pattern_class_1h == "كسر استمراري") and 
+                (patterns_2h == "ابتلاع_صاعد") and 
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (patterns_4h == "خطوط_التلاقي_صاعد") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (patterns_1d == "خطوط_التلاقي_صاعد") and 
+                (pattern_name_1d == "علم هابط") and 
+                (pattern_class_1d == "كسر استمراري")
+            )
+
+            # --- is_sell_pattern_5 ---
+            is_sell_pattern_5 = (
+                (patterns_1h == "هارامي_صليب_هابط") and 
+                (patterns_2h == "الخط_الثاقب_صاعد") and 
+                (patterns_4h == "في_الرقبة_هابط") and 
+                (patterns_1d == "في_الرقبة_هابط")
+            )
+
+            # --- is_sell_pattern_6 ---
+            is_sell_pattern_6 = (
+                (patterns_1h == "ابتلاع_هابط") and 
+                (pattern_name_1h == "قمة مزدوجة") and 
+                (pattern_class_1h == "انعكاسي هابط") and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "بوق متسع هابط") and 
+                (pattern_class_4h == "انهيار سعري") and 
+                (patterns_1d == "ثلاثة_للخارج_هابط")
+            )
+
+            # --- is_sell_pattern_7 ---
+            is_sell_pattern_7 = (
+                (patterns_1h == "الحمامة_الزاجلة_صاعد") and 
+                (pattern_name_1h == "سايفر بيعي") and 
+                (pattern_class_1h == "هارمونيك احترافي") and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (trend_direction_4h == "هابط") and 
+                (trend_touches_4h == 3) and 
+                (channel_direction_4h == "هابط") and 
+                (channel_status_4h == "STRONG_CONFIRMED") and 
+                (channel_touches_4h == 8) and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_8 ---
+            is_sell_pattern_8 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1h == "بوق متسع هابط") and 
+                (pattern_class_1h == "انهيار سعري") and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "بوق متسع هابط") and 
+                (pattern_class_2h == "انهيار سعري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1d == "بوق متسع هابط") and 
+                (pattern_class_1d == "انهيار سعري")
+            )
+
+            # --- is_sell_pattern_9 ---
+            is_sell_pattern_9 = (
+                (patterns_1h == "في_الرقبة_هابط") and 
+                (trend_direction_1h == "هابط") and 
+                (trend_touches_1h == 3) and 
+                (channel_direction_1h == "هابط") and 
+                (channel_status_1h == "STRONG_CONFIRMED") and 
+                (channel_touches_1h == 5) and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (trend_direction_2h == "هابط") and 
+                (trend_touches_2h == 3) and 
+                (channel_direction_2h == "هابط") and 
+                (channel_status_2h == "VALID") and 
+                (channel_touches_2h == 4) and 
+                (patterns_4h == "مطرقة_صاعد") and 
+                (trend_direction_4h == "هابط") and 
+                (trend_touches_4h == 3) and 
+                (channel_direction_4h == "هابط") and 
+                (channel_status_4h == "STRONG_CONFIRMED") and 
+                (channel_touches_4h == 5) and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_10 ---
+            is_sell_pattern_10 = (
+                (patterns_1h == "ابتلاع_هابط") and 
+                (pattern_name_1h == "بوق متسع هابط") and 
+                (pattern_class_1h == "انهيار سعري") and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "بوق متسع هابط") and 
+                (pattern_class_2h == "انهيار سعري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_11 ---
+            is_sell_pattern_11 = (
+                (patterns_1h == "ثلاثة_للداخل_هابط") and 
+                (trend_direction_1h == "هابط") and 
+                (trend_touches_1h == 3) and 
+                (channel_direction_1h == "هابط") and 
+                (channel_status_1h == "STRONG_CONFIRMED") and 
+                (channel_touches_1h == 6) and 
+                (trend_direction_2h == "هابط") and 
+                (trend_touches_2h == 3) and 
+                (channel_direction_2h == "هابط") and 
+                (channel_status_2h == "STRONG_CONFIRMED") and 
+                (channel_touches_2h == 6) and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_12 ---
+            is_sell_pattern_12 = (
+                (patterns_1h == "ابتلاع_هابط") and 
+                (trend_direction_1h == "هابط") and 
+                (trend_touches_1h == 3) and 
+                (channel_direction_1h == "هابط") and 
+                (channel_status_1h == "STRONG_CONFIRMED") and 
+                (channel_touches_1h == 5) and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "بوق متسع هابط") and 
+                (pattern_class_2h == "انهيار سعري") and 
+                (patterns_4h == "في_الرقبة_هابط") and 
+                (patterns_1d == "في_الرقبة_هابط")
+            )
+
+            # --- is_sell_pattern_13 ---
+            is_sell_pattern_13 = (
+                (patterns_1h == "الحزام_الممسوك_هابط") and 
+                (trend_direction_1h == "هابط") and 
+                (trend_touches_1h == 3) and 
+                (channel_direction_1h == "هابط") and 
+                (channel_status_1h == "STRONG_CONFIRMED") and 
+                (channel_touches_1h == 6) and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (trend_direction_2h == "هابط") and 
+                (trend_touches_2h == 4) and 
+                (channel_direction_2h == "هابط") and 
+                (channel_status_2h == "STRONG_CONFIRMED") and 
+                (channel_touches_2h == 6) and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_14 ---
+            is_sell_pattern_14 = (
+                (patterns_1h == "خطوط_الانفصال_هابط") and 
+                (pattern_name_1h == "علم هابط") and 
+                (pattern_class_1h == "كسر استمراري") and 
+                (trend_direction_1h == "هابط") and 
+                (trend_touches_1h == 3) and 
+                (channel_direction_1h == "هابط") and 
+                (channel_status_1h == "STRONG_CONFIRMED") and 
+                (channel_touches_1h == 5) and 
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (trend_direction_2h == "هابط") and 
+                (trend_touches_2h == 3) and 
+                (channel_direction_2h == "هابط") and 
+                (channel_status_2h == "STRONG_CONFIRMED") and 
+                (channel_touches_2h == 6) and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (pattern_name_1d == "علم هابط") and 
+                (pattern_class_1d == "كسر استمراري")
+            )
+
+            # --- is_sell_pattern_15 ---
+            is_sell_pattern_15 = (
+                (patterns_1h == "ابتلاع_هابط") and 
+                (pattern_name_2h == "بوق متسع هابط") and 
+                (pattern_class_2h == "انهيار سعري") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_16 ---
+            is_sell_pattern_16 = (
+                (patterns_1h == "نجمة_الصباح_صاعد") and 
+                (patterns_2h == "في_الرقبة_هابط") and 
+                (pattern_name_2h == "رأس وكتفين") and 
+                (pattern_class_2h == "انعكاسي هابط") and 
+                (patterns_4h == "في_الرقبة_هابط") and 
+                (patterns_1d == "في_الرقبة_هابط") and 
+                (pattern_name_1d == "علم هابط") and 
+                (pattern_class_1d == "كسر استمراري")
+            )
+
+            # --- is_sell_pattern_17 ---
+            is_sell_pattern_17 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1h == "سايفر بيعي") and 
+                (pattern_class_1h == "هارمونيك احترافي") and 
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1d == "علم هابط") and 
+                (pattern_class_1d == "كسر استمراري")
+            )
+
+            # --- is_sell_pattern_18 ---
+            is_sell_pattern_18 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "علم هابط") and 
+                (pattern_class_2h == "كسر استمراري") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_19 ---
+            is_sell_pattern_19 = (
+                (pattern_name_1h == "مثلث متماثل هابط") and 
+                (pattern_class_1h == "استمراري هابط") and 
+                (trend_direction_1h == "هابط") and 
+                (trend_touches_1h == 3) and 
+                (channel_direction_1h == "هابط") and 
+                (channel_status_1h == "VALID") and 
+                (channel_touches_1h == 4) and 
+                (pattern_name_2h == "قمة مزدوجة") and 
+                (pattern_class_2h == "انعكاسي هابط") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "قمة مزدوجة") and 
+                (pattern_class_4h == "انعكاسي هابط") and 
+                (trend_direction_1d == "هابط") and 
+                (trend_touches_1d == 3) and 
+                (channel_direction_1d == "هابط") and 
+                (channel_status_1d == "VALID") and 
+                (channel_touches_1d == 4)
+            )
+
+            # --- is_sell_pattern_20 ---
+            is_sell_pattern_20 = (
+                (patterns_1h == "ابتلاع_صاعد") and 
+                (patterns_2h == "قاع_الملقط_صاعد") and 
+                (pattern_name_1d == "بوق متسع هابط") and 
+                (pattern_class_1d == "انهيار سعري")
+            )
+
+            # --- is_sell_pattern_21 ---
+            is_sell_pattern_21 = (
+                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_1h == "بوق متسع هابط") and 
+                (pattern_class_1h == "انهيار سعري") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
+
+            # --- is_sell_pattern_22 ---
+            is_sell_pattern_22 = (
+                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_2h == "رأس وكتفين") and 
+                (pattern_class_2h == "انعكاسي هابط") and 
+                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
+                (pattern_name_4h == "علم هابط") and 
+                (pattern_class_4h == "كسر استمراري") and 
+                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
+            )
 
             # --- إدراج_شروط_نماذج_بيع ---
             
@@ -407,8 +986,273 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نمودج شراء 0")
 
+            # --- تقييم_is_buy_pattern_1 ---
+            elif is_buy_pattern_1:
+                score += 50
+                reasons.append("نموذج شراء 1")
+
+            # --- تقييم_is_buy_pattern_2 ---
+            elif is_buy_pattern_2:
+                score += 50
+                reasons.append("نموذج شراء 2")
+
+            # --- تقييم_is_buy_pattern_3 ---
+            elif is_buy_pattern_3:
+                score += 50
+                reasons.append("نموذج شراء 3")
+
+            # --- تقييم_is_buy_pattern_4 ---
+            elif is_buy_pattern_4:
+                score += 50
+                reasons.append("نموذج شراء 4")
+
+            # --- تقييم_is_buy_pattern_5 ---
+            elif is_buy_pattern_5:
+                score += 50
+                reasons.append("نموذج شراء 5")
+
+            # --- تقييم_is_buy_pattern_6 ---
+            elif is_buy_pattern_6:
+                score += 50
+                reasons.append("نموذج شراء 6")
+
+            # --- تقييم_is_buy_pattern_7 ---
+            elif is_buy_pattern_7:
+                score += 50
+                reasons.append("نموذج شراء 7")
+
+            # --- تقييم_is_buy_pattern_8 ---
+            elif is_buy_pattern_8:
+                score += 50
+                reasons.append("نموذج شراء 8")
+
+            # --- تقييم_is_buy_pattern_9 ---
+            elif is_buy_pattern_9:
+                score += 50
+                reasons.append("نموذج شراء 9")
+
+            # --- تقييم_is_buy_pattern_10 ---
+            elif is_buy_pattern_10:
+                score += 50
+                reasons.append("نموذج شراء 10")
+
+            # --- تقييم_is_buy_pattern_11 ---
+            elif is_buy_pattern_11:
+                score += 50
+                reasons.append("نموذج شراء 11")
+
+            # --- تقييم_is_buy_pattern_12 ---
+            elif is_buy_pattern_12:
+                score += 50
+                reasons.append("نموذج شراء 12")
+
+            # --- تقييم_is_buy_pattern_13 ---
+            elif is_buy_pattern_13:
+                score += 50
+                reasons.append("نموذج شراء 13")
+
+            # --- تقييم_is_buy_pattern_14 ---
+            elif is_buy_pattern_14:
+                score += 50
+                reasons.append("نموذج شراء 14")
+
+            # --- تقييم_is_buy_pattern_15 ---
+            elif is_buy_pattern_15:
+                score += 50
+                reasons.append("نموذج شراء 15")
+
+            # --- تقييم_is_buy_pattern_16 ---
+            elif is_buy_pattern_16:
+                score += 50
+                reasons.append("نموذج شراء 16")
+
+            # --- تقييم_is_buy_pattern_17 ---
+            elif is_buy_pattern_17:
+                score += 50
+                reasons.append("نموذج شراء 17")
+
+            # --- تقييم_is_buy_pattern_18 ---
+            elif is_buy_pattern_18:
+                score += 50
+                reasons.append("نموذج شراء 18")
+
+            # --- تقييم_is_buy_pattern_19 ---
+            elif is_buy_pattern_19:
+                score += 50
+                reasons.append("نموذج شراء 19")
+
+            # --- تقييم_is_buy_pattern_20 ---
+            elif is_buy_pattern_20:
+                score += 50
+                reasons.append("نموذج شراء 20")
+
+            # --- تقييم_is_buy_pattern_21 ---
+            elif is_buy_pattern_21:
+                score += 50
+                reasons.append("نموذج شراء 21")
+
+            # --- تقييم_is_buy_pattern_22 ---
+            elif is_buy_pattern_22:
+                score += 50
+                reasons.append("نموذج شراء 22")
+
+            # --- تقييم_is_buy_pattern_23 ---
+            elif is_buy_pattern_23:
+                score += 50
+                reasons.append("نموذج شراء 23")
+
+            # --- تقييم_is_buy_pattern_24 ---
+            elif is_buy_pattern_24:
+                score += 50
+                reasons.append("نموذج شراء 24")
+
+            # --- تقييم_is_buy_pattern_25 ---
+            elif is_buy_pattern_25:
+                score += 50
+                reasons.append("نموذج شراء 25")
+
+            # --- تقييم_is_buy_pattern_26 ---
+            elif is_buy_pattern_26:
+                score += 50
+                reasons.append("نموذج شراء 26")
+
+            # --- تقييم_is_buy_pattern_27 ---
+            elif is_buy_pattern_27:
+                score += 50
+                reasons.append("نموذج شراء 27")
+
+            # --- تقييم_is_buy_pattern_28 ---
+            elif is_buy_pattern_28:
+                score += 50
+                reasons.append("نموذج شراء 28")
+
+            # --- تقييم_is_buy_pattern_29 ---
+            elif is_buy_pattern_29:
+                score += 50
+                reasons.append("نموذج شراء 29")
+
+            # --- تقييم_is_buy_pattern_30 ---
+            elif is_buy_pattern_30:
+                score += 50
+                reasons.append("نموذج شراء 30")
+
+            # --- تقييم_is_buy_pattern_31 ---
+            elif is_buy_pattern_31:
+                score += 50
+                reasons.append("نموذج شراء 31")
+
             # --- إدراج_تقييم_نماذج_شراء ---
 
+
+            # --- تقييم_is_sell_pattern_1 ---
+            elif is_sell_pattern_1:
+                score -= 50
+                reasons.append("نموذج بيع 1")
+
+            # --- تقييم_is_sell_pattern_2 ---
+            elif is_sell_pattern_2:
+                score -= 50
+                reasons.append("نموذج بيع 2")
+
+            # --- تقييم_is_sell_pattern_3 ---
+            elif is_sell_pattern_3:
+                score -= 50
+                reasons.append("نموذج بيع 3")
+
+            # --- تقييم_is_sell_pattern_4 ---
+            elif is_sell_pattern_4:
+                score -= 50
+                reasons.append("نموذج بيع 4")
+
+            # --- تقييم_is_sell_pattern_5 ---
+            elif is_sell_pattern_5:
+                score -= 50
+                reasons.append("نموذج بيع 5")
+
+            # --- تقييم_is_sell_pattern_6 ---
+            elif is_sell_pattern_6:
+                score -= 50
+                reasons.append("نموذج بيع 6")
+
+            # --- تقييم_is_sell_pattern_7 ---
+            elif is_sell_pattern_7:
+                score -= 50
+                reasons.append("نموذج بيع 7")
+
+            # --- تقييم_is_sell_pattern_8 ---
+            elif is_sell_pattern_8:
+                score -= 50
+                reasons.append("نموذج بيع 8")
+
+            # --- تقييم_is_sell_pattern_9 ---
+            elif is_sell_pattern_9:
+                score -= 50
+                reasons.append("نموذج بيع 9")
+
+            # --- تقييم_is_sell_pattern_10 ---
+            elif is_sell_pattern_10:
+                score -= 50
+                reasons.append("نموذج بيع 10")
+
+            # --- تقييم_is_sell_pattern_11 ---
+            elif is_sell_pattern_11:
+                score -= 50
+                reasons.append("نموذج بيع 11")
+
+            # --- تقييم_is_sell_pattern_12 ---
+            elif is_sell_pattern_12:
+                score -= 50
+                reasons.append("نموذج بيع 12")
+
+            # --- تقييم_is_sell_pattern_13 ---
+            elif is_sell_pattern_13:
+                score -= 50
+                reasons.append("نموذج بيع 13")
+
+            # --- تقييم_is_sell_pattern_14 ---
+            elif is_sell_pattern_14:
+                score -= 50
+                reasons.append("نموذج بيع 14")
+
+            # --- تقييم_is_sell_pattern_15 ---
+            elif is_sell_pattern_15:
+                score -= 50
+                reasons.append("نموذج بيع 15")
+
+            # --- تقييم_is_sell_pattern_16 ---
+            elif is_sell_pattern_16:
+                score -= 50
+                reasons.append("نموذج بيع 16")
+
+            # --- تقييم_is_sell_pattern_17 ---
+            elif is_sell_pattern_17:
+                score -= 50
+                reasons.append("نموذج بيع 17")
+
+            # --- تقييم_is_sell_pattern_18 ---
+            elif is_sell_pattern_18:
+                score -= 50
+                reasons.append("نموذج بيع 18")
+
+            # --- تقييم_is_sell_pattern_19 ---
+            elif is_sell_pattern_19:
+                score -= 50
+                reasons.append("نموذج بيع 19")
+
+            # --- تقييم_is_sell_pattern_20 ---
+            elif is_sell_pattern_20:
+                score -= 50
+                reasons.append("نموذج بيع 20")
+
+            # --- تقييم_is_sell_pattern_21 ---
+            elif is_sell_pattern_21:
+                score -= 50
+                reasons.append("نموذج بيع 21")
+
+            # --- تقييم_is_sell_pattern_22 ---
+            elif is_sell_pattern_22:
+                score -= 50
+                reasons.append("نموذج بيع 22")
 
             # --- إدراج_تقييم_نماذج_بيع ---
             
@@ -747,13 +1591,761 @@ async def intelligence_scanner2():
             )
 
 
+            # --- is_buy_indicator_1 ---
+            is_buy_indicator_1 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > ichimoku_base_1h > bb_middle_1h > parabolic_sar_1h > ema_50_1h > supertrend_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > ema_200_4h > bb_middle_4h > parabolic_sar_4h > ema_50_4h > ema_100_4h > supertrend_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_2 ---
+            is_buy_indicator_2 = (
+                (ichimoku_conversion_1h > ichimoku_base_1h > ichimoku_cloud_top_1h > parabolic_sar_1h > ema_20_1h > supertrend_1h > bb_middle_1h > ema_50_1h > ema_100_1h > kc_lower_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_base_2h > ichimoku_cloud_top_2h > supertrend_2h > ema_20_2h > bb_middle_2h > ema_50_2h > parabolic_sar_2h > ema_100_2h > ema_200_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > supertrend_4h > ema_20_4h > bb_middle_4h > ema_50_4h > ema_100_4h > parabolic_sar_4h > kc_lower_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator_3 ---
+            is_buy_indicator_3 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > ema_50_1h > ema_100_1h > ema_200_1h > kc_lower_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > ema_50_2h > ema_100_2h > ema_200_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_200_4h > ema_20_4h > bb_middle_4h > ema_100_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_4 ---
+            is_buy_indicator_4 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > bb_middle_1h > ichimoku_base_1h > ema_20_1h > parabolic_sar_1h > ema_50_1h > ema_100_1h > ema_200_1h > kc_lower_1h > supertrend_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > parabolic_sar_2h > ema_20_2h > bb_middle_2h > ema_200_2h > ema_50_2h > ema_100_2h > supertrend_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_200_4h > ema_20_4h > ema_100_4h > ema_50_4h > bb_middle_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_5 ---
+            is_buy_indicator_5 = (
+                (parabolic_sar_1h > supertrend_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > ema_200_1h > bb_middle_1h > ema_50_1h > ema_100_1h > kc_lower_1h) and 
+                (parabolic_sar_2h > supertrend_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_200_2h > ema_100_2h > ema_20_2h > ema_50_2h > bb_middle_2h > kc_lower_2h) and 
+                (ema_200_4h > ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_100_4h > ema_50_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_6 ---
+            is_buy_indicator_6 = (
+                (ichimoku_conversion_1h > parabolic_sar_1h > ichimoku_cloud_top_1h > ema_20_1h > ema_200_1h > bb_middle_1h > ichimoku_base_1h > ema_50_1h > ema_100_1h > supertrend_1h > kc_lower_1h) and 
+                (ema_200_2h > ichimoku_conversion_2h > ema_100_2h > ichimoku_cloud_top_2h > parabolic_sar_2h > ema_20_2h > ichimoku_base_2h > ema_50_2h > bb_middle_2h > supertrend_2h > kc_lower_2h) and 
+                (supertrend_4h > parabolic_sar_4h > ema_100_4h > ema_50_4h > ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_200_4h > ema_20_4h > bb_middle_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_7 ---
+            is_buy_indicator_7 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > bb_middle_1h > ema_20_1h > ema_50_1h > parabolic_sar_1h > ema_100_1h > supertrend_1h > ema_200_1h > kc_lower_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > parabolic_sar_2h > ema_50_2h > ema_100_2h > ema_200_2h > supertrend_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > ema_200_4h > bb_middle_4h > ema_50_4h > ema_100_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_8 ---
+            is_buy_indicator_8 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > ema_50_1h > ema_200_1h > ema_100_1h > kc_lower_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > ema_200_2h > ema_50_2h > ema_100_2h > bb_middle_2h > kc_lower_2h) and 
+                (supertrend_4h > parabolic_sar_4h > ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_200_4h > ema_100_4h > ema_20_4h > ema_50_4h > bb_middle_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_9 ---
+            is_buy_indicator_9 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > parabolic_sar_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > supertrend_1h > ema_50_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > supertrend_2h > bb_middle_2h > parabolic_sar_2h > ema_50_2h > kc_lower_2h > ema_100_2h > ema_200_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > supertrend_4h > bb_middle_4h > parabolic_sar_4h > ema_50_4h > ema_100_4h > ema_200_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_10 ---
+            is_buy_indicator_10 = (
+                (parabolic_sar_1h > supertrend_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > ema_200_1h > ema_50_1h > ema_100_1h > kc_lower_1h) and 
+                (parabolic_sar_2h > supertrend_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_200_2h > ema_20_2h > ema_100_2h > ema_50_2h > bb_middle_2h > kc_lower_2h) and 
+                (parabolic_sar_4h > supertrend_4h > ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_200_4h > ema_100_4h > ema_50_4h > ema_20_4h > bb_middle_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_11 ---
+            is_buy_indicator_11 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > parabolic_sar_1h > bb_middle_1h > ema_20_1h > ichimoku_base_1h > supertrend_1h > ema_50_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > parabolic_sar_2h > supertrend_2h > bb_middle_2h > ema_200_2h > ema_50_2h > ema_100_2h > kc_lower_2h) and 
+                (ema_200_4h > ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_20_4h > ema_100_4h > supertrend_4h > ema_50_4h > bb_middle_4h > kc_lower_4h > parabolic_sar_4h)
+            )
+
+            # --- is_buy_indicator_12 ---
+            is_buy_indicator_12 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > supertrend_1h > parabolic_sar_1h > ema_50_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > parabolic_sar_2h > bb_middle_2h > supertrend_2h > ema_50_2h > kc_lower_2h > ema_100_2h > ema_200_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > ema_50_4h > kc_lower_4h > ema_100_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator_13 ---
+            is_buy_indicator_13 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > parabolic_sar_1h > bb_middle_1h > ema_50_1h > ema_100_1h > kc_lower_1h > ema_200_1h > supertrend_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > parabolic_sar_2h > ema_50_2h > ema_100_2h > ema_200_2h > supertrend_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > ema_200_4h > ema_100_4h > bb_middle_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_14 ---
+            is_buy_indicator_14 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_base_1h > ichimoku_cloud_top_1h > ichimoku_conversion_1h > bb_middle_1h > ema_20_1h > ema_50_1h > ema_100_1h > ema_200_1h > kc_lower_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > ema_50_2h > ema_200_2h > ema_100_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_200_4h > ema_20_4h > ema_100_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_15 ---
+            is_buy_indicator_15 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > bb_middle_1h > ema_20_1h > ema_50_1h > ema_200_1h > ema_100_1h > kc_lower_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > ema_200_2h > ema_50_2h > ema_100_2h > kc_lower_2h) and 
+                (supertrend_4h > parabolic_sar_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_200_4h > ema_100_4h > ema_20_4h > ema_50_4h > bb_middle_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_16 ---
+            is_buy_indicator_16 = (
+                (ema_200_1h > ema_100_1h > ema_50_1h > ema_20_1h > ichimoku_conversion_1h > parabolic_sar_1h > bb_middle_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > kc_lower_1h > supertrend_1h) and 
+                (ema_200_2h > ema_100_2h > supertrend_2h > ema_50_2h > parabolic_sar_2h > bb_middle_2h > ema_20_2h > kc_lower_2h > ichimoku_base_2h > ichimoku_cloud_top_2h > ichimoku_conversion_2h) and 
+                (ema_200_4h > ema_100_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > bb_middle_4h > ema_20_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > kc_lower_4h > ichimoku_conversion_4h)
+            )
+
+            # --- is_buy_indicator_17 ---
+            is_buy_indicator_17 = (
+                (ema_200_1h > supertrend_1h > parabolic_sar_1h > ema_100_1h > ema_50_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > ichimoku_base_1h > bb_middle_1h > kc_lower_1h) and 
+                (supertrend_2h > ema_200_2h > ema_100_2h > parabolic_sar_2h > ema_50_2h > ema_20_2h > bb_middle_2h > ichimoku_base_2h > ichimoku_cloud_top_2h > ichimoku_conversion_2h > kc_lower_2h) and 
+                (ema_200_4h > supertrend_4h > ema_100_4h > ema_50_4h > parabolic_sar_4h > bb_middle_4h > ichimoku_base_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_18 ---
+            is_buy_indicator_18 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_200_1h > parabolic_sar_1h > ema_20_1h > ema_100_1h > ema_50_1h > bb_middle_1h > supertrend_1h > kc_lower_1h)
+            )
+
+            # --- is_buy_indicator_19 ---
+            is_buy_indicator_19 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > bb_middle_1h > ichimoku_base_1h > supertrend_1h > parabolic_sar_1h > ema_50_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > parabolic_sar_2h > ema_20_2h > supertrend_2h > bb_middle_2h > ema_50_2h > ema_100_2h > kc_lower_2h > ema_200_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > supertrend_4h > ema_50_4h > ema_100_4h > parabolic_sar_4h > kc_lower_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator_20 ---
+            is_buy_indicator_20 = (
+                (ichimoku_conversion_1h > parabolic_sar_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > ema_50_1h > supertrend_1h > ema_100_1h > kc_lower_1h > ema_200_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > ema_50_2h > ema_100_2h > ema_200_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > supertrend_4h > ema_200_4h > ema_50_4h > parabolic_sar_4h > ema_100_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_21 ---
+            is_buy_indicator_21 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > bb_middle_1h > ichimoku_base_1h > ema_50_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > ema_50_2h > ema_100_2h > kc_lower_2h > ema_200_2h) and 
+                (supertrend_4h > parabolic_sar_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > ema_50_4h > ema_100_4h > ema_200_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_22 ---
+            is_buy_indicator_22 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > supertrend_1h > ema_20_1h > bb_middle_1h > ema_50_1h > ema_100_1h > ema_200_1h > parabolic_sar_1h > kc_lower_1h) and 
+                (ichimoku_conversion_2h > ichimoku_base_2h > ichimoku_cloud_top_2h > supertrend_2h > ema_200_2h > ema_20_2h > bb_middle_2h > ema_100_2h > ema_50_2h > parabolic_sar_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_200_4h > ema_100_4h > ema_20_4h > supertrend_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_23 ---
+            is_buy_indicator_23 = (
+                (bb_middle_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > parabolic_sar_1h > ichimoku_base_1h > ema_50_1h > ema_100_1h > kc_lower_1h > ema_200_1h > supertrend_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > parabolic_sar_2h > bb_middle_2h > ema_50_2h > ema_100_2h > ema_200_2h > kc_lower_2h > supertrend_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > ema_200_4h > ema_50_4h > ema_100_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_24 ---
+            is_buy_indicator_24 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > ichimoku_base_1h > bb_middle_1h > parabolic_sar_1h > ema_50_1h > ema_100_1h > supertrend_1h > ema_200_1h > kc_lower_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > parabolic_sar_2h > ema_200_2h > ema_50_2h > ema_100_2h > bb_middle_2h > supertrend_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_200_4h > ema_20_4h > ema_100_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_25 ---
+            is_buy_indicator_25 = (
+                (bb_middle_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > ema_50_1h > parabolic_sar_1h > kc_lower_1h > supertrend_1h > ema_100_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > bb_middle_2h > ema_20_2h > parabolic_sar_2h > ichimoku_base_2h > ema_50_2h > kc_lower_2h > supertrend_2h > ema_100_2h > ema_200_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > parabolic_sar_4h > ema_20_4h > bb_middle_4h > ema_50_4h > supertrend_4h > ema_100_4h > kc_lower_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator_26 ---
+            is_buy_indicator_26 = (
+                (ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > supertrend_1h > ema_20_1h > ema_200_1h > ema_100_1h > ema_50_1h > bb_middle_1h > parabolic_sar_1h > kc_lower_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_200_2h > supertrend_2h > ema_20_2h > ema_100_2h > ema_50_2h > bb_middle_2h > parabolic_sar_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_200_4h > ema_100_4h > supertrend_4h > ema_20_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_27 ---
+            is_buy_indicator_27 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_20_1h > bb_middle_1h > ema_50_1h > ema_100_1h > kc_lower_1h > ema_200_1h) and 
+                (ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > parabolic_sar_2h > bb_middle_2h > ema_50_2h > ema_200_2h > ema_100_2h > supertrend_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_200_4h > ema_20_4h > bb_middle_4h > ema_100_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_28 ---
+            is_buy_indicator_28 = (
+                (supertrend_1h > parabolic_sar_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ema_20_1h > bb_middle_1h > ichimoku_base_1h > ema_50_1h > kc_lower_1h > ema_100_1h > ema_200_1h) and 
+                (supertrend_2h > parabolic_sar_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_20_2h > bb_middle_2h > ema_50_2h > ema_100_2h > kc_lower_2h > ema_200_2h) and 
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > ema_50_4h > ema_100_4h > kc_lower_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator_29 ---
+            is_buy_indicator_29 = (
+                (ema_200_1h > ema_100_1h > ema_50_1h > parabolic_sar_1h > supertrend_1h > bb_middle_1h > ichimoku_base_1h > ema_20_1h > ichimoku_cloud_top_1h > ichimoku_conversion_1h > kc_lower_1h) and 
+                (ema_200_2h > ema_100_2h > ema_50_2h > supertrend_2h > ichimoku_base_2h > parabolic_sar_2h > bb_middle_2h > ema_20_2h > ichimoku_cloud_top_2h > ichimoku_conversion_2h > kc_lower_2h) and 
+                (ema_200_4h > ema_100_4h > ichimoku_base_4h > ema_50_4h > ichimoku_cloud_top_4h > bb_middle_4h > ema_20_4h > ichimoku_conversion_4h > parabolic_sar_4h > kc_lower_4h > supertrend_4h)
+            )
+
+            # --- is_buy_indicator_30 ---
+            is_buy_indicator_30 = (
+                (ema_20_1h > bb_middle_1h > parabolic_sar_1h > supertrend_1h > kc_lower_1h) and 
+                (supertrend_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > parabolic_sar_2h > bb_middle_2h > ema_20_2h > ema_50_2h > ema_100_2h > kc_lower_2h) and 
+                (supertrend_4h > parabolic_sar_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > bb_middle_4h > ema_20_4h > ema_50_4h > ema_100_4h > ema_200_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_31 ---
+            is_buy_indicator_31 = (
+                (ema_200_1h > ichimoku_conversion_1h > ichimoku_base_1h > ichimoku_cloud_top_1h > ema_100_1h > ema_50_1h > ema_20_1h > bb_middle_1h > parabolic_sar_1h > kc_lower_1h > supertrend_1h) and 
+                (ema_200_2h > ema_100_2h > ichimoku_conversion_2h > ichimoku_base_2h > ichimoku_cloud_top_2h > ema_50_2h > ema_20_2h > bb_middle_2h > parabolic_sar_2h > kc_lower_2h > supertrend_2h) and 
+                (ema_200_4h > ema_100_4h > ema_50_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h > supertrend_4h)
+            )
+
+            # --- is_buy_indicator_32 ---
+            is_buy_indicator_32 = (
+                (ema_200_1h > ema_100_1h > ichimoku_conversion_1h > ichimoku_cloud_top_1h > ichimoku_base_1h > ema_50_1h > ema_20_1h > parabolic_sar_1h > bb_middle_1h > supertrend_1h > kc_lower_1h) and 
+                (ema_200_2h > ema_100_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ema_50_2h > ema_20_2h > bb_middle_2h > supertrend_2h > parabolic_sar_2h > kc_lower_2h) and 
+                (ema_200_4h > ema_100_4h > ichimoku_conversion_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ema_50_4h > ema_20_4h > bb_middle_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
             # --- إدراج_شروط_مؤشرات_شراء ---
             
+            # --- is_buy_momentum_1 ---
+            is_buy_momentum_1 = (
+                (rsi_1h >= 66 and macd_1h >= 0.000097 and macd_signal_1h >= 0.000084 and macd_hist_1h >= 0.000013 and obv_1h >= 3869296486 and obv_slope_1h >= 342529771 and adx_1h >= 50 and stochastic_k_1h >= 72 and stochastic_d_1h >= 69 and williams_r_1h >= -26) and 
+                (rsi_4h >= 71 and macd_4h >= 0.000174 and macd_signal_4h >= 0.000124 and macd_hist_4h >= 0.00005 and obv_4h >= 4961883286 and obv_slope_4h >= 1588068181 and adx_4h >= 79 and stochastic_k_4h >= 79 and stochastic_d_4h >= 73 and williams_r_4h >= -15)
+            )
+
+            # --- is_buy_momentum_2 ---
+            is_buy_momentum_2 = (
+                (rsi_1h >= 78 and macd_1h >= 0.000013 and macd_signal_1h >= 0.000009 and macd_hist_1h >= 0.000004 and obv_1h >= 32241768423 and obv_slope_1h >= 2374800412 and adx_1h >= 96 and stochastic_k_1h >= 84 and stochastic_d_1h >= 83 and williams_r_1h >= -14) and 
+                (rsi_2h >= 88 and macd_2h >= 0.000011 and macd_signal_2h >= 0.000005 and macd_hist_2h >= 0.000006 and obv_2h >= 56103764557 and obv_slope_2h >= 4002547109 and adx_2h >= 90 and stochastic_k_2h >= 80 and stochastic_d_2h >= 79 and williams_r_2h >= -14) and 
+                (rsi_4h >= 82 and macd_4h >= 0.000009 and macd_signal_4h >= 0.000005 and macd_hist_4h >= 0.000004 and obv_4h >= -9372636805 and obv_slope_4h >= 11496738454 and adx_4h >= 76 and stochastic_k_4h >= 84 and stochastic_d_4h >= 75 and williams_r_4h >= -14)
+            )
+
+            # --- is_buy_momentum_3 ---
+            is_buy_momentum_3 = (
+                (rsi_1h >= 59 and macd_1h >= 0.000747 and macd_signal_1h >= 0.000729 and macd_hist_1h >= 0.000019 and obv_1h >= 467587651 and obv_slope_1h >= -77996812 and adx_1h >= 62 and stochastic_k_1h >= 50 and stochastic_d_1h >= 50 and williams_r_1h >= -52) and 
+                (rsi_2h >= 63 and macd_2h >= 0.000798 and macd_signal_2h >= 0.00054 and macd_hist_2h >= 0.000259 and obv_2h >= 806302476 and obv_slope_2h >= -83416978 and adx_2h >= 83 and stochastic_k_2h >= 50 and stochastic_d_2h >= 53 and williams_r_2h >= -51) and 
+                (rsi_4h >= 66 and macd_4h >= 0.000627 and macd_signal_4h >= 0.000263 and macd_hist_4h >= 0.000365 and obv_4h >= 667252739 and obv_slope_4h >= 307382490 and adx_4h >= 88 and stochastic_k_4h >= 63 and stochastic_d_4h >= 77 and williams_r_4h >= -48)
+            )
+
+            # --- is_buy_momentum_4 ---
+            is_buy_momentum_4 = (
+                (rsi_1h >= 65 and macd_1h >= 0.00295 and macd_signal_1h >= 0.003288 and macd_hist_1h >= -0.000338 and obv_1h >= 87172349 and obv_slope_1h >= 2848944 and adx_1h >= 72 and stochastic_k_1h >= 28 and stochastic_d_1h >= 37 and williams_r_1h >= -68) and 
+                (rsi_2h >= 70 and macd_2h >= 0.004081 and macd_signal_2h >= 0.003257 and macd_hist_2h >= 0.000823 and obv_2h >= 115426887 and obv_slope_2h >= 3413058 and adx_2h >= 83 and stochastic_k_2h >= 60 and stochastic_d_2h >= 61 and williams_r_2h >= -37) and 
+                (rsi_4h >= 70 and macd_4h >= 0.003451 and macd_signal_4h >= 0.001522 and macd_hist_4h >= 0.001929 and obv_4h >= 94448547 and obv_slope_4h >= 33148170 and adx_4h >= 96 and stochastic_k_4h >= 68 and stochastic_d_4h >= 69 and williams_r_4h >= -34)
+            )
+
+            # --- is_buy_momentum_5 ---
+            is_buy_momentum_5 = (
+                (rsi_1h >= 59 and macd_1h >= 0.004344 and macd_signal_1h >= 0.002703 and macd_hist_1h >= 0.001641 and obv_1h >= 85073316 and obv_slope_1h >= -11768508 and adx_1h >= 76 and stochastic_k_1h >= 41 and stochastic_d_1h >= 46 and williams_r_1h >= -67) and 
+                (rsi_2h >= 67 and macd_2h >= 0.002316 and macd_signal_2h >= 0.000435 and macd_hist_2h >= 0.001881 and obv_2h >= 44834025 and obv_slope_2h >= -23340136 and adx_2h >= 82 and stochastic_k_2h >= 44 and stochastic_d_2h >= 50 and williams_r_2h >= -61) and 
+                (rsi_4h >= 74 and macd_4h >= 0.000948 and macd_signal_4h >= -0.001025 and macd_hist_4h >= 0.001973 and obv_4h >= 155239153 and obv_slope_4h >= 29552689 and adx_4h >= 77 and stochastic_k_4h >= 38 and stochastic_d_4h >= 28 and williams_r_4h >= -49)
+            )
+
+            # --- is_buy_momentum_6 ---
+            is_buy_momentum_6 = (
+                (rsi_1h >= 68 and macd_1h >= 0.022365 and macd_signal_1h >= 0.02117 and macd_hist_1h >= 0.001194 and obv_1h >= -11448020 and obv_slope_1h >= 1275149 and adx_1h >= 69 and stochastic_k_1h >= 73 and stochastic_d_1h >= 74 and williams_r_1h >= -25) and 
+                (rsi_2h >= 73 and macd_2h >= 0.020387 and macd_signal_2h >= 0.010319 and macd_hist_2h >= 0.010068 and obv_2h >= -11362511 and obv_slope_2h >= 3526689 and adx_2h >= 60 and stochastic_k_2h >= 82 and stochastic_d_2h >= 86 and williams_r_2h >= -17) and 
+                (rsi_4h >= 64 and macd_4h >= 0.00424 and macd_signal_4h >= -0.009582 and macd_hist_4h >= 0.013822 and obv_4h >= 348595956 and obv_slope_4h >= -3909259 and adx_4h >= 52 and stochastic_k_4h >= 83 and stochastic_d_4h >= 82 and williams_r_4h >= -20)
+            )
+
+            # --- is_buy_momentum_7 ---
+            is_buy_momentum_7 = (
+                (rsi_1h >= 69 and macd_1h >= 0.000154 and macd_signal_1h >= 0.00011 and macd_hist_1h >= 0.000044 and obv_1h >= 9787529447 and obv_slope_1h >= 1347329090 and adx_1h >= 60 and stochastic_k_1h >= 71 and stochastic_d_1h >= 63 and williams_r_1h >= -11) and 
+                (rsi_2h >= 74 and macd_2h >= 0.000207 and macd_signal_2h >= 0.000131 and macd_hist_2h >= 0.000077 and obv_2h >= 1730360907 and obv_slope_2h >= 1770665377 and adx_2h >= 70 and stochastic_k_2h >= 83 and stochastic_d_2h >= 63 and williams_r_2h >= -3) and 
+                (rsi_4h >= 78 and macd_4h >= 0.000188 and macd_signal_4h >= 0.000079 and macd_hist_4h >= 0.000109 and obv_4h >= 12602069746 and obv_slope_4h >= 4394247150 and adx_4h >= 82 and stochastic_k_4h >= 69 and stochastic_d_4h >= 53 and williams_r_4h >= -3)
+            )
+
+            # --- is_buy_momentum_8 ---
+            is_buy_momentum_8 = (
+                (rsi_1h >= 61 and macd_1h >= 0.008216 and macd_signal_1h >= 0.005584 and macd_hist_1h >= 0.002632 and obv_1h >= 41987800 and obv_slope_1h >= -16187163 and adx_1h >= 92 and stochastic_k_1h >= 51 and stochastic_d_1h >= 61 and williams_r_1h >= -58) and 
+                (rsi_2h >= 69 and macd_2h >= 0.005638 and macd_signal_2h >= 0.002176 and macd_hist_2h >= 0.003462 and obv_2h >= 116209181 and obv_slope_2h >= -27499027 and adx_2h >= 85 and stochastic_k_2h >= 58 and stochastic_d_2h >= 70 and williams_r_2h >= -54) and 
+                (rsi_4h >= 71 and macd_4h >= 0.003057 and macd_signal_4h >= 0.000148 and macd_hist_4h >= 0.002908 and obv_4h >= -28706775 and obv_slope_4h >= -71841725 and adx_4h >= 82 and stochastic_k_4h >= 69 and stochastic_d_4h >= 69 and williams_r_4h >= -54)
+            )
+
+            # --- is_buy_momentum_9 ---
+            is_buy_momentum_9 = (
+                (rsi_1h >= 78 and macd_1h >= 0.009605 and macd_signal_1h >= 0.007815 and macd_hist_1h >= 0.00179 and obv_1h >= -14541123 and obv_slope_1h >= 8501560 and adx_1h >= 82 and stochastic_k_1h >= 86 and stochastic_d_1h >= 91 and williams_r_1h >= -15) and 
+                (rsi_2h >= 84 and macd_2h >= 0.011904 and macd_signal_2h >= 0.008673 and macd_hist_2h >= 0.00323 and obv_2h >= 209506574 and obv_slope_2h >= 19661862 and adx_2h >= 83 and stochastic_k_2h >= 92 and stochastic_d_2h >= 92 and williams_r_2h >= -13) and 
+                (rsi_4h >= 81 and macd_4h >= 0.011675 and macd_signal_4h >= 0.006572 and macd_hist_4h >= 0.005104 and obv_4h >= 176391401 and obv_slope_4h >= 31001782 and adx_4h >= 92 and stochastic_k_4h >= 92 and stochastic_d_4h >= 91 and williams_r_4h >= -10)
+            )
+
+            # --- is_buy_momentum_10 ---
+            is_buy_momentum_10 = (
+                (rsi_1h >= 48 and macd_1h >= 0.000144 and macd_signal_1h >= 0.000155 and macd_hist_1h >= -0.000011 and obv_1h >= 274935602 and obv_slope_1h >= 0 and adx_1h >= 50 and stochastic_k_1h >= 19 and stochastic_d_1h >= 30 and williams_r_1h >= -85) and 
+                (rsi_2h >= 52 and macd_2h >= 0.00014 and macd_signal_2h >= 0.00008 and macd_hist_2h >= 0.000061 and obv_2h >= 1912708013 and obv_slope_2h >= -289241326 and adx_2h >= 60 and stochastic_k_2h >= 37 and stochastic_d_2h >= 58 and williams_r_2h >= -80) and 
+                (rsi_4h >= 52 and macd_4h >= 0.000057 and macd_signal_4h >= -0.000008 and macd_hist_4h >= 0.000065 and obv_4h >= 706119332 and obv_slope_4h >= -313939858 and adx_4h >= 64 and stochastic_k_4h >= 48 and stochastic_d_4h >= 64 and williams_r_4h >= -80)
+            )
+
+            # --- is_buy_momentum_11 ---
+            is_buy_momentum_11 = (
+                (rsi_1h >= 78 and macd_1h >= 0.006331 and macd_signal_1h >= 0.005477 and macd_hist_1h >= 0.000854 and obv_1h >= 12254514 and obv_slope_1h >= 12338007 and adx_1h >= 93 and stochastic_k_1h >= 75 and stochastic_d_1h >= 74 and williams_r_1h >= -9) and 
+                (rsi_2h >= 85 and macd_2h >= 0.007701 and macd_signal_2h >= 0.005093 and macd_hist_2h >= 0.002608 and obv_2h >= 89779873 and obv_slope_2h >= 20277996 and adx_2h >= 84 and stochastic_k_2h >= 93 and stochastic_d_2h >= 93 and williams_r_2h >= -3) and 
+                (rsi_4h >= 81 and macd_4h >= 0.006214 and macd_signal_4h >= 0.002342 and macd_hist_4h >= 0.003872 and obv_4h >= 123090436 and obv_slope_4h >= 31985274 and adx_4h >= 71 and stochastic_k_4h >= 92 and stochastic_d_4h >= 88 and williams_r_4h >= -3)
+            )
+
+            # --- is_buy_momentum_12 ---
+            is_buy_momentum_12 = (
+                (rsi_1h >= 77 and macd_1h >= 0.047817 and macd_signal_1h >= 0.036977 and macd_hist_1h >= 0.01084 and obv_1h >= 195836971 and obv_slope_1h >= 6752801 and adx_1h >= 51 and stochastic_k_1h >= 94 and stochastic_d_1h >= 90 and williams_r_1h >= -2) and 
+                (rsi_2h >= 76 and macd_2h >= 0.058786 and macd_signal_2h >= 0.043026 and macd_hist_2h >= 0.01576 and obv_2h >= 505324640 and obv_slope_2h >= 10964790 and adx_2h >= 84 and stochastic_k_2h >= 96 and stochastic_d_2h >= 86 and williams_r_2h >= -1) and 
+                (rsi_4h >= 73 and macd_4h >= 0.063939 and macd_signal_4h >= 0.041501 and macd_hist_4h >= 0.022438 and obv_4h >= 360780446 and obv_slope_4h >= 18626454 and adx_4h >= 87 and stochastic_k_4h >= 90 and stochastic_d_4h >= 86 and williams_r_4h >= -1)
+            )
+
+            # --- is_buy_momentum_13 ---
+            is_buy_momentum_13 = (
+                (rsi_1h >= 61 and macd_1h >= 0.002784 and macd_signal_1h >= 0.00291 and macd_hist_1h >= -0.000126 and obv_1h >= 200604005 and obv_slope_1h >= 35222713 and adx_1h >= 39 and stochastic_k_1h >= 42 and stochastic_d_1h >= 41 and williams_r_1h >= -43) and 
+                (rsi_2h >= 68 and macd_2h >= 0.003579 and macd_signal_2h >= 0.002631 and macd_hist_2h >= 0.000948 and obv_2h >= 665966414 and obv_slope_2h >= 55309128 and adx_2h >= 68 and stochastic_k_2h >= 58 and stochastic_d_2h >= 67 and williams_r_2h >= -32) and 
+                (rsi_4h >= 72 and macd_4h >= 0.002997 and macd_signal_4h >= 0.001316 and macd_hist_4h >= 0.001682 and obv_4h >= 175509273 and obv_slope_4h >= 133721830 and adx_4h >= 84 and stochastic_k_4h >= 72 and stochastic_d_4h >= 80 and williams_r_4h >= -30)
+            )
+
+            # --- is_buy_momentum_14 ---
+            is_buy_momentum_14 = (
+                (rsi_1h >= 55 and macd_1h >= 0.000551 and macd_signal_1h >= 0.000756 and macd_hist_1h >= -0.000205 and obv_1h >= 656286294 and obv_slope_1h >= -40000625 and adx_1h >= 18 and stochastic_k_1h >= 20 and stochastic_d_1h >= 21 and williams_r_1h >= -77) and 
+                (rsi_2h >= 60 and macd_2h >= 0.001047 and macd_signal_2h >= 0.000978 and macd_hist_2h >= 0.000069 and obv_2h >= 15931330 and obv_slope_2h >= -48929958 and adx_2h >= 50 and stochastic_k_2h >= 42 and stochastic_d_2h >= 41 and williams_r_2h >= -54) and 
+                (rsi_4h >= 62 and macd_4h >= 0.00099 and macd_signal_4h >= 0.000549 and macd_hist_4h >= 0.000442 and obv_4h >= -8874902 and obv_slope_4h >= 228588341 and adx_4h >= 70 and stochastic_k_4h >= 45 and stochastic_d_4h >= 53 and williams_r_4h >= -54)
+            )
+
+            # --- is_buy_momentum_15 ---
+            is_buy_momentum_15 = (
+                (rsi_1h >= 52 and macd_1h >= 0.003264 and macd_signal_1h >= 0.004201 and macd_hist_1h >= -0.000936 and obv_1h >= -20364487 and obv_slope_1h >= -1999276 and adx_1h >= 6 and stochastic_k_1h >= 25 and stochastic_d_1h >= 27 and williams_r_1h >= -75) and 
+                (rsi_2h >= 56 and macd_2h >= 0.005096 and macd_signal_2h >= 0.004592 and macd_hist_2h >= 0.000504 and obv_2h >= -11876342 and obv_slope_2h >= -2128743 and adx_2h >= 61 and stochastic_k_2h >= 47 and stochastic_d_2h >= 48 and williams_r_2h >= -57) and 
+                (rsi_4h >= 57 and macd_4h >= 0.004334 and macd_signal_4h >= 0.001942 and macd_hist_4h >= 0.002392 and obv_4h >= -16348165 and obv_slope_4h >= -9729360 and adx_4h >= 61 and stochastic_k_4h >= 49 and stochastic_d_4h >= 57 and williams_r_4h >= -55)
+            )
+
+            # --- is_buy_momentum_16 ---
+            is_buy_momentum_16 = (
+                (rsi_1h >= 58 and macd_1h >= 0.000163 and macd_signal_1h >= -0.000299 and macd_hist_1h >= 0.000462 and obv_1h >= -951220 and obv_slope_1h >= 52889 and adx_1h >= 32 and stochastic_k_1h >= 81 and stochastic_d_1h >= 84 and williams_r_1h >= -6) and 
+                (rsi_2h >= 19 and macd_2h >= -0.003449 and macd_signal_2h >= -0.001989 and macd_hist_2h >= -0.00146 and obv_2h >= -16430054 and obv_slope_2h >= -13822190 and adx_2h >= 75 and stochastic_k_2h >= 48 and stochastic_d_2h >= 57 and williams_r_2h >= -80) and 
+                (rsi_4h >= 23 and macd_4h >= -0.004516 and macd_signal_4h >= -0.003436 and macd_hist_4h >= -0.001081 and obv_4h >= -30467877 and obv_slope_4h >= -18702271 and adx_4h >= 72 and stochastic_k_4h >= 51 and stochastic_d_4h >= 48 and williams_r_4h >= -61)
+            )
+
+            # --- is_buy_momentum_17 ---
+            is_buy_momentum_17 = (
+                (rsi_1h >= 43 and macd_1h >= -0.000206 and macd_signal_1h >= -0.000579 and macd_hist_1h >= 0.000373 and obv_1h >= -2089269 and obv_slope_1h >= -1138067 and adx_1h >= 57 and stochastic_k_1h >= 38 and stochastic_d_1h >= 54 and williams_r_1h >= -76) and 
+                (rsi_2h >= 30 and macd_2h >= -0.002577 and macd_signal_2h >= -0.002578 and macd_hist_2h >= 0 and obv_2h >= -11033814 and obv_slope_2h >= -1834276 and adx_2h >= 27 and stochastic_k_2h >= 45 and stochastic_d_2h >= 63 and williams_r_2h >= -98) and 
+                (rsi_4h >= 33 and macd_4h >= -0.003437 and macd_signal_4h >= -0.002696 and macd_hist_4h >= -0.000741 and obv_4h >= -104901272 and obv_slope_4h >= -2399759 and adx_4h >= 57 and stochastic_k_4h >= 34 and stochastic_d_4h >= 36 and williams_r_4h >= -82)
+            )
+
+            # --- is_buy_momentum_18 ---
+            is_buy_momentum_18 = (
+                (rsi_1h >= 77 and macd_1h >= 0.005101 and macd_signal_1h >= 0.002554 and macd_hist_1h >= 0.002547 and obv_1h >= -9263395 and obv_slope_1h >= 10956743 and adx_1h >= 83 and stochastic_k_1h >= 61 and stochastic_d_1h >= 51 and williams_r_1h >= -5)
+            )
+
+            # --- is_buy_momentum_19 ---
+            is_buy_momentum_19 = (
+                (rsi_1h >= 78 and macd_1h >= 0.032604 and macd_signal_1h >= 0.025312 and macd_hist_1h >= 0.007293 and obv_1h >= 21091417 and obv_slope_1h >= 985768 and adx_1h >= 68 and stochastic_k_1h >= 92 and stochastic_d_1h >= 90 and williams_r_1h >= -4) and 
+                (rsi_2h >= 75 and macd_2h >= 0.034653 and macd_signal_2h >= 0.022376 and macd_hist_2h >= 0.012277 and obv_2h >= 47103265 and obv_slope_2h >= 2661819 and adx_2h >= 80 and stochastic_k_2h >= 92 and stochastic_d_2h >= 88 and williams_r_2h >= -3) and 
+                (rsi_4h >= 74 and macd_4h >= 0.032885 and macd_signal_4h >= 0.012686 and macd_hist_4h >= 0.020199 and obv_4h >= -39796482 and obv_slope_4h >= 4177071 and adx_4h >= 53 and stochastic_k_4h >= 92 and stochastic_d_4h >= 91 and williams_r_4h >= -2)
+            )
+
+            # --- is_buy_momentum_20 ---
+            is_buy_momentum_20 = (
+                (rsi_1h >= 65 and macd_1h >= 0.000259 and macd_signal_1h >= 0.00021 and macd_hist_1h >= 0.000049 and obv_1h >= 2512287496 and obv_slope_1h >= 139378936 and adx_1h >= 57 and stochastic_k_1h >= 64 and stochastic_d_1h >= 70 and williams_r_1h >= -34) and 
+                (rsi_2h >= 71 and macd_2h >= 0.000281 and macd_signal_2h >= 0.00018 and macd_hist_2h >= 0.000101 and obv_2h >= 1262335968 and obv_slope_2h >= -274952861 and adx_2h >= 73 and stochastic_k_2h >= 80 and stochastic_d_2h >= 85 and williams_r_2h >= -28) and 
+                (rsi_4h >= 84 and macd_4h >= 0.000286 and macd_signal_4h >= 0.000174 and macd_hist_4h >= 0.000113 and obv_4h >= 3370786811 and obv_slope_4h >= 477547452 and adx_4h >= 63 and stochastic_k_4h >= 81 and stochastic_d_4h >= 81 and williams_r_4h >= -20)
+            )
+
+            # --- is_buy_momentum_21 ---
+            is_buy_momentum_21 = (
+                (rsi_1h >= 57 and macd_1h >= 0.012134 and macd_signal_1h >= 0.013036 and macd_hist_1h >= -0.000902 and obv_1h >= 63229788 and obv_slope_1h >= -2354142 and adx_1h >= 4 and stochastic_k_1h >= 55 and stochastic_d_1h >= 68 and williams_r_1h >= -57) and 
+                (rsi_2h >= 63 and macd_2h >= 0.016438 and macd_signal_2h >= 0.013308 and macd_hist_2h >= 0.00313 and obv_2h >= 349856312 and obv_slope_2h >= -4320184 and adx_2h >= 56 and stochastic_k_2h >= 78 and stochastic_d_2h >= 79 and williams_r_2h >= -31) and 
+                (rsi_4h >= 69 and macd_4h >= 0.017564 and macd_signal_4h >= 0.01152 and macd_hist_4h >= 0.006043 and obv_4h >= 683590313 and obv_slope_4h >= -19539215 and adx_4h >= 66 and stochastic_k_4h >= 82 and stochastic_d_4h >= 84 and williams_r_4h >= -31)
+            )
+
+            # --- is_buy_momentum_22 ---
+            is_buy_momentum_22 = (
+                (rsi_1h >= 94 and macd_1h >= 0.002377 and macd_signal_1h >= 0.000611 and macd_hist_1h >= 0.001766 and obv_1h >= 48660705 and obv_slope_1h >= 51265094 and adx_1h >= 87 and stochastic_k_1h >= 91 and stochastic_d_1h >= 82 and williams_r_1h >= -9) and 
+                (rsi_2h >= 90 and macd_2h >= 0.002182 and macd_signal_2h >= 0.00048 and macd_hist_2h >= 0.001702 and obv_2h >= 73907915 and obv_slope_2h >= 76033963 and adx_2h >= 91 and stochastic_k_2h >= 76 and stochastic_d_2h >= 66 and williams_r_2h >= -20) and 
+                (rsi_4h >= 85 and macd_4h >= 0.001695 and macd_signal_4h >= -0.000019 and macd_hist_4h >= 0.001714 and obv_4h >= -579890703 and obv_slope_4h >= 82118144 and adx_4h >= 88 and stochastic_k_4h >= 68 and stochastic_d_4h >= 59 and williams_r_4h >= -20)
+            )
+
+            # --- is_buy_momentum_23 ---
+            is_buy_momentum_23 = (
+                (rsi_1h >= 56 and macd_1h >= 0.002119 and macd_signal_1h >= 0.002902 and macd_hist_1h >= -0.000783 and obv_1h >= 154279248 and obv_slope_1h >= 24899766 and adx_1h >= 16 and stochastic_k_1h >= 35 and stochastic_d_1h >= 35 and williams_r_1h >= -56) and 
+                (rsi_2h >= 65 and macd_2h >= 0.004503 and macd_signal_2h >= 0.004343 and macd_hist_2h >= 0.00016 and obv_2h >= 337636682 and obv_slope_2h >= 36423987 and adx_2h >= 51 and stochastic_k_2h >= 62 and stochastic_d_2h >= 64 and williams_r_2h >= -36) and 
+                (rsi_4h >= 67 and macd_4h >= 0.00473 and macd_signal_4h >= 0.002989 and macd_hist_4h >= 0.00174 and obv_4h >= 280628996 and obv_slope_4h >= 82152130 and adx_4h >= 73 and stochastic_k_4h >= 68 and stochastic_d_4h >= 68 and williams_r_4h >= -33)
+            )
+
+            # --- is_buy_momentum_24 ---
+            is_buy_momentum_24 = (
+                (rsi_1h >= 73 and macd_1h >= 0.00113 and macd_signal_1h >= 0.00094 and macd_hist_1h >= 0.00019 and obv_1h >= 159999061 and obv_slope_1h >= 23951185 and adx_1h >= 79 and stochastic_k_1h >= 66 and stochastic_d_1h >= 58 and williams_r_1h >= -21) and 
+                (rsi_2h >= 75 and macd_2h >= 0.000993 and macd_signal_2h >= 0.000434 and macd_hist_2h >= 0.000559 and obv_2h >= 628111682 and obv_slope_2h >= 41700426 and adx_2h >= 86 and stochastic_k_2h >= 66 and stochastic_d_2h >= 58 and williams_r_2h >= -15) and 
+                (rsi_4h >= 67 and macd_4h >= 0.000505 and macd_signal_4h >= -0.000059 and macd_hist_4h >= 0.000565 and obv_4h >= 664950453 and obv_slope_4h >= 86054047 and adx_4h >= 86 and stochastic_k_4h >= 63 and stochastic_d_4h >= 56 and williams_r_4h >= -14)
+            )
+
+            # --- is_buy_momentum_25 ---
+            is_buy_momentum_25 = (
+                (rsi_1h >= 52 and macd_1h >= 0.001172 and macd_signal_1h >= 0.002789 and macd_hist_1h >= -0.001617 and obv_1h >= 393955653 and obv_slope_1h >= 23381382 and adx_1h >= 37 and stochastic_k_1h >= 28 and stochastic_d_1h >= 24 and williams_r_1h >= -64) and 
+                (rsi_2h >= 59 and macd_2h >= 0.006323 and macd_signal_2h >= 0.007465 and macd_hist_2h >= -0.001143 and obv_2h >= 644824028 and obv_slope_2h >= 34409706 and adx_2h >= 34 and stochastic_k_2h >= 42 and stochastic_d_2h >= 44 and williams_r_2h >= -48) and 
+                (rsi_4h >= 67 and macd_4h >= 0.00917 and macd_signal_4h >= 0.007616 and macd_hist_4h >= 0.001554 and obv_4h >= 695608420 and obv_slope_4h >= 53568438 and adx_4h >= 58 and stochastic_k_4h >= 65 and stochastic_d_4h >= 73 and williams_r_4h >= -29)
+            )
+
+            # --- is_buy_momentum_26 ---
+            is_buy_momentum_26 = (
+                (rsi_1h >= 90 and macd_1h >= 0.000347 and macd_signal_1h >= 0.000085 and macd_hist_1h >= 0.000262 and obv_1h >= 82937303 and obv_slope_1h >= 41065884 and adx_1h >= 94 and stochastic_k_1h >= 90 and stochastic_d_1h >= 91 and williams_r_1h >= -14) and 
+                (rsi_2h >= 90 and macd_2h >= 0.000355 and macd_signal_2h >= -0.00002 and macd_hist_2h >= 0.000375 and obv_2h >= 70063060 and obv_slope_2h >= 113107666 and adx_2h >= 92 and stochastic_k_2h >= 90 and stochastic_d_2h >= 78 and williams_r_2h >= -16) and 
+                (rsi_4h >= 85 and macd_4h >= 0.000257 and macd_signal_4h >= -0.00007 and macd_hist_4h >= 0.000328 and obv_4h >= 218059853 and obv_slope_4h >= 113107666 and adx_4h >= 71 and stochastic_k_4h >= 64 and stochastic_d_4h >= 42 and williams_r_4h >= -16)
+            )
+
+            # --- is_buy_momentum_27 ---
+            is_buy_momentum_27 = (
+                (rsi_1h >= 59 and macd_1h >= 0.005018 and macd_signal_1h >= 0.004626 and macd_hist_1h >= 0.000392 and obv_1h >= -7504692 and obv_slope_1h >= -1639915 and adx_1h >= 31 and stochastic_k_1h >= 47 and stochastic_d_1h >= 65 and williams_r_1h >= -65) and 
+                (rsi_2h >= 69 and macd_2h >= 0.0059 and macd_signal_2h >= 0.003388 and macd_hist_2h >= 0.002512 and obv_2h >= 5960740 and obv_slope_2h >= 4879500 and adx_2h >= 61 and stochastic_k_2h >= 82 and stochastic_d_2h >= 77 and williams_r_2h >= -16) and 
+                (rsi_4h >= 71 and macd_4h >= 0.005112 and macd_signal_4h >= 0.002482 and macd_hist_4h >= 0.00263 and obv_4h >= 41434993 and obv_slope_4h >= 4879500 and adx_4h >= 56 and stochastic_k_4h >= 70 and stochastic_d_4h >= 72 and williams_r_4h >= -16)
+            )
+
+            # --- is_buy_momentum_28 ---
+            is_buy_momentum_28 = (
+                (rsi_1h >= 57 and macd_1h >= 0.07434 and macd_signal_1h >= 0.068484 and macd_hist_1h >= 0.005856 and obv_1h >= 487255 and obv_slope_1h >= -117889 and adx_1h >= 87 and stochastic_k_1h >= 72 and stochastic_d_1h >= 76 and williams_r_1h >= -40) and 
+                (rsi_2h >= 64 and macd_2h >= 0.092218 and macd_signal_2h >= 0.072749 and macd_hist_2h >= 0.01947 and obv_2h >= -53948 and obv_slope_2h >= -310668 and adx_2h >= 92 and stochastic_k_2h >= 80 and stochastic_d_2h >= 79 and williams_r_2h >= -30) and 
+                (rsi_4h >= 74 and macd_4h >= 0.117087 and macd_signal_4h >= 0.085221 and macd_hist_4h >= 0.031865 and obv_4h >= 1510959 and obv_slope_4h >= 696989 and adx_4h >= 91 and stochastic_k_4h >= 83 and stochastic_d_4h >= 78 and williams_r_4h >= -12)
+            )
+
+            # --- is_buy_momentum_29 ---
+            is_buy_momentum_29 = (
+                (rsi_1h >= 19 and macd_1h >= -0.00462 and macd_signal_1h >= -0.003359 and macd_hist_1h >= -0.001261 and obv_1h >= -278525025 and obv_slope_1h >= -5492652 and adx_1h >= 42 and stochastic_k_1h >= 11 and stochastic_d_1h >= 14 and williams_r_1h >= -94) and 
+                (rsi_2h >= 25 and macd_2h >= -0.004985 and macd_signal_2h >= -0.003224 and macd_hist_2h >= -0.001761 and obv_2h >= 131795484 and obv_slope_2h >= -10011060 and adx_2h >= 67 and stochastic_k_2h >= 6 and stochastic_d_2h >= 6 and williams_r_2h >= -96) and 
+                (rsi_4h >= 40 and macd_4h >= -0.005154 and macd_signal_4h >= -0.003983 and macd_hist_4h >= -0.001171 and obv_4h >= 121423575 and obv_slope_4h >= 19240631 and adx_4h >= 9 and stochastic_k_4h >= 13 and stochastic_d_4h >= 7 and williams_r_4h >= -69)
+            )
+
+            # --- is_buy_momentum_30 ---
+            is_buy_momentum_30 = (
+                (rsi_1h >= 78 and macd_1h >= 0.002714 and macd_signal_1h >= 0.001548 and macd_hist_1h >= 0.001166 and obv_1h >= 250785576 and obv_slope_1h >= 32212084 and adx_1h >= 82 and stochastic_k_1h >= 69 and stochastic_d_1h >= 55 and williams_r_1h >= -2) and 
+                (rsi_2h >= 42 and macd_2h >= 0.00116 and macd_signal_2h >= 0.001371 and macd_hist_2h >= -0.000211 and obv_2h >= 61845733 and obv_slope_2h >= -148801718 and adx_2h >= 92 and stochastic_k_2h >= 37 and stochastic_d_2h >= 43 and williams_r_2h >= -92) and 
+                (rsi_4h >= 43 and macd_4h >= 0.001704 and macd_signal_4h >= 0.002326 and macd_hist_4h >= -0.000622 and obv_4h >= 386703980 and obv_slope_4h >= -252342771 and adx_4h >= 56 and stochastic_k_4h >= 35 and stochastic_d_4h >= 43 and williams_r_4h >= -94)
+            )
+
+            # --- is_buy_momentum_31 ---
+            is_buy_momentum_31 = (
+                (rsi_1h >= 60 and macd_1h >= 0.013322 and macd_signal_1h >= 0.003024 and macd_hist_1h >= 0.010298 and obv_1h >= 1014064 and obv_slope_1h >= 44651 and adx_1h >= 50 and stochastic_k_1h >= 32 and stochastic_d_1h >= 23 and williams_r_1h >= -52) and 
+                (rsi_2h >= 56 and macd_2h >= -0.012217 and macd_signal_2h >= -0.030793 and macd_hist_2h >= 0.018576 and obv_2h >= -333384 and obv_slope_2h >= 113779 and adx_2h >= 56 and stochastic_k_2h >= 24 and stochastic_d_2h >= 22 and williams_r_2h >= -52) and 
+                (rsi_4h >= 68 and macd_4h >= -0.068093 and macd_signal_4h >= -0.168144 and macd_hist_4h >= 0.100052 and obv_4h >= 1807409 and obv_slope_4h >= 244215 and adx_4h >= 69 and stochastic_k_4h >= 42 and stochastic_d_4h >= 25 and williams_r_4h >= -11)
+            )
+
+            # --- is_buy_momentum_32 ---
+            is_buy_momentum_32 = (
+                (rsi_1h >= 74 and macd_1h >= 0.000232 and macd_signal_1h >= 0.00006 and macd_hist_1h >= 0.000171 and obv_1h >= -22271280 and obv_slope_1h >= 16098845 and adx_1h >= 66 and stochastic_k_1h >= 83 and stochastic_d_1h >= 85 and williams_r_1h >= -1) and 
+                (rsi_2h >= 77 and macd_2h >= 0.00019 and macd_signal_2h >= -0.000259 and macd_hist_2h >= 0.000449 and obv_2h >= 6133102 and obv_slope_2h >= 72591284 and adx_2h >= 71 and stochastic_k_2h >= 92 and stochastic_d_2h >= 87 and williams_r_2h >= -2) and 
+                (rsi_4h >= 68 and macd_4h >= -0.00034 and macd_signal_4h >= -0.000782 and macd_hist_4h >= 0.000442 and obv_4h >= 172271212 and obv_slope_4h >= 171504346 and adx_4h >= 56 and stochastic_k_4h >= 50 and stochastic_d_4h >= 36 and williams_r_4h >= -27)
+            )
+
             # --- إدراج_شروط_زخم_شراء ---
             
 
+            # --- is_sell_indicator_1 ---
+            is_sell_indicator_1 = (
+                (supertrend_1h < parabolic_sar_1h < ichimoku_conversion_1h < ema_200_1h < ema_100_1h < ema_20_1h < ema_50_1h < bb_middle_1h < kc_upper_1h < ichimoku_cloud_bottom_1h < ichimoku_base_1h) and 
+                (supertrend_2h < parabolic_sar_2h < ema_200_2h < ema_100_2h < ema_50_2h < ema_20_2h < bb_middle_2h < ichimoku_conversion_2h < kc_upper_2h < ichimoku_cloud_bottom_2h < ichimoku_base_2h)
+            )
+
+            # --- is_sell_indicator_2 ---
+            is_sell_indicator_2 = (
+                (ichimoku_conversion_1h < parabolic_sar_1h < ema_200_1h < ema_20_1h < bb_middle_1h < ema_100_1h < ema_50_1h < kc_upper_1h < supertrend_1h < ichimoku_cloud_bottom_1h < ichimoku_base_1h) and 
+                (ema_200_2h < ema_100_2h < ema_50_2h < ema_20_2h < ichimoku_conversion_2h < parabolic_sar_2h < bb_middle_2h < kc_upper_2h < supertrend_2h < ichimoku_base_2h < ichimoku_cloud_bottom_2h) and 
+                (ema_200_4h < ema_100_4h < ema_50_4h < bb_middle_4h < ema_20_4h < kc_upper_4h < supertrend_4h < ichimoku_cloud_bottom_4h < ichimoku_base_4h < ichimoku_conversion_4h < parabolic_sar_4h)
+            )
+
+            # --- is_sell_indicator_3 ---
+            is_sell_indicator_3 = (
+                (parabolic_sar_1h < ichimoku_conversion_1h < ema_20_1h < bb_middle_1h < ema_200_1h < supertrend_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ichimoku_base_1h < ichimoku_cloud_bottom_1h) and 
+                (supertrend_2h < parabolic_sar_2h < ema_200_2h < ichimoku_conversion_2h < ema_100_2h < ema_20_2h < ema_50_2h < bb_middle_2h < ichimoku_base_2h < ichimoku_cloud_bottom_2h < kc_upper_2h) and 
+                (supertrend_4h < ema_200_4h < parabolic_sar_4h < ema_100_4h < ema_50_4h < ema_20_4h < bb_middle_4h < ichimoku_conversion_4h < ichimoku_base_4h < ichimoku_cloud_bottom_4h < kc_upper_4h)
+            )
+
+            # --- is_sell_indicator_4 ---
+            is_sell_indicator_4 = (
+                (ichimoku_conversion_1h < parabolic_sar_1h < ema_20_1h < bb_middle_1h < ichimoku_base_1h < supertrend_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ichimoku_cloud_bottom_1h < ema_200_1h) and 
+                (supertrend_2h < parabolic_sar_2h < ichimoku_conversion_2h < ema_20_2h < bb_middle_2h < ema_50_2h < ichimoku_base_2h < ichimoku_cloud_bottom_2h < kc_upper_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < bb_middle_4h < supertrend_4h < ichimoku_base_4h < parabolic_sar_4h < ichimoku_cloud_bottom_4h < kc_upper_4h < ema_50_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_5 ---
+            is_sell_indicator_5 = (
+                (ichimoku_conversion_1h < ema_20_1h < ichimoku_base_1h < parabolic_sar_1h < bb_middle_1h < ema_50_1h < supertrend_1h < ichimoku_cloud_bottom_1h < ema_100_1h < kc_upper_1h < ema_200_1h) and 
+                (supertrend_2h < parabolic_sar_2h < ichimoku_conversion_2h < ema_20_2h < bb_middle_2h < ichimoku_base_2h < ichimoku_cloud_bottom_2h < ema_50_2h < ema_100_2h < kc_upper_2h < ema_200_2h) and 
+                (supertrend_4h < parabolic_sar_4h < ichimoku_conversion_4h < ema_20_4h < ichimoku_base_4h < bb_middle_4h < ichimoku_cloud_bottom_4h < ema_50_4h < kc_upper_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_6 ---
+            is_sell_indicator_6 = (
+                (parabolic_sar_1h < ichimoku_conversion_1h < supertrend_1h < bb_middle_1h < ema_20_1h < ema_200_1h < kc_upper_1h < ema_50_1h < ema_100_1h < ichimoku_base_1h < ichimoku_cloud_bottom_1h) and 
+                (ema_200_2h < ichimoku_conversion_2h < ema_100_2h < supertrend_2h < ema_20_2h < ema_50_2h < parabolic_sar_2h < bb_middle_2h < ichimoku_cloud_bottom_2h < ichimoku_base_2h < kc_upper_2h) and 
+                (ema_200_4h < ema_100_4h < ema_50_4h < ema_20_4h < bb_middle_4h < ichimoku_base_4h < ichimoku_cloud_bottom_4h < supertrend_4h < ichimoku_conversion_4h < kc_upper_4h < parabolic_sar_4h)
+            )
+
+            # --- is_sell_indicator_7 ---
+            is_sell_indicator_7 = (
+                (supertrend_1h < parabolic_sar_1h < ichimoku_conversion_1h < ichimoku_base_1h < ema_20_1h < bb_middle_1h < ichimoku_cloud_bottom_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < supertrend_2h < ichimoku_base_2h < ema_20_2h < bb_middle_2h < parabolic_sar_2h < ichimoku_cloud_bottom_2h < ema_50_2h < ema_100_2h < kc_upper_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < ichimoku_base_4h < ichimoku_cloud_bottom_4h < supertrend_4h < bb_middle_4h < parabolic_sar_4h < ema_50_4h < ema_100_4h < kc_upper_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_8 ---
+            is_sell_indicator_8 = (
+                (ema_20_1h < bb_middle_1h < ichimoku_conversion_1h < ichimoku_base_1h < ichimoku_cloud_bottom_1h < parabolic_sar_1h < supertrend_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ema_20_2h < bb_middle_2h < ichimoku_conversion_2h < ichimoku_base_2h < supertrend_2h < ema_50_2h < ichimoku_cloud_bottom_2h < kc_upper_2h < parabolic_sar_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < ichimoku_base_4h < bb_middle_4h < supertrend_4h < parabolic_sar_4h < ichimoku_cloud_bottom_4h < kc_upper_4h < ema_50_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_9 ---
+            is_sell_indicator_9 = (
+                (supertrend_1h < parabolic_sar_1h < ema_20_1h < bb_middle_1h < ichimoku_conversion_1h < ichimoku_base_1h < ema_50_1h < ichimoku_cloud_bottom_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ema_20_2h < bb_middle_2h < ichimoku_base_2h < supertrend_2h < parabolic_sar_2h < ema_50_2h < kc_upper_2h < ichimoku_cloud_bottom_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < parabolic_sar_4h < bb_middle_4h < supertrend_4h < ichimoku_base_4h < kc_upper_4h < ema_50_4h < ichimoku_cloud_bottom_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_10 ---
+            is_sell_indicator_10 = (
+                (ema_20_1h < bb_middle_1h < ema_50_1h < parabolic_sar_1h < ema_100_1h < supertrend_1h < ichimoku_conversion_1h < ichimoku_base_1h < ichimoku_cloud_bottom_1h < kc_upper_1h < ema_200_1h) and 
+                (bb_middle_2h < ema_20_2h < ema_50_2h < ichimoku_conversion_2h < ichimoku_base_2h < ichimoku_cloud_bottom_2h < kc_upper_2h < supertrend_2h < parabolic_sar_2h < ema_100_2h < ema_200_2h) and 
+                (ema_20_4h < bb_middle_4h < ichimoku_conversion_4h < ichimoku_base_4h < supertrend_4h < kc_upper_4h < ema_50_4h < parabolic_sar_4h < ema_100_4h < ichimoku_cloud_bottom_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_11 ---
+            is_sell_indicator_11 = (
+                (ichimoku_conversion_1h < parabolic_sar_1h < ema_20_1h < bb_middle_1h < ichimoku_base_1h < ichimoku_cloud_bottom_1h < ema_50_1h < supertrend_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ema_20_2h < ichimoku_base_2h < bb_middle_2h < ichimoku_cloud_bottom_2h < supertrend_2h < ema_50_2h < parabolic_sar_2h < kc_upper_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < ichimoku_base_4h < bb_middle_4h < supertrend_4h < parabolic_sar_4h < ichimoku_cloud_bottom_4h < kc_upper_4h < ema_50_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_12 ---
+            is_sell_indicator_12 = (
+                (ichimoku_conversion_1h < supertrend_1h < ema_20_1h < ichimoku_base_1h < parabolic_sar_1h < bb_middle_1h < ichimoku_cloud_bottom_1h < kc_upper_1h < ema_50_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ichimoku_base_2h < supertrend_2h < ema_20_2h < bb_middle_2h < ichimoku_cloud_bottom_2h < parabolic_sar_2h < kc_upper_2h < ema_50_2h < ema_100_2h < ema_200_2h) and 
+                (supertrend_4h < parabolic_sar_4h < ichimoku_conversion_4h < ichimoku_base_4h < ema_20_4h < bb_middle_4h < kc_upper_4h < ema_50_4h < ema_100_4h < ema_200_4h < ichimoku_cloud_bottom_4h)
+            )
+
+            # --- is_sell_indicator_13 ---
+            is_sell_indicator_13 = (
+                (ichimoku_conversion_1h < ichimoku_base_1h < parabolic_sar_1h < ema_20_1h < bb_middle_1h < supertrend_1h < ichimoku_cloud_bottom_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ichimoku_base_2h < ema_20_2h < bb_middle_2h < parabolic_sar_2h < supertrend_2h < kc_upper_2h < ichimoku_cloud_bottom_2h < ema_50_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < parabolic_sar_4h < supertrend_4h < ema_20_4h < bb_middle_4h < ichimoku_base_4h < kc_upper_4h < ichimoku_cloud_bottom_4h < ema_50_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_14 ---
+            is_sell_indicator_14 = (
+                (ichimoku_conversion_1h < ichimoku_base_1h < ema_20_1h < bb_middle_1h < supertrend_1h < parabolic_sar_1h < ichimoku_cloud_bottom_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ichimoku_base_2h < supertrend_2h < ema_20_2h < parabolic_sar_2h < bb_middle_2h < ichimoku_cloud_bottom_2h < kc_upper_2h < ema_50_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ichimoku_base_4h < supertrend_4h < parabolic_sar_4h < ema_20_4h < bb_middle_4h < ichimoku_cloud_bottom_4h < kc_upper_4h < ema_50_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_15 ---
+            is_sell_indicator_15 = (
+                (ichimoku_conversion_1h < bb_middle_1h < ema_20_1h < ichimoku_base_1h < ema_50_1h < parabolic_sar_1h < kc_upper_1h < supertrend_1h < ema_100_1h < ichimoku_cloud_bottom_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < bb_middle_2h < ema_20_2h < parabolic_sar_2h < ema_50_2h < ichimoku_base_2h < supertrend_2h < kc_upper_2h < ichimoku_cloud_bottom_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < parabolic_sar_4h < bb_middle_4h < ichimoku_base_4h < ichimoku_cloud_bottom_4h < ema_50_4h < supertrend_4h < kc_upper_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_16 ---
+            is_sell_indicator_16 = (
+                (supertrend_1h < parabolic_sar_1h < ichimoku_conversion_1h < ema_20_1h < ichimoku_base_1h < bb_middle_1h < kc_upper_1h < ema_50_1h < ichimoku_cloud_bottom_1h < ema_100_1h < ema_200_1h) and 
+                (supertrend_2h < parabolic_sar_2h < ichimoku_conversion_2h < ema_20_2h < bb_middle_2h < ichimoku_base_2h < kc_upper_2h < ema_50_2h < ichimoku_cloud_bottom_2h < ema_100_2h < ema_200_2h) and 
+                (supertrend_4h < parabolic_sar_4h < ichimoku_conversion_4h < bb_middle_4h < ema_20_4h < ichimoku_base_4h < kc_upper_4h < ichimoku_cloud_bottom_4h < ema_50_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_17 ---
+            is_sell_indicator_17 = (
+                (ichimoku_conversion_1h < ichimoku_base_1h < ema_20_1h < bb_middle_1h < parabolic_sar_1h < ichimoku_cloud_bottom_1h < supertrend_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ichimoku_base_2h < ema_20_2h < bb_middle_2h < parabolic_sar_2h < supertrend_2h < ema_50_2h < kc_upper_2h < ichimoku_cloud_bottom_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < parabolic_sar_4h < bb_middle_4h < supertrend_4h < ichimoku_base_4h < ichimoku_cloud_bottom_4h < ema_50_4h < kc_upper_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_18 ---
+            is_sell_indicator_18 = (
+                (ichimoku_conversion_1h < ema_20_1h < bb_middle_1h < ichimoku_base_1h < ichimoku_cloud_bottom_1h < supertrend_1h < parabolic_sar_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ichimoku_base_2h < ema_20_2h < bb_middle_2h < ichimoku_cloud_bottom_2h < supertrend_2h < parabolic_sar_2h < ema_50_2h < kc_upper_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < bb_middle_4h < ichimoku_base_4h < supertrend_4h < parabolic_sar_4h < kc_upper_4h < ema_50_4h < ichimoku_cloud_bottom_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_19 ---
+            is_sell_indicator_19 = (
+                (ichimoku_conversion_1h < ema_20_1h < bb_middle_1h < ichimoku_base_1h < parabolic_sar_1h < supertrend_1h < ichimoku_cloud_bottom_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ichimoku_base_2h < ema_20_2h < bb_middle_2h < supertrend_2h < parabolic_sar_2h < ema_50_2h < ichimoku_cloud_bottom_2h < kc_upper_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ichimoku_base_4h < ema_20_4h < bb_middle_4h < supertrend_4h < parabolic_sar_4h < ema_50_4h < ichimoku_cloud_bottom_4h < kc_upper_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_20 ---
+            is_sell_indicator_20 = (
+                (supertrend_1h < parabolic_sar_1h < ichimoku_conversion_1h < ema_20_1h < ichimoku_base_1h < bb_middle_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h < ichimoku_cloud_bottom_1h) and 
+                (supertrend_2h < parabolic_sar_2h < ichimoku_conversion_2h < ema_20_2h < bb_middle_2h < ema_50_2h < ema_100_2h < kc_upper_2h < ichimoku_base_2h < ichimoku_cloud_bottom_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < bb_middle_4h < parabolic_sar_4h < ema_50_4h < ichimoku_base_4h < ema_100_4h < supertrend_4h < kc_upper_4h < ichimoku_cloud_bottom_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_21 ---
+            is_sell_indicator_21 = (
+                (ema_20_1h < bb_middle_1h < parabolic_sar_1h < ichimoku_conversion_1h < ichimoku_base_1h < supertrend_1h < ichimoku_cloud_bottom_1h < ema_50_1h < kc_upper_1h < ema_100_1h < ema_200_1h) and 
+                (bb_middle_2h < ichimoku_conversion_2h < ema_20_2h < ichimoku_base_2h < supertrend_2h < kc_upper_2h < parabolic_sar_2h < ichimoku_cloud_bottom_2h < ema_50_2h < ema_100_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < bb_middle_4h < ema_20_4h < parabolic_sar_4h < supertrend_4h < ichimoku_base_4h < kc_upper_4h < ema_50_4h < ichimoku_cloud_bottom_4h < ema_100_4h < ema_200_4h)
+            )
+
+            # --- is_sell_indicator_22 ---
+            is_sell_indicator_22 = (
+                (supertrend_1h < parabolic_sar_1h < ichimoku_conversion_1h < ema_20_1h < bb_middle_1h < ichimoku_base_1h < ema_50_1h < ema_100_1h < ichimoku_cloud_bottom_1h < kc_upper_1h < ema_200_1h) and 
+                (ichimoku_conversion_2h < ema_20_2h < bb_middle_2h < parabolic_sar_2h < ema_50_2h < ichimoku_base_2h < supertrend_2h < kc_upper_2h < ema_100_2h < ichimoku_cloud_bottom_2h < ema_200_2h) and 
+                (ichimoku_conversion_4h < ema_20_4h < bb_middle_4h < parabolic_sar_4h < ichimoku_base_4h < ichimoku_cloud_bottom_4h < supertrend_4h < ema_50_4h < kc_upper_4h < ema_100_4h < ema_200_4h)
+            )
+
             # --- إدراج_شروط_مؤشرات_بيع ---
             
+            # --- is_sell_momentum_1 ---
+            is_sell_momentum_1 = (
+                (rsi_1h <= 44 and macd_1h <= -0.001707 and macd_signal_1h <= -0.001349 and macd_hist_1h <= -0.000358 and obv_1h <= 965220172 and obv_slope_1h <= 38682805 and adx_1h <= 6 and stochastic_k_1h <= 36 and stochastic_d_1h <= 25 and williams_r_1h <= -61) and 
+                (rsi_2h <= 46 and macd_2h <= -0.00004 and macd_signal_2h <= 0.00133 and macd_hist_2h <= -0.001371 and obv_2h <= 1562630642 and obv_slope_2h <= 96172354 and adx_2h <= 18 and stochastic_k_2h <= 3 and stochastic_d_2h <= 3 and williams_r_2h <= -96)
+            )
+
+            # --- is_sell_momentum_2 ---
+            is_sell_momentum_2 = (
+                (rsi_1h <= 42 and macd_1h <= -0.002963 and macd_signal_1h <= -0.002436 and macd_hist_1h <= -0.000527 and obv_1h <= -44700803 and obv_slope_1h <= -2781009 and adx_1h <= 10 and stochastic_k_1h <= 17 and stochastic_d_1h <= 14 and williams_r_1h <= -87) and 
+                (rsi_2h <= 45 and macd_2h <= -0.000904 and macd_signal_2h <= 0.000956 and macd_hist_2h <= -0.00186 and obv_2h <= 9047224 and obv_slope_2h <= -6643250 and adx_2h <= 58 and stochastic_k_2h <= 2 and stochastic_d_2h <= 2 and williams_r_2h <= -98) and 
+                (rsi_4h <= 47 and macd_4h <= 0.001365 and macd_signal_4h <= 0.002712 and macd_hist_4h <= -0.001347 and obv_4h <= -30221446 and obv_slope_4h <= -10847104 and adx_4h <= 76 and stochastic_k_4h <= 6 and stochastic_d_4h <= 6 and williams_r_4h <= -93)
+            )
+
+            # --- is_sell_momentum_3 ---
+            is_sell_momentum_3 = (
+                (rsi_1h <= 29 and macd_1h <= -0.011412 and macd_signal_1h <= -0.010862 and macd_hist_1h <= -0.00055 and obv_1h <= 81294633 and obv_slope_1h <= -1991721 and adx_1h <= 39 and stochastic_k_1h <= 6 and stochastic_d_1h <= 5 and williams_r_1h <= -93) and 
+                (rsi_2h <= 34 and macd_2h <= -0.009644 and macd_signal_2h <= -0.004356 and macd_hist_2h <= -0.005288 and obv_2h <= 67931291 and obv_slope_2h <= 2139311 and adx_2h <= 57 and stochastic_k_2h <= 2 and stochastic_d_2h <= 3 and williams_r_2h <= -96) and 
+                (rsi_4h <= 39 and macd_4h <= -0.003874 and macd_signal_4h <= 0.00161 and macd_hist_4h <= -0.005484 and obv_4h <= 111910826 and obv_slope_4h <= 4198647 and adx_4h <= 12 and stochastic_k_4h <= 5 and stochastic_d_4h <= 6 and williams_r_4h <= -96)
+            )
+
+            # --- is_sell_momentum_4 ---
+            is_sell_momentum_4 = (
+                (rsi_1h <= 32 and macd_1h <= -0.000316 and macd_signal_1h <= -0.000277 and macd_hist_1h <= -0.000039 and obv_1h <= -28611767 and obv_slope_1h <= 0 and adx_1h <= 100 and stochastic_k_1h <= 13 and stochastic_d_1h <= 9 and williams_r_1h <= -83) and 
+                (rsi_2h <= 27 and macd_2h <= -0.000403 and macd_signal_2h <= -0.000308 and macd_hist_2h <= -0.000096 and obv_2h <= -631148516 and obv_slope_2h <= 24174968 and adx_2h <= 37 and stochastic_k_2h <= 5 and stochastic_d_2h <= 7 and williams_r_2h <= -88) and 
+                (rsi_4h <= 21 and macd_4h <= -0.00053 and macd_signal_4h <= -0.000425 and macd_hist_4h <= -0.000105 and obv_4h <= -89371387 and obv_slope_4h <= 0 and adx_4h <= 5 and stochastic_k_4h <= 9 and stochastic_d_4h <= 7 and williams_r_4h <= -86)
+            )
+
+            # --- is_sell_momentum_5 ---
+            is_sell_momentum_5 = (
+                (rsi_1h <= 24 and macd_1h <= -0.000053 and macd_signal_1h <= -0.00004 and macd_hist_1h <= -0.000013 and obv_1h <= 298877196 and obv_slope_1h <= -162676785 and adx_1h <= 50 and stochastic_k_1h <= 11 and stochastic_d_1h <= 9 and williams_r_1h <= -84) and 
+                (rsi_2h <= 24 and macd_2h <= -0.000053 and macd_signal_2h <= -0.000032 and macd_hist_2h <= -0.000021 and obv_2h <= -3463260794 and obv_slope_2h <= 460326466 and adx_2h <= 20 and stochastic_k_2h <= 8 and stochastic_d_2h <= 8 and williams_r_2h <= -87) and 
+                (rsi_4h <= 25 and macd_4h <= -0.000052 and macd_signal_4h <= -0.000032 and macd_hist_4h <= -0.000021 and obv_4h <= 4147246898 and obv_slope_4h <= 700803963 and adx_4h <= 13 and stochastic_k_4h <= 7 and stochastic_d_4h <= 7 and williams_r_4h <= -90)
+            )
+
+            # --- is_sell_momentum_6 ---
+            is_sell_momentum_6 = (
+                (rsi_1h <= 19 and macd_1h <= -0.0338 and macd_signal_1h <= -0.029484 and macd_hist_1h <= -0.004316 and obv_1h <= 9480576 and obv_slope_1h <= -91351 and adx_1h <= 77 and stochastic_k_1h <= 7 and stochastic_d_1h <= 6 and williams_r_1h <= -90) and 
+                (rsi_2h <= 25 and macd_2h <= -0.029736 and macd_signal_2h <= -0.013914 and macd_hist_2h <= -0.015822 and obv_2h <= 60118922 and obv_slope_2h <= -133677 and adx_2h <= 46 and stochastic_k_2h <= 2 and stochastic_d_2h <= 3 and williams_r_2h <= -96) and 
+                (rsi_4h <= 34 and macd_4h <= -0.006644 and macd_signal_4h <= 0.012892 and macd_hist_4h <= -0.019537 and obv_4h <= 49158874 and obv_slope_4h <= -411735 and adx_4h <= 25 and stochastic_k_4h <= 3 and stochastic_d_4h <= 4 and williams_r_4h <= -96)
+            )
+
+            # --- is_sell_momentum_7 ---
+            is_sell_momentum_7 = (
+                (rsi_1h <= 20 and macd_1h <= -0.000434 and macd_signal_1h <= -0.000301 and macd_hist_1h <= -0.000133 and obv_1h <= -136117721 and obv_slope_1h <= 4408260 and adx_1h <= 90 and stochastic_k_1h <= 11 and stochastic_d_1h <= 7 and williams_r_1h <= -85) and 
+                (rsi_2h <= 14 and macd_2h <= -0.000436 and macd_signal_2h <= -0.000278 and macd_hist_2h <= -0.000158 and obv_2h <= 103008101 and obv_slope_2h <= -22305806 and adx_2h <= 73 and stochastic_k_2h <= 7 and stochastic_d_2h <= 7 and williams_r_2h <= -86) and 
+                (rsi_4h <= 22 and macd_4h <= -0.000429 and macd_signal_4h <= -0.000197 and macd_hist_4h <= -0.000233 and obv_4h <= 562860607 and obv_slope_4h <= -35249914 and adx_4h <= 64 and stochastic_k_4h <= 5 and stochastic_d_4h <= 6 and williams_r_4h <= -97)
+            )
+
+            # --- is_sell_momentum_8 ---
+            is_sell_momentum_8 = (
+                (rsi_1h <= 33 and macd_1h <= -0.004164 and macd_signal_1h <= -0.003562 and macd_hist_1h <= -0.000602 and obv_1h <= 153478188 and obv_slope_1h <= -7640934 and adx_1h <= 6 and stochastic_k_1h <= 3 and stochastic_d_1h <= 5 and williams_r_1h <= -93) and 
+                (rsi_2h <= 26 and macd_2h <= -0.006806 and macd_signal_2h <= -0.006092 and macd_hist_2h <= -0.000714 and obv_2h <= 254037326 and obv_slope_2h <= -17043188 and adx_2h <= 22 and stochastic_k_2h <= 6 and stochastic_d_2h <= 12 and williams_r_2h <= -93) and 
+                (rsi_4h <= 19 and macd_4h <= -0.011433 and macd_signal_4h <= -0.009222 and macd_hist_4h <= -0.002211 and obv_4h <= -53703113 and obv_slope_4h <= -40419050 and adx_4h <= 49 and stochastic_k_4h <= 7 and stochastic_d_4h <= 8 and williams_r_4h <= -99)
+            )
+
+            # --- is_sell_momentum_9 ---
+            is_sell_momentum_9 = (
+                (rsi_1h <= 27 and macd_1h <= -0.000129 and macd_signal_1h <= -0.000108 and macd_hist_1h <= -0.000022 and obv_1h <= -791179741 and obv_slope_1h <= 30708257 and adx_1h <= 6 and stochastic_k_1h <= 9 and stochastic_d_1h <= 13 and williams_r_1h <= -92) and 
+                (rsi_2h <= 20 and macd_2h <= -0.000189 and macd_signal_2h <= -0.000165 and macd_hist_2h <= -0.000024 and obv_2h <= -956772223 and obv_slope_2h <= -60890658 and adx_2h <= 28 and stochastic_k_2h <= 15 and stochastic_d_2h <= 22 and williams_r_2h <= -92) and 
+                (rsi_4h <= 18 and macd_4h <= -0.000309 and macd_signal_4h <= -0.00028 and macd_hist_4h <= -0.000029 and obv_4h <= -1202947870 and obv_slope_4h <= -151315651 and adx_4h <= 36 and stochastic_k_4h <= 13 and stochastic_d_4h <= 13 and williams_r_4h <= -88)
+            )
+
+            # --- is_sell_momentum_10 ---
+            is_sell_momentum_10 = (
+                (rsi_1h <= 35 and macd_1h <= -0.001406 and macd_signal_1h <= -0.000334 and macd_hist_1h <= -0.001072 and obv_1h <= -84864336 and obv_slope_1h <= -3728531 and adx_1h <= 27 and stochastic_k_1h <= 3 and stochastic_d_1h <= 5 and williams_r_1h <= -97) and 
+                (rsi_2h <= 37 and macd_2h <= -0.002601 and macd_signal_2h <= -0.002405 and macd_hist_2h <= -0.000196 and obv_2h <= -86050748 and obv_slope_2h <= -6009192 and adx_2h <= 37 and stochastic_k_2h <= 2 and stochastic_d_2h <= 12 and williams_r_2h <= -97) and 
+                (rsi_4h <= 30 and macd_4h <= -0.008414 and macd_signal_4h <= -0.00928 and macd_hist_4h <= 0.000866 and obv_4h <= -55657699 and obv_slope_4h <= -11643042 and adx_4h <= 11 and stochastic_k_4h <= 10 and stochastic_d_4h <= 11 and williams_r_4h <= -98)
+            )
+
+            # --- is_sell_momentum_11 ---
+            is_sell_momentum_11 = (
+                (rsi_1h <= 31 and macd_1h <= -0.000322 and macd_signal_1h <= -0.000277 and macd_hist_1h <= -0.000045 and obv_1h <= -103855213 and obv_slope_1h <= -12592192 and adx_1h <= 55 and stochastic_k_1h <= 16 and stochastic_d_1h <= 13 and williams_r_1h <= -88) and 
+                (rsi_2h <= 25 and macd_2h <= -0.000429 and macd_signal_2h <= -0.000356 and macd_hist_2h <= -0.000073 and obv_2h <= -79016684 and obv_slope_2h <= -25914662 and adx_2h <= 52 and stochastic_k_2h <= 11 and stochastic_d_2h <= 8 and williams_r_2h <= -88) and 
+                (rsi_4h <= 21 and macd_4h <= -0.000609 and macd_signal_4h <= -0.000488 and macd_hist_4h <= -0.000121 and obv_4h <= -525626035 and obv_slope_4h <= -57079523 and adx_4h <= 61 and stochastic_k_4h <= 6 and stochastic_d_4h <= 9 and williams_r_4h <= -100)
+            )
+
+            # --- is_sell_momentum_12 ---
+            is_sell_momentum_12 = (
+                (rsi_1h <= 17 and macd_1h <= -0.000028 and macd_signal_1h <= -0.00002 and macd_hist_1h <= -0.000008 and obv_1h <= -2302921346 and obv_slope_1h <= -637179705 and adx_1h <= 100 and stochastic_k_1h <= 5 and stochastic_d_1h <= 7 and williams_r_1h <= -98) and 
+                (rsi_2h <= 17 and macd_2h <= -0.000029 and macd_signal_2h <= -0.00002 and macd_hist_2h <= -0.00001 and obv_2h <= -17924544143 and obv_slope_2h <= -1259793281 and adx_2h <= 75 and stochastic_k_2h <= 4 and stochastic_d_2h <= 5 and williams_r_2h <= -98) and 
+                (rsi_4h <= 23 and macd_4h <= -0.000045 and macd_signal_4h <= -0.00004 and macd_hist_4h <= -0.000005 and obv_4h <= -23461938205 and obv_slope_4h <= 2274909658 and adx_4h <= 57 and stochastic_k_4h <= 5 and stochastic_d_4h <= 4 and williams_r_4h <= -92)
+            )
+
+            # --- is_sell_momentum_13 ---
+            is_sell_momentum_13 = (
+                (rsi_1h <= 24 and macd_1h <= -0.000273 and macd_signal_1h <= -0.000237 and macd_hist_1h <= -0.000037 and obv_1h <= 49832733 and obv_slope_1h <= -8346811 and adx_1h <= 66 and stochastic_k_1h <= 15 and stochastic_d_1h <= 15 and williams_r_1h <= -90) and 
+                (rsi_2h <= 18 and macd_2h <= -0.000389 and macd_signal_2h <= -0.000327 and macd_hist_2h <= -0.000062 and obv_2h <= -665629569 and obv_slope_2h <= -15075026 and adx_2h <= 100 and stochastic_k_2h <= 10 and stochastic_d_2h <= 12 and williams_r_2h <= -92) and 
+                (rsi_4h <= 18 and macd_4h <= -0.000568 and macd_signal_4h <= -0.000484 and macd_hist_4h <= -0.000084 and obv_4h <= -464817032 and obv_slope_4h <= -59068768 and adx_4h <= 90 and stochastic_k_4h <= 11 and stochastic_d_4h <= 9 and williams_r_4h <= -85)
+            )
+
+            # --- is_sell_momentum_14 ---
+            is_sell_momentum_14 = (
+                (rsi_1h <= 16 and macd_1h <= -0.000487 and macd_signal_1h <= -0.000376 and macd_hist_1h <= -0.000111 and obv_1h <= 19295518 and obv_slope_1h <= -14086737 and adx_1h <= 80 and stochastic_k_1h <= 12 and stochastic_d_1h <= 11 and williams_r_1h <= -95) and 
+                (rsi_2h <= 13 and macd_2h <= -0.000671 and macd_signal_2h <= -0.000531 and macd_hist_2h <= -0.00014 and obv_2h <= -852197920 and obv_slope_2h <= -38862272 and adx_2h <= 93 and stochastic_k_2h <= 4 and stochastic_d_2h <= 8 and williams_r_2h <= -96) and 
+                (rsi_4h <= 15 and macd_4h <= -0.000904 and macd_signal_4h <= -0.000711 and macd_hist_4h <= -0.000193 and obv_4h <= -897212774 and obv_slope_4h <= -65387479 and adx_4h <= 85 and stochastic_k_4h <= 7 and stochastic_d_4h <= 7 and williams_r_4h <= -91)
+            )
+
+            # --- is_sell_momentum_15 ---
+            is_sell_momentum_15 = (
+                (rsi_1h <= 33 and macd_1h <= -0.000088 and macd_signal_1h <= -0.000085 and macd_hist_1h <= -0.000003 and obv_1h <= -588892555 and obv_slope_1h <= -16983617 and adx_1h <= 2 and stochastic_k_1h <= 14 and stochastic_d_1h <= 20 and williams_r_1h <= -85) and 
+                (rsi_2h <= 30 and macd_2h <= -0.00019 and macd_signal_2h <= -0.000187 and macd_hist_2h <= -0.000003 and obv_2h <= -65181457 and obv_slope_2h <= -38289934 and adx_2h <= 4 and stochastic_k_2h <= 15 and stochastic_d_2h <= 17 and williams_r_2h <= -85) and 
+                (rsi_4h <= 28 and macd_4h <= -0.000272 and macd_signal_4h <= -0.000212 and macd_hist_4h <= -0.00006 and obv_4h <= -1487914779 and obv_slope_4h <= -58039964 and adx_4h <= 34 and stochastic_k_4h <= 3 and stochastic_d_4h <= 4 and williams_r_4h <= -96)
+            )
+
+            # --- is_sell_momentum_16 ---
+            is_sell_momentum_16 = (
+                (rsi_1h <= 22 and macd_1h <= -0.007976 and macd_signal_1h <= -0.006452 and macd_hist_1h <= -0.001524 and obv_1h <= -43969327 and obv_slope_1h <= 1132038 and adx_1h <= 79 and stochastic_k_1h <= 7 and stochastic_d_1h <= 5 and williams_r_1h <= -85) and 
+                (rsi_2h <= 18 and macd_2h <= -0.011026 and macd_signal_2h <= -0.009416 and macd_hist_2h <= -0.00161 and obv_2h <= -35365446 and obv_slope_2h <= 1808412 and adx_2h <= 100 and stochastic_k_2h <= 7 and stochastic_d_2h <= 7 and williams_r_2h <= -89) and 
+                (rsi_4h <= 19 and macd_4h <= -0.019828 and macd_signal_4h <= -0.018756 and macd_hist_4h <= -0.001072 and obv_4h <= -93991391 and obv_slope_4h <= 3858930 and adx_4h <= 32 and stochastic_k_4h <= 4 and stochastic_d_4h <= 6 and williams_r_4h <= -93)
+            )
+
+            # --- is_sell_momentum_17 ---
+            is_sell_momentum_17 = (
+                (rsi_1h <= 17 and macd_1h <= -0.000172 and macd_signal_1h <= -0.000134 and macd_hist_1h <= -0.000038 and obv_1h <= 15936933 and obv_slope_1h <= -11215334 and adx_1h <= 57 and stochastic_k_1h <= 7 and stochastic_d_1h <= 11 and williams_r_1h <= -89) and 
+                (rsi_2h <= 18 and macd_2h <= -0.000226 and macd_signal_2h <= -0.000175 and macd_hist_2h <= -0.000051 and obv_2h <= -460156845 and obv_slope_2h <= -28830705 and adx_2h <= 70 and stochastic_k_2h <= 7 and stochastic_d_2h <= 7 and williams_r_2h <= -91) and 
+                (rsi_4h <= 20 and macd_4h <= -0.000319 and macd_signal_4h <= -0.000245 and macd_hist_4h <= -0.000074 and obv_4h <= 10619609 and obv_slope_4h <= -43446171 and adx_4h <= 87 and stochastic_k_4h <= 3 and stochastic_d_4h <= 5 and williams_r_4h <= -100)
+            )
+
+            # --- is_sell_momentum_18 ---
+            is_sell_momentum_18 = (
+                (rsi_1h <= 21 and macd_1h <= -0.000005 and macd_signal_1h <= -0.000004 and macd_hist_1h <= -0.000001 and obv_1h <= -28322376158 and obv_slope_1h <= -1412270211 and adx_1h <= 77 and stochastic_k_1h <= 12 and stochastic_d_1h <= 12 and williams_r_1h <= -90) and 
+                (rsi_2h <= 14 and macd_2h <= -0.000006 and macd_signal_2h <= -0.000005 and macd_hist_2h <= -0.000001 and obv_2h <= -34191503075 and obv_slope_2h <= -2493489803 and adx_2h <= 62 and stochastic_k_2h <= 12 and stochastic_d_2h <= 10 and williams_r_2h <= -92) and 
+                (rsi_4h <= 22 and macd_4h <= -0.000009 and macd_signal_4h <= -0.000007 and macd_hist_4h <= -0.000001 and obv_4h <= -62389550150 and obv_slope_4h <= -5604578669 and adx_4h <= 17 and stochastic_k_4h <= 5 and stochastic_d_4h <= 7 and williams_r_4h <= -94)
+            )
+
+            # --- is_sell_momentum_19 ---
+            is_sell_momentum_19 = (
+                (rsi_1h <= 23 and macd_1h <= -0.005633 and macd_signal_1h <= -0.004292 and macd_hist_1h <= -0.001341 and obv_1h <= 23985091 and obv_slope_1h <= -2234841 and adx_1h <= 70 and stochastic_k_1h <= 8 and stochastic_d_1h <= 7 and williams_r_1h <= -88) and 
+                (rsi_2h <= 19 and macd_2h <= -0.006971 and macd_signal_2h <= -0.005362 and macd_hist_2h <= -0.001609 and obv_2h <= 7519936 and obv_slope_2h <= -4964217 and adx_2h <= 28 and stochastic_k_2h <= 7 and stochastic_d_2h <= 9 and williams_r_2h <= -91) and 
+                (rsi_4h <= 20 and macd_4h <= -0.009074 and macd_signal_4h <= -0.005812 and macd_hist_4h <= -0.003263 and obv_4h <= 129264044 and obv_slope_4h <= -12690163 and adx_4h <= 62 and stochastic_k_4h <= 6 and stochastic_d_4h <= 12 and williams_r_4h <= -100)
+            )
+
+            # --- is_sell_momentum_20 ---
+            is_sell_momentum_20 = (
+                (rsi_1h <= 37 and macd_1h <= -0.002311 and macd_signal_1h <= -0.002026 and macd_hist_1h <= -0.000285 and obv_1h <= -364814570 and obv_slope_1h <= 114078078 and adx_1h <= 23 and stochastic_k_1h <= 17 and stochastic_d_1h <= 7 and williams_r_1h <= -58) and 
+                (rsi_2h <= 35 and macd_2h <= -0.002525 and macd_signal_2h <= -0.001813 and macd_hist_2h <= -0.000712 and obv_2h <= 622093212 and obv_slope_2h <= 153401980 and adx_2h <= 65 and stochastic_k_2h <= 10 and stochastic_d_2h <= 7 and williams_r_2h <= -72) and 
+                (rsi_4h <= 28 and macd_4h <= -0.00318 and macd_signal_4h <= -0.001937 and macd_hist_4h <= -0.001242 and obv_4h <= 273552936 and obv_slope_4h <= -240384640 and adx_4h <= 3 and stochastic_k_4h <= 2 and stochastic_d_4h <= 3 and williams_r_4h <= -98)
+            )
+
+            # --- is_sell_momentum_21 ---
+            is_sell_momentum_21 = (
+                (rsi_1h <= 28 and macd_1h <= -0.000172 and macd_signal_1h <= -0.00014 and macd_hist_1h <= -0.000031 and obv_1h <= -1083778971 and obv_slope_1h <= -76556335 and adx_1h <= 3 and stochastic_k_1h <= 2 and stochastic_d_1h <= 4 and williams_r_1h <= -96) and 
+                (rsi_2h <= 26 and macd_2h <= -0.000394 and macd_signal_2h <= -0.000419 and macd_hist_2h <= 0.000025 and obv_2h <= -1029873808 and obv_slope_2h <= -132527645 and adx_2h <= 1 and stochastic_k_2h <= 3 and stochastic_d_2h <= 8 and williams_r_2h <= -96) and 
+                (rsi_4h <= 19 and macd_4h <= -0.001191 and macd_signal_4h <= -0.001343 and macd_hist_4h <= 0.000153 and obv_4h <= -1800747191 and obv_slope_4h <= -270706254 and adx_4h <= 23 and stochastic_k_4h <= 2 and stochastic_d_4h <= 3 and williams_r_4h <= -97)
+            )
+
+            # --- is_sell_momentum_22 ---
+            is_sell_momentum_22 = (
+                (rsi_1h <= 33 and macd_1h <= -0.013923 and macd_signal_1h <= -0.011323 and macd_hist_1h <= -0.0026 and obv_1h <= -3956989 and obv_slope_1h <= 30545 and adx_1h <= 33 and stochastic_k_1h <= 11 and stochastic_d_1h <= 15 and williams_r_1h <= -86) and 
+                (rsi_2h <= 27 and macd_2h <= -0.016338 and macd_signal_2h <= -0.01156 and macd_hist_2h <= -0.004778 and obv_2h <= -8173989 and obv_slope_2h <= -82544 and adx_2h <= 50 and stochastic_k_2h <= 14 and stochastic_d_2h <= 17 and williams_r_2h <= -86) and 
+                (rsi_4h <= 24 and macd_4h <= -0.02721 and macd_signal_4h <= -0.018113 and macd_hist_4h <= -0.009097 and obv_4h <= -11180670 and obv_slope_4h <= -653667 and adx_4h <= 38 and stochastic_k_4h <= 10 and stochastic_d_4h <= 14 and williams_r_4h <= -92)
+            )
+
             # --- إدراج_شروط_زخم_بيع ---
             
   
@@ -762,12 +2354,552 @@ async def intelligence_scanner2():
                 score += 50
                 reasons.append("مؤشرات شراء A 1")
 
+            # --- تقييم_is_buy_indicator_1 ---
+            elif is_buy_indicator_1:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 1")
+
+            # --- تقييم_is_buy_indicator_2 ---
+            elif is_buy_indicator_2:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 2")
+
+            # --- تقييم_is_buy_indicator_3 ---
+            elif is_buy_indicator_3:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 3")
+
+            # --- تقييم_is_buy_indicator_4 ---
+            elif is_buy_indicator_4:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 4")
+
+            # --- تقييم_is_buy_indicator_5 ---
+            elif is_buy_indicator_5:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 5")
+
+            # --- تقييم_is_buy_indicator_6 ---
+            elif is_buy_indicator_6:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 6")
+
+            # --- تقييم_is_buy_indicator_7 ---
+            elif is_buy_indicator_7:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 7")
+
+            # --- تقييم_is_buy_indicator_8 ---
+            elif is_buy_indicator_8:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 8")
+
+            # --- تقييم_is_buy_indicator_9 ---
+            elif is_buy_indicator_9:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 9")
+
+            # --- تقييم_is_buy_indicator_10 ---
+            elif is_buy_indicator_10:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 10")
+
+            # --- تقييم_is_buy_indicator_11 ---
+            elif is_buy_indicator_11:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 11")
+
+            # --- تقييم_is_buy_indicator_12 ---
+            elif is_buy_indicator_12:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 12")
+
+            # --- تقييم_is_buy_indicator_13 ---
+            elif is_buy_indicator_13:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 13")
+
+            # --- تقييم_is_buy_indicator_14 ---
+            elif is_buy_indicator_14:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 14")
+
+            # --- تقييم_is_buy_indicator_15 ---
+            elif is_buy_indicator_15:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 15")
+
+            # --- تقييم_is_buy_indicator_16 ---
+            elif is_buy_indicator_16:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 16")
+
+            # --- تقييم_is_buy_indicator_17 ---
+            elif is_buy_indicator_17:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 17")
+
+            # --- تقييم_is_buy_indicator_18 ---
+            elif is_buy_indicator_18:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 18")
+
+            # --- تقييم_is_buy_indicator_19 ---
+            elif is_buy_indicator_19:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 19")
+
+            # --- تقييم_is_buy_indicator_20 ---
+            elif is_buy_indicator_20:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 20")
+
+            # --- تقييم_is_buy_indicator_21 ---
+            elif is_buy_indicator_21:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 21")
+
+            # --- تقييم_is_buy_indicator_22 ---
+            elif is_buy_indicator_22:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 22")
+
+            # --- تقييم_is_buy_indicator_23 ---
+            elif is_buy_indicator_23:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 23")
+
+            # --- تقييم_is_buy_indicator_24 ---
+            elif is_buy_indicator_24:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 24")
+
+            # --- تقييم_is_buy_indicator_25 ---
+            elif is_buy_indicator_25:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 25")
+
+            # --- تقييم_is_buy_indicator_26 ---
+            elif is_buy_indicator_26:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 26")
+
+            # --- تقييم_is_buy_indicator_27 ---
+            elif is_buy_indicator_27:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 27")
+
+            # --- تقييم_is_buy_indicator_28 ---
+            elif is_buy_indicator_28:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 28")
+
+            # --- تقييم_is_buy_indicator_29 ---
+            elif is_buy_indicator_29:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 29")
+
+            # --- تقييم_is_buy_indicator_30 ---
+            elif is_buy_indicator_30:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 30")
+
+            # --- تقييم_is_buy_indicator_31 ---
+            elif is_buy_indicator_31:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 31")
+
+            # --- تقييم_is_buy_indicator_32 ---
+            elif is_buy_indicator_32:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 32")
+
             # --- إدراج_تقييم_مؤشرات_شراء ---
             
+            # --- تقييم_is_buy_momentum_1 ---
+            elif is_buy_momentum_1:
+                score += 50
+                reasons.append("زخم شراء إيجابي 1")
+
+            # --- تقييم_is_buy_momentum_2 ---
+            elif is_buy_momentum_2:
+                score += 50
+                reasons.append("زخم شراء إيجابي 2")
+
+            # --- تقييم_is_buy_momentum_3 ---
+            elif is_buy_momentum_3:
+                score += 50
+                reasons.append("زخم شراء إيجابي 3")
+
+            # --- تقييم_is_buy_momentum_4 ---
+            elif is_buy_momentum_4:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4")
+
+            # --- تقييم_is_buy_momentum_5 ---
+            elif is_buy_momentum_5:
+                score += 50
+                reasons.append("زخم شراء إيجابي 5")
+
+            # --- تقييم_is_buy_momentum_6 ---
+            elif is_buy_momentum_6:
+                score += 50
+                reasons.append("زخم شراء إيجابي 6")
+
+            # --- تقييم_is_buy_momentum_7 ---
+            elif is_buy_momentum_7:
+                score += 50
+                reasons.append("زخم شراء إيجابي 7")
+
+            # --- تقييم_is_buy_momentum_8 ---
+            elif is_buy_momentum_8:
+                score += 50
+                reasons.append("زخم شراء إيجابي 8")
+
+            # --- تقييم_is_buy_momentum_9 ---
+            elif is_buy_momentum_9:
+                score += 50
+                reasons.append("زخم شراء إيجابي 9")
+
+            # --- تقييم_is_buy_momentum_10 ---
+            elif is_buy_momentum_10:
+                score += 50
+                reasons.append("زخم شراء إيجابي 10")
+
+            # --- تقييم_is_buy_momentum_11 ---
+            elif is_buy_momentum_11:
+                score += 50
+                reasons.append("زخم شراء إيجابي 11")
+
+            # --- تقييم_is_buy_momentum_12 ---
+            elif is_buy_momentum_12:
+                score += 50
+                reasons.append("زخم شراء إيجابي 12")
+
+            # --- تقييم_is_buy_momentum_13 ---
+            elif is_buy_momentum_13:
+                score += 50
+                reasons.append("زخم شراء إيجابي 13")
+
+            # --- تقييم_is_buy_momentum_14 ---
+            elif is_buy_momentum_14:
+                score += 50
+                reasons.append("زخم شراء إيجابي 14")
+
+            # --- تقييم_is_buy_momentum_15 ---
+            elif is_buy_momentum_15:
+                score += 50
+                reasons.append("زخم شراء إيجابي 15")
+
+            # --- تقييم_is_buy_momentum_16 ---
+            elif is_buy_momentum_16:
+                score += 50
+                reasons.append("زخم شراء إيجابي 16")
+
+            # --- تقييم_is_buy_momentum_17 ---
+            elif is_buy_momentum_17:
+                score += 50
+                reasons.append("زخم شراء إيجابي 17")
+
+            # --- تقييم_is_buy_momentum_18 ---
+            elif is_buy_momentum_18:
+                score += 50
+                reasons.append("زخم شراء إيجابي 18")
+
+            # --- تقييم_is_buy_momentum_19 ---
+            elif is_buy_momentum_19:
+                score += 50
+                reasons.append("زخم شراء إيجابي 19")
+
+            # --- تقييم_is_buy_momentum_20 ---
+            elif is_buy_momentum_20:
+                score += 50
+                reasons.append("زخم شراء إيجابي 20")
+
+            # --- تقييم_is_buy_momentum_21 ---
+            elif is_buy_momentum_21:
+                score += 50
+                reasons.append("زخم شراء إيجابي 21")
+
+            # --- تقييم_is_buy_momentum_22 ---
+            elif is_buy_momentum_22:
+                score += 50
+                reasons.append("زخم شراء إيجابي 22")
+
+            # --- تقييم_is_buy_momentum_23 ---
+            elif is_buy_momentum_23:
+                score += 50
+                reasons.append("زخم شراء إيجابي 23")
+
+            # --- تقييم_is_buy_momentum_24 ---
+            elif is_buy_momentum_24:
+                score += 50
+                reasons.append("زخم شراء إيجابي 24")
+
+            # --- تقييم_is_buy_momentum_25 ---
+            elif is_buy_momentum_25:
+                score += 50
+                reasons.append("زخم شراء إيجابي 25")
+
+            # --- تقييم_is_buy_momentum_26 ---
+            elif is_buy_momentum_26:
+                score += 50
+                reasons.append("زخم شراء إيجابي 26")
+
+            # --- تقييم_is_buy_momentum_27 ---
+            elif is_buy_momentum_27:
+                score += 50
+                reasons.append("زخم شراء إيجابي 27")
+
+            # --- تقييم_is_buy_momentum_28 ---
+            elif is_buy_momentum_28:
+                score += 50
+                reasons.append("زخم شراء إيجابي 28")
+
+            # --- تقييم_is_buy_momentum_29 ---
+            elif is_buy_momentum_29:
+                score += 50
+                reasons.append("زخم شراء إيجابي 29")
+
+            # --- تقييم_is_buy_momentum_30 ---
+            elif is_buy_momentum_30:
+                score += 50
+                reasons.append("زخم شراء إيجابي 30")
+
+            # --- تقييم_is_buy_momentum_31 ---
+            elif is_buy_momentum_31:
+                score += 50
+                reasons.append("زخم شراء إيجابي 31")
+
+            # --- تقييم_is_buy_momentum_32 ---
+            elif is_buy_momentum_32:
+                score += 50
+                reasons.append("زخم شراء إيجابي 32")
+
             # --- إدراج_تقييم_زخم_شراء ---
             
+            # --- تقييم_is_sell_indicator_1 ---
+            elif is_sell_indicator_1:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 1")
+
+            # --- تقييم_is_sell_indicator_2 ---
+            elif is_sell_indicator_2:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 2")
+
+            # --- تقييم_is_sell_indicator_3 ---
+            elif is_sell_indicator_3:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 3")
+
+            # --- تقييم_is_sell_indicator_4 ---
+            elif is_sell_indicator_4:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 4")
+
+            # --- تقييم_is_sell_indicator_5 ---
+            elif is_sell_indicator_5:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 5")
+
+            # --- تقييم_is_sell_indicator_6 ---
+            elif is_sell_indicator_6:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 6")
+
+            # --- تقييم_is_sell_indicator_7 ---
+            elif is_sell_indicator_7:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 7")
+
+            # --- تقييم_is_sell_indicator_8 ---
+            elif is_sell_indicator_8:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 8")
+
+            # --- تقييم_is_sell_indicator_9 ---
+            elif is_sell_indicator_9:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 9")
+
+            # --- تقييم_is_sell_indicator_10 ---
+            elif is_sell_indicator_10:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 10")
+
+            # --- تقييم_is_sell_indicator_11 ---
+            elif is_sell_indicator_11:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 11")
+
+            # --- تقييم_is_sell_indicator_12 ---
+            elif is_sell_indicator_12:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 12")
+
+            # --- تقييم_is_sell_indicator_13 ---
+            elif is_sell_indicator_13:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 13")
+
+            # --- تقييم_is_sell_indicator_14 ---
+            elif is_sell_indicator_14:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 14")
+
+            # --- تقييم_is_sell_indicator_15 ---
+            elif is_sell_indicator_15:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 15")
+
+            # --- تقييم_is_sell_indicator_16 ---
+            elif is_sell_indicator_16:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 16")
+
+            # --- تقييم_is_sell_indicator_17 ---
+            elif is_sell_indicator_17:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 17")
+
+            # --- تقييم_is_sell_indicator_18 ---
+            elif is_sell_indicator_18:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 18")
+
+            # --- تقييم_is_sell_indicator_19 ---
+            elif is_sell_indicator_19:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 19")
+
+            # --- تقييم_is_sell_indicator_20 ---
+            elif is_sell_indicator_20:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 20")
+
+            # --- تقييم_is_sell_indicator_21 ---
+            elif is_sell_indicator_21:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 21")
+
+            # --- تقييم_is_sell_indicator_22 ---
+            elif is_sell_indicator_22:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 22")
+
             # --- إدراج_تقييم_مؤشرات_بيع --- 
             
+            # --- تقييم_is_sell_momentum_1 ---
+            elif is_sell_momentum_1:
+                score -= 50
+                reasons.append("زخم بيع سلبي 1")
+
+            # --- تقييم_is_sell_momentum_2 ---
+            elif is_sell_momentum_2:
+                score -= 50
+                reasons.append("زخم بيع سلبي 2")
+
+            # --- تقييم_is_sell_momentum_3 ---
+            elif is_sell_momentum_3:
+                score -= 50
+                reasons.append("زخم بيع سلبي 3")
+
+            # --- تقييم_is_sell_momentum_4 ---
+            elif is_sell_momentum_4:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4")
+
+            # --- تقييم_is_sell_momentum_5 ---
+            elif is_sell_momentum_5:
+                score -= 50
+                reasons.append("زخم بيع سلبي 5")
+
+            # --- تقييم_is_sell_momentum_6 ---
+            elif is_sell_momentum_6:
+                score -= 50
+                reasons.append("زخم بيع سلبي 6")
+
+            # --- تقييم_is_sell_momentum_7 ---
+            elif is_sell_momentum_7:
+                score -= 50
+                reasons.append("زخم بيع سلبي 7")
+
+            # --- تقييم_is_sell_momentum_8 ---
+            elif is_sell_momentum_8:
+                score -= 50
+                reasons.append("زخم بيع سلبي 8")
+
+            # --- تقييم_is_sell_momentum_9 ---
+            elif is_sell_momentum_9:
+                score -= 50
+                reasons.append("زخم بيع سلبي 9")
+
+            # --- تقييم_is_sell_momentum_10 ---
+            elif is_sell_momentum_10:
+                score -= 50
+                reasons.append("زخم بيع سلبي 10")
+
+            # --- تقييم_is_sell_momentum_11 ---
+            elif is_sell_momentum_11:
+                score -= 50
+                reasons.append("زخم بيع سلبي 11")
+
+            # --- تقييم_is_sell_momentum_12 ---
+            elif is_sell_momentum_12:
+                score -= 50
+                reasons.append("زخم بيع سلبي 12")
+
+            # --- تقييم_is_sell_momentum_13 ---
+            elif is_sell_momentum_13:
+                score -= 50
+                reasons.append("زخم بيع سلبي 13")
+
+            # --- تقييم_is_sell_momentum_14 ---
+            elif is_sell_momentum_14:
+                score -= 50
+                reasons.append("زخم بيع سلبي 14")
+
+            # --- تقييم_is_sell_momentum_15 ---
+            elif is_sell_momentum_15:
+                score -= 50
+                reasons.append("زخم بيع سلبي 15")
+
+            # --- تقييم_is_sell_momentum_16 ---
+            elif is_sell_momentum_16:
+                score -= 50
+                reasons.append("زخم بيع سلبي 16")
+
+            # --- تقييم_is_sell_momentum_17 ---
+            elif is_sell_momentum_17:
+                score -= 50
+                reasons.append("زخم بيع سلبي 17")
+
+            # --- تقييم_is_sell_momentum_18 ---
+            elif is_sell_momentum_18:
+                score -= 50
+                reasons.append("زخم بيع سلبي 18")
+
+            # --- تقييم_is_sell_momentum_19 ---
+            elif is_sell_momentum_19:
+                score -= 50
+                reasons.append("زخم بيع سلبي 19")
+
+            # --- تقييم_is_sell_momentum_20 ---
+            elif is_sell_momentum_20:
+                score -= 50
+                reasons.append("زخم بيع سلبي 20")
+
+            # --- تقييم_is_sell_momentum_21 ---
+            elif is_sell_momentum_21:
+                score -= 50
+                reasons.append("زخم بيع سلبي 21")
+
+            # --- تقييم_is_sell_momentum_22 ---
+            elif is_sell_momentum_22:
+                score -= 50
+                reasons.append("زخم بيع سلبي 22")
+
             # --- إدراج_تقييم_زخم_بيع ---        
             # ==========================================
             # ⚡ [ التقييم النهائي وإطلاق الإشارة ]
