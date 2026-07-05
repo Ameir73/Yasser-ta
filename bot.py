@@ -4134,10 +4134,26 @@ async def coin_detail_handler(call: types.CallbackQuery):
     
     await call.message.edit_text(template, reply_markup=keyboard, parse_mode="Markdown")
 
+import json
+from aiogram import types
+from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+
+# دالة مساعدة لتحليل الأسباب (JSONB) بأمان
+def parse_json_reasons(reasons_data):
+    if not reasons_data:
+        return []
+    if isinstance(reasons_data, list):
+        return reasons_data
+    if isinstance(reasons_data, str):
+        try:
+            return json.loads(reasons_data)
+        except:
+            return [reasons_data]
+    return []
+
 # ==========================================
 # 🔄 التنقل بين الصفحات (الناجحة / الفاشلة)
 # ==========================================
-# --- قسم معالجات الازرار @dp.callback_query_handler ---
 @dp.callback_query_handler(lambda c: c.data and c.data.startswith('report_list:'))
 async def process_report_list(callback_query: types.CallbackQuery):
     await bot.answer_callback_query(callback_query.id, "⏳ جاري الجلب والتنسيق...")
@@ -4146,7 +4162,7 @@ async def process_report_list(callback_query: types.CallbackQuery):
     list_type = parts[1] # success or failed
     page = int(parts[2])
     
-    successful, failed, _ = fetch_and_analyze_signals()
+    successful, failed, _ = await fetch_and_analyze_signals() # تأكد أن هذه الدالة تدعم await إذا كانت غير متزامنة
     data_list = successful if list_type == "success" else failed
     
     # إعدادات الصفحات
@@ -4157,13 +4173,16 @@ async def process_report_list(callback_query: types.CallbackQuery):
     current_page_data = data_list[start_idx:end_idx]
     
     emoji = "✅" if list_type == "success" else "❌"
-    text = f"{emoji} <b>سجل الصفقات | صفحة ({page + 1}/{total_pages})</b>\n\nإجمالي الإشارات: {len(data_list)}\nاختر العملة لعرض أسرارها:"
+    text = f"{emoji} <b>سجل الصفقات | صفحة ({page + 1}/{total_pages})</b>\n\nإجمالي الإشارات: {len(data_list)}\nاختر العملة لعرض تفاصيلها:"
     
     markup = InlineKeyboardMarkup(row_width=1)
     
     # 1. أزرار العملات
     for sig in current_page_data:
-        btn_text = f"🪙 {sig['symbol']} ({sig['direction']}) | {sig['best_change']:.2f}% | {sig['rating']}"
+        # افترضنا هنا أن fetch_and_analyze_signals ترجع قواميس تحتوي على هذه المفاتيح
+        best_change = sig.get('best_change', 0.0)
+        rating = sig.get('rating', 'بدون تقييم')
+        btn_text = f"🪙 {sig['symbol']} ({sig['direction']}) | {best_change:.2f}% | {rating}"
         markup.add(InlineKeyboardButton(btn_text, callback_data=f"sig_view:{sig['id']}"))
         
     # 2. أزرار التنقل (السابق / التالي)
@@ -4179,13 +4198,13 @@ async def process_report_list(callback_query: types.CallbackQuery):
     markup.add(InlineKeyboardButton("🔙 عودة للوحة التحليل", callback_data="report_back"))
     
     await bot.edit_message_text(text, callback_query.message.chat.id, callback_query.message.message_id, parse_mode="HTML", reply_markup=markup)
-    
+
 # ==========================================
-# 🕵️ عرض تفاصيل وأسرار إشارة معينة
+# 🕵️ عرض تفاصيل وأسرار إشارة معينة (تم تعديله ليطابق قاعدة البيانات)
 # ==========================================
 @dp.callback_query_handler(lambda c: c.data and c.data.startswith('sig_view:'))
 async def view_signal_details(callback_query: types.CallbackQuery):
-    await bot.answer_callback_query(callback_query.id, "🔍 جاري سحب أسرار الرصد...")
+    await bot.answer_callback_query(callback_query.id, "🔍 جاري سحب تفاصيل الرصد...")
     
     sig_id = int(callback_query.data.split(":")[1])
     
@@ -4196,31 +4215,31 @@ async def view_signal_details(callback_query: types.CallbackQuery):
         
     row = res.data[0]
     
+    # التعامل مع القيم الفارغة بأمان
+    max_price = row.get('max_price_reached') or "لم يحدد"
+    min_price = row.get('min_price_reached') or "لم يحدد"
+    final_change = row.get('final_change_pct') or 0.0
+    status_dict = {'tracking': '🟢 قيد التتبع', 'closed': '🔴 مغلقة', 'success': '✅ ناجحة', 'failed': '❌ فاشلة'}
+    current_status = status_dict.get(row.get('status', 'tracking'), row.get('status'))
+
     text = (
         f"📊 <b>تفاصيل الرصد: {row['symbol']} ({row['signal_type']})</b>\n"
-        f"💵 السعر وقت الإشارة: <code>{row['price']}</code>\n"
+        f"الحالة: {current_status}\n"
         f"━━━━━━━━━━━━━━━━━━\n"
+        f"💵 السعر وقت الإشارة: <code>{row['price']}</code>\n"
+        f"📈 أعلى سعر وصل له: <code>{max_price}</code>\n"
+        f"📉 أدنى سعر وصل له: <code>{min_price}</code>\n"
+        f"🎯 التغير النهائي: <b>{final_change:.2f}%</b>\n\n"
     )
     
-    # الأسرار الابتدائية
-    initial = parse_json_reasons(row.get('initial_reasons'))
-    if initial:
-        text += "🕵️‍♂️ <b>الأسرار وقت الرصد 0h:</b>\n"
-        for r in initial: text += f" - {r}\n"
-        
-    # تفاصيل المحطات الزمنية وتطور العملة
-    time_stations = [4, 8, 12, 16, 20, 24]
-    for t in time_stations:
-        change = row.get(f"change_{t}h")
-        if change is not None:
-            rating = row.get(f"rating_{t}h", "بدون تقييم")
-            reasons_th = parse_json_reasons(row.get(f"reasons_{t}h"))
-            
-            text += f"\n⏳ <b>محطة {t} ساعات:</b>\n"
-            text += f"📈 الحركة: {change}% | 🎯 {rating}\n"
-            if reasons_th:
-                text += f"🔍 الأسرار والمستجدات:\n"
-                for r in reasons_th: text += f"  • {r}\n"
+    # الأسرار (الأسباب الفنية)
+    reasons = parse_json_reasons(row.get('reasons'))
+    if reasons:
+        text += "🕵️‍♂️ <b>الأسرار والأسباب الفنية للرصد:</b>\n"
+        for r in reasons: 
+            text += f" - {r}\n"
+    else:
+        text += "🕵️‍♂️ <i>لم يتم تسجيل أسباب فنية واضحة لهذه الإشارة.</i>\n"
 
     markup = InlineKeyboardMarkup()
     # زر للرجوع للقائمة السابقة
@@ -4232,7 +4251,6 @@ async def view_signal_details(callback_query: types.CallbackQuery):
         import logging
         logging.error(f"Error in sig_view: {e}")
 
-
 # ==========================================
 # 👑 عرض أسرار النجاح (الزر الثالث) + زر الرجوع الرئيسي
 # ==========================================
@@ -4242,11 +4260,13 @@ async def handle_secrets_and_back(callback_query: types.CallbackQuery):
     
     if action == "report_back":
         # إعادة لوحة التحكم الرئيسية
+        # ملاحظة: إذا كانت analytics_dashboard_handler ترسل رسالة جديدة، قد ترغب في تمرير `edit=True` إليها إذا قمت ببرمجتها لدعم ذلك.
+        await bot.answer_callback_query(callback_query.id)
         await analytics_dashboard_handler(callback_query.message)
         
     elif action == "report_secrets":
         await bot.answer_callback_query(callback_query.id, "⏳ جاري استخراج الجينات...")
-        _, _, top_reasons = fetch_and_analyze_signals()
+        _, _, top_reasons = await fetch_and_analyze_signals() # تم إضافة await للضمان
         
         text = "👑 <b>الجينات الوراثية للصفقات الناجحة:</b>\n<i>هذه هي الأسباب الفنية التي تكررت في الصفقات الرابحة:</i>\n\n"
         if not top_reasons:
@@ -4259,10 +4279,9 @@ async def handle_secrets_and_back(callback_query: types.CallbackQuery):
         markup.add(InlineKeyboardButton("🔙 عودة للوحة التحليل", callback_data="report_back"))
         await bot.edit_message_text(text, callback_query.message.chat.id, callback_query.message.message_id, parse_mode="HTML", reply_markup=markup)
 
- # ==========================================
+# ==========================================
 # 6. معالجات الأزرار الأساسية (Secured Callbacks)
 # ==========================================
-# --- 🖱️ تحديث معالج الكولباك ليستخدم نفس الدالة الموحدة ---
 @dp.callback_query_handler(lambda c: c.data == 'view_intel_report')
 async def show_intelligence_report(callback_query: types.CallbackQuery):
     if callback_query.from_user.id != ADMIN_ID:
@@ -4276,8 +4295,8 @@ async def show_intelligence_report(callback_query: types.CallbackQuery):
             reply_markup=markup, 
             parse_mode="HTML"
         )
-    except:
-        # في حال لم يتغير النص أو حدث خطأ في التعديل
+    except Exception as e:
+        # في حال لم يتغير النص (Message is not modified)
         await callback_query.answer("تم تحديث البيانات")
        
 @dp.callback_query_handler(lambda c: c.data and c.data.startswith('wallet_view:'), state="*")
