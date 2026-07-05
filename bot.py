@@ -3159,24 +3159,7 @@ async def update_tracked_signals(symbol, current_price):
         
 
 from collections import Counter
-# ==========================================
-# 🛠️ محلل الأسرار (يحل مشكلة عدم جلب بعض العملات)
-# ==========================================
-def parse_json_reasons(data):
-    if isinstance(data, list):
-        return data
-    if isinstance(data, str):
-        try:
-            clean_data = data.replace('""', '"')
-            parsed = json.loads(clean_data)
-            return parsed if isinstance(parsed, list) else [str(parsed)]
-        except:
-            return [data]
-    return []
 
-# ==========================================
-# 📊 المحرك التحليلي (محدث بالتتبع الزمني للصفقات)
-# ==========================================
 def fetch_and_analyze_signals():
     # سحب آخر 5000 إشارة لتفادي الحد الأقصى لسوبابيس
     res = supabase.table("radar_signals").select("*").order("created_at", desc=True).limit(5000).execute()
@@ -3185,82 +3168,47 @@ def fetch_and_analyze_signals():
     if not records:
         return [], [], []
 
-    success_keywords = ["جيد", "جيد جدا", "ممتازة", "ممتازة جدا", "ممتاز", "ممتاز جداً", "متفوق", "أسطوري"]
-    fail_keywords = ["فاشل", "فاشل جداً", "فاشله جداً", "كارثي"]
-    
     successful_signals = []
     failed_signals = []
     all_successful_reasons = [] 
     
-    time_stations = [4, 8, 12, 16, 20, 24]
-    
     for row in records:
-        direction = row.get('signal_type', 'LONG')
+        is_success = row.get('is_success')
         
-        is_success = False
-        is_fail = False
-        final_rating = "عادي ➖"
-        recorded_change = 0
-        recorded_time = 0
-        
-        # التتبع الزمني (محطة بمحطة)
-        for t in time_stations:
-            change_val = row.get(f"change_{t}h")
-            if change_val is not None:
-                current_change = float(change_val)
-                
-                # 1. إذا كانت الصفقة لم تُحسم بعد (لم تضرب هدفاً ولم تضرب وقف خسارة)
-                if not is_success and not is_fail:
-                    temp_rating = get_signal_rating(direction, current_change)
-                    
-                    if any(kw in temp_rating for kw in success_keywords):
-                        is_success = True
-                        final_rating = temp_rating
-                        recorded_change = current_change
-                        recorded_time = t
-                    elif any(kw in temp_rating for kw in fail_keywords):
-                        is_fail = True
-                        final_rating = temp_rating
-                        recorded_change = current_change
-                        recorded_time = t
-                
-                # 2. إذا حُسمت بالنجاح، نستمر فقط لنرى إن كانت ستحقق "قمة أعلى" (Peak Tracking)
-                elif is_success:
-                    if direction == "LONG" and current_change > recorded_change:
-                        recorded_change = current_change
-                        recorded_time = t
-                        final_rating = get_signal_rating(direction, current_change)
-                    elif direction == "SHORT" and current_change < recorded_change:
-                        recorded_change = current_change
-                        recorded_time = t
-                        final_rating = get_signal_rating(direction, current_change)
-
-        # إذا لم تسجل أي بيانات في المحطات، نتجاوزها
-        if recorded_time == 0:
+        # إذا كانت القيمة None (لم تُحسم الصفقة بعد)، نتجاوزها
+        if is_success is None:
             continue
-
-        clean_reasons = parse_json_reasons(row.get('initial_reasons'))
+            
+        direction = row.get('signal_type', 'LONG')
+        # نستخدم التغير النهائي كنسبة للحركة
+        final_change = row.get('final_change_pct') or 0.0
+        
+        # تنظيف وجلب الأسباب من عمود 'reasons' المعتمد في قاعدة بياناتك
+        clean_reasons = parse_json_reasons(row.get('reasons'))
+        
+        # التقييم أصبح مباشراً بناءً على حالة العمود
+        rating = "ممتازة ✅" if is_success else "فاشلة ❌"
         
         # تجهيز الكائن الذي سيُرسل للأزرار
         sig_obj = {
             "id": row["id"],
             "symbol": row["symbol"],
             "direction": direction,
-            "best_change": recorded_change,
-            "best_time": recorded_time,
-            "rating": final_rating
+            "best_change": final_change, 
+            "rating": rating
         }
         
-        if is_success:
+        # فرز الصفقات واستخراج جينات النجاح
+        if is_success is True:
             successful_signals.append(sig_obj)
             all_successful_reasons.extend(clean_reasons)
-        elif is_fail:
+        elif is_success is False:
             failed_signals.append(sig_obj)
 
+    # حصر أكثر 10 أسباب فنية تكررت في الصفقات الناجحة (الجينات)
     reasons_counter = Counter(all_successful_reasons).most_common(10)
-    return successful_signals, failed_signals, reasons_counter
     
-
+    return successful_signals, failed_signals, reasons_counter
 # ==========================================
 # 1. الدوال الحسابية الأساسية (Math Core)
 # ==========================================
