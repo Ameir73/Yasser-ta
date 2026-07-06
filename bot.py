@@ -389,14 +389,6 @@ async def intelligence_scanner():
                 (patterns_1d == "ابتلاع_صاعد")
             )
 
-            # --- is_buy_pattern_1 ---
-            is_buy_pattern_1 = (
-                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
-                (pattern_name_1h == "راية صاعدة") and 
-                (pattern_class_1h == "اختراق استمراري") and 
-                (patterns_4h == "ابتلاع_صاعد")
-            )
-
             # --- is_buy_pattern_2 ---
             is_buy_pattern_2 = (
                 (patterns_1h == "ابتلاع_صاعد") and 
@@ -523,14 +515,6 @@ async def intelligence_scanner():
                 (pattern_class_1h == "استمراري هابط")
             )
 
-            # --- is_buy_pattern_18 ---
-            is_buy_pattern_18 = (
-                (patterns_1h == "الجنود_الثلاثة_البيض_صاعد") and 
-                (patterns_2h == "الجنود_الثلاثة_البيض_صاعد") and 
-                (pattern_name_4h == "راية صاعدة") and 
-                (pattern_class_4h == "اختراق استمراري") and 
-                (patterns_1d == "الجنود_الثلاثة_البيض_صاعد")
-            )
 
             # --- is_buy_pattern_19 ---
             is_buy_pattern_19 = (
@@ -541,12 +525,6 @@ async def intelligence_scanner():
                 (pattern_class_1d == "انفجار سعري")
             )
 
-            # --- is_buy_pattern_20 ---
-            is_buy_pattern_20 = (
-                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
-                (patterns_2h == "نجمة_المساء_هابط") and 
-                (patterns_4h == "ابتلاع_هابط")
-            )
 
             # --- is_buy_pattern_21 ---
             is_buy_pattern_21 = (
@@ -870,18 +848,6 @@ async def intelligence_scanner():
                 (pattern_class_1d == "كسر استمراري")
             )
 
-            # --- is_sell_pattern_18 ---
-            is_sell_pattern_18 = (
-                (patterns_1h == "الغربان_الثلاثة_السود_هابط") and 
-                (patterns_2h == "الغربان_الثلاثة_السود_هابط") and 
-                (pattern_name_2h == "علم هابط") and 
-                (pattern_class_2h == "كسر استمراري") and 
-                (patterns_4h == "الغربان_الثلاثة_السود_هابط") and 
-                (pattern_name_4h == "علم هابط") and 
-                (pattern_class_4h == "كسر استمراري") and 
-                (patterns_1d == "الغربان_الثلاثة_السود_هابط")
-            )
-
             # --- is_sell_pattern_19 ---
             is_sell_pattern_19 = (
                 (pattern_name_1h == "مثلث متماثل هابط") and 
@@ -943,11 +909,6 @@ async def intelligence_scanner():
             if is_buy_pattern2_2:
                 score += 50
                 reasons.append("نمودج شراء 0")
-
-            # --- تقييم_is_buy_pattern_1 ---
-            elif is_buy_pattern_1:
-                score += 50
-                reasons.append("نموذج شراء 1")
 
             # --- تقييم_is_buy_pattern_2 ---
             elif is_buy_pattern_2:
@@ -1014,20 +975,10 @@ async def intelligence_scanner():
                 score += 50
                 reasons.append("نموذج شراء 17")
 
-            # --- تقييم_is_buy_pattern_18 ---
-            elif is_buy_pattern_18:
-                score += 50
-                reasons.append("نموذج شراء 18")
-
             # --- تقييم_is_buy_pattern_19 ---
             elif is_buy_pattern_19:
                 score += 50
                 reasons.append("نموذج شراء 19")
-
-            # --- تقييم_is_buy_pattern_20 ---
-            elif is_buy_pattern_20:
-                score += 50
-                reasons.append("نموذج شراء 20")
 
             # --- تقييم_is_buy_pattern_21 ---
             elif is_buy_pattern_21:
@@ -1150,11 +1101,6 @@ async def intelligence_scanner():
             elif is_sell_pattern_17:
                 score -= 50
                 reasons.append("نموذج بيع 17")
-
-            # --- تقييم_is_sell_pattern_18 ---
-            elif is_sell_pattern_18:
-                score -= 50
-                reasons.append("نموذج بيع 18")
 
             # --- تقييم_is_sell_pattern_19 ---
             elif is_sell_pattern_19:
