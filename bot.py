@@ -1326,13 +1326,81 @@ async def intelligence_scanner2():
             # 🧠 [ شروط الشراء ]
 
 
+            # --- is_buy_indicator_1 ---
+            is_buy_indicator_1 = (
+                (ichimoku_conversion_1h > ema_20_1h > bb_middle_1h > ichimoku_base_1h > ema_50_1h > ema_100_1h > ema_200_1h > ichimoku_cloud_top_1h > supertrend_1h > parabolic_sar_1h > kc_lower_1h) and 
+                (ichimoku_conversion_2h > ema_20_2h > bb_middle_2h > ichimoku_base_2h > ema_50_2h > ema_100_2h > ema_200_2h > ichimoku_cloud_top_2h > supertrend_2h > parabolic_sar_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ema_20_4h > bb_middle_4h > ichimoku_base_4h > ema_50_4h > ema_100_4h > ema_200_4h > ichimoku_cloud_top_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_2 ---
+            is_buy_indicator_2 = (
+                (ichimoku_conversion_1h > ema_20_1h > bb_middle_1h > ichimoku_base_1h > ema_50_1h > ema_100_1h > ema_200_1h > ichimoku_cloud_top_1h > supertrend_1h > parabolic_sar_1h > kc_lower_1h) and 
+                (ichimoku_conversion_4h > ema_20_4h > bb_middle_4h > ichimoku_base_4h > ema_50_4h > ema_100_4h > ema_200_4h > ichimoku_cloud_top_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator_3 ---
+            is_buy_indicator_3 = (
+                (ichimoku_conversion_1h > ema_20_1h > bb_middle_1h > ichimoku_base_1h > ema_50_1h > ema_100_1h > ema_200_1h > ichimoku_cloud_top_1h > supertrend_1h > parabolic_sar_1h > kc_lower_1h)
+            )
+
+            # --- is_buy_indicator_4 ---
+            is_buy_indicator_4 = (
+                (ema_20_1h > bb_middle_1h > supertrend_1h > parabolic_sar_1h > kc_lower_1h) and 
+                (ichimoku_conversion_2h > ema_20_2h > bb_middle_2h > ichimoku_base_2h > ema_50_2h > ema_100_2h > ichimoku_cloud_top_2h > supertrend_2h > parabolic_sar_2h > kc_lower_2h) and 
+                (ichimoku_conversion_4h > ema_20_4h > bb_middle_4h > ichimoku_base_4h > ema_50_4h > ema_100_4h > ema_200_4h > ichimoku_cloud_top_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h)
+            )
+
             # --- إدراج_شروط_مؤشرات_شراء ---
             # --- is_sell_indicator_1 ---
             
+            # --- is_sell_indicator_1 ---
+            is_sell_indicator_1 = (
+                (ema_200_1h > ema_100_1h > ema_50_1h > ichimoku_cloud_bottom_1h > ichimoku_base_1h > bb_middle_1h > ema_20_1h > ichimoku_conversion_1h > kc_upper_1h > supertrend_1h > parabolic_sar_1h) and 
+                (ema_200_2h > ema_100_2h > ema_50_2h > ichimoku_cloud_bottom_2h > ichimoku_base_2h > bb_middle_2h > ema_20_2h > ichimoku_conversion_2h > kc_upper_2h > supertrend_2h > parabolic_sar_2h) and 
+                (ema_200_4h > ema_100_4h > ema_50_4h > ichimoku_cloud_bottom_4h > ichimoku_base_4h > bb_middle_4h > ema_20_4h > ichimoku_conversion_4h > kc_upper_4h > supertrend_4h > parabolic_sar_4h)
+            )
+
+            # --- is_sell_indicator_2 ---
+            is_sell_indicator_2 = (
+                (ema_200_1h > ema_100_1h > ema_50_1h > ichimoku_cloud_bottom_1h > ichimoku_base_1h > bb_middle_1h > ema_20_1h > ichimoku_conversion_1h > kc_upper_1h > supertrend_1h > parabolic_sar_1h) and 
+                (ema_200_2h > ema_100_2h > ema_50_2h > ichimoku_cloud_bottom_2h > ichimoku_base_2h > bb_middle_2h > ema_20_2h > ichimoku_conversion_2h > kc_upper_2h > supertrend_2h > parabolic_sar_2h)
+            )
+
             # --- إدراج_شروط_مؤشرات_بيع ---            
   
 
+            # --- تقييم_is_buy_indicator_1 ---
+            elif is_buy_indicator_1:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 1")
+
+            # --- تقييم_is_buy_indicator_2 ---
+            elif is_buy_indicator_2:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 2")
+
+            # --- تقييم_is_buy_indicator_3 ---
+            elif is_buy_indicator_3:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 3")
+
+            # --- تقييم_is_buy_indicator_4 ---
+            elif is_buy_indicator_4:
+                score += 50
+                reasons.append("مؤشرات شراء قوية 4")
+
             # --- إدراج_تقييم_مؤشرات_شراء ---
+
+            # --- تقييم_is_sell_indicator_1 ---
+            elif is_sell_indicator_1:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 1")
+
+            # --- تقييم_is_sell_indicator_2 ---
+            elif is_sell_indicator_2:
+                score -= 50
+                reasons.append("مؤشرات بيع قوية 2")
 
             # --- إدراج_تقييم_مؤشرات_بيع ---
             # ==========================================
