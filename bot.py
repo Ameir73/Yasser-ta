@@ -1282,12 +1282,15 @@ async def intelligence_scanner2():
             
             kc_upper_1h = float(coin.get('kc_upper_1h') or 0.0) 
             kc_lower_1h = float(coin.get('kc_lower_1h') or 0.0)
+            kc_middle_1h = float(coin.get('kc_middle_1h') or 0.0) 
             
             kc_upper_2h = float(coin.get('kc_upper_2h') or 0.0) 
-            kc_lower_2h = float(coin.get('kc_lower_2h') or 0.0) 
+            kc_lower_2h = float(coin.get('kc_lower_2h') or 0.0)
+            kc_middle_2h = float(coin.get('kc_middle_2h') or 0.0) 
             
             kc_upper_4h = float(coin.get('kc_upper_4h') or 0.0) 
-            kc_lower_4h = float(coin.get('kc_lower_4h') or 0.0)  
+            kc_lower_4h = float(coin.get('kc_lower_4h') or 0.0) 
+            kc_middle_4h = float(coin.get('kc_middle_4h') or 0.0) 
 
             # --- سحابة الإيشيموكو (Ichimoku Cloud) ---
             ichimoku_conversion_1h = float(coin.get('ichimoku_conversion_1h') or 0.0)
