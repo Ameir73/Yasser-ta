@@ -1722,9 +1722,8 @@ async def intelligence_scanner2():
 
             # --- إدراج_شروط_مؤشرات_بيع ---            
   
-
             # --- تقييم_is_buy_indicator_5 ---
-            elif is_buy_indicator_5:
+            if is_buy_indicator_5:
                 score += 50
                 reasons.append("ترتيب إيجابي للمؤشرات (PUMP) 5")
 
