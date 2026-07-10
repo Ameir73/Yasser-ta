@@ -1318,8 +1318,7 @@ async def intelligence_scanner2():
             low_24h = float(coin.get('low_24h') or (price * 0.95)) 
             fib_618 = high_24h - (0.618 * (high_24h - low_24h)) 
        
-            is_at_tf_support = False       # ضع هنا شرط الدعم الخاص بالفريمات المتعددة (إذا وُجد)
-            is_at_tf_resistance = False    # ضع هنا شرط المقاومة الخاص بالفريمات المتعددة (إذا وُجد)
+            
             # ===============================================
             # 1. حساب وتجهيز جميع الشروط المنطقية أولاً
             # ===============================================
@@ -1643,7 +1642,7 @@ async def intelligence_scanner2():
   
 
             # --- تقييم_is_buy_indicator_1 ---
-            elif is_buy_indicator_1:
+            if is_buy_indicator_1:
                 score += 50
                 reasons.append("ترتيب إيجابي للمؤشرات (PUMP) 1")
 
