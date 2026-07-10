@@ -1690,6 +1690,186 @@ async def intelligence_scanner2():
                 (ema_200_2h > ema_100_2h > kc_upper_2h > bb_upper_2h > ichimoku_conversion_2h > ichimoku_cloud_top_2h > ichimoku_base_2h > ichimoku_cloud_bottom_2h > ema_50_2h > ema_20_2h > bb_middle_2h > supertrend_2h > parabolic_sar_2h > kc_lower_2h > bb_lower_2h)
             )
 
+            # --- is_buy_indicator4_1 ---
+            is_buy_indicator4_1 = (
+                (ichimoku_cloud_bottom_4h > ema_200_4h > kc_upper_4h > bb_upper_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ema_100_4h > ema_50_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_2 ---
+            is_buy_indicator4_2 = (
+                (ema_200_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > bb_upper_4h > kc_upper_4h > ema_100_4h > supertrend_4h > ema_20_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_3 ---
+            is_buy_indicator4_3 = (
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > kc_upper_4h > bb_upper_4h > ichimoku_cloud_bottom_4h > supertrend_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > ema_200_4h > ema_50_4h > ema_100_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_4 ---
+            is_buy_indicator4_4 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > supertrend_4h > parabolic_sar_4h > ema_50_4h > ichimoku_cloud_bottom_4h > kc_lower_4h > ema_100_4h > bb_lower_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator4_5 ---
+            is_buy_indicator4_5 = (
+                (ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ichimoku_cloud_bottom_4h > kc_upper_4h > ema_200_4h > bb_upper_4h > ema_100_4h > ema_50_4h > ema_20_4h > bb_middle_4h > supertrend_4h > parabolic_sar_4h > bb_lower_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator4_6 ---
+            is_buy_indicator4_6 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ema_20_4h > bb_middle_4h > ichimoku_base_4h > parabolic_sar_4h > ichimoku_cloud_bottom_4h > ema_50_4h > supertrend_4h > ema_100_4h > kc_lower_4h > ema_200_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_7 ---
+            is_buy_indicator4_7 = (
+                (supertrend_4h > parabolic_sar_4h > bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > ema_200_4h > bb_middle_4h > ema_50_4h > ema_100_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_8 ---
+            is_buy_indicator4_8 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > supertrend_4h > bb_middle_4h > ema_50_4h > parabolic_sar_4h > ema_100_4h > ema_200_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_9 ---
+            is_buy_indicator4_9 = (
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > bb_upper_4h > kc_upper_4h > supertrend_4h > ema_200_4h > ema_20_4h > ema_100_4h > bb_middle_4h > ema_50_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_10 ---
+            is_buy_indicator4_10 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > ema_200_4h > bb_middle_4h > parabolic_sar_4h > ema_50_4h > ema_100_4h > supertrend_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_11 ---
+            is_buy_indicator4_11 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_200_4h > ema_20_4h > bb_middle_4h > ema_100_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_12 ---
+            is_buy_indicator4_12 = (
+                (kc_upper_4h > bb_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_200_4h > ema_20_4h > ema_100_4h > ema_50_4h > bb_middle_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_13 ---
+            is_buy_indicator4_13 = (
+                (supertrend_4h > parabolic_sar_4h > bb_upper_4h > kc_upper_4h > ema_100_4h > ichimoku_cloud_bottom_4h > ema_50_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ema_200_4h > ema_20_4h > bb_middle_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_14 ---
+            is_buy_indicator4_14 = (
+                (supertrend_4h > parabolic_sar_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_upper_4h > bb_upper_4h > ema_200_4h > ema_100_4h > ema_20_4h > ema_50_4h > bb_middle_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_15 ---
+            is_buy_indicator4_15 = (
+                (parabolic_sar_4h > supertrend_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_upper_4h > bb_upper_4h > ema_200_4h > ema_100_4h > ema_50_4h > ema_20_4h > bb_middle_4h > bb_lower_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator4_16 ---
+            is_buy_indicator4_16 = (
+                (bb_upper_4h > kc_upper_4h > ema_200_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ema_20_4h > ema_100_4h > supertrend_4h > ema_50_4h > bb_middle_4h > kc_lower_4h > parabolic_sar_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_17 ---
+            is_buy_indicator4_17 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > ichimoku_cloud_bottom_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > ema_50_4h > kc_lower_4h > ema_100_4h > bb_lower_4h > ema_200_4h)
+            )
+
+            # --- is_buy_indicator4_18 ---
+            is_buy_indicator4_18 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > ema_200_4h > ema_100_4h > bb_middle_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_19 ---
+            is_buy_indicator4_19 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_200_4h > ema_20_4h > ema_100_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_20 ---
+            is_buy_indicator4_20 = (
+                (supertrend_4h > parabolic_sar_4h > bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_200_4h > ema_100_4h > ema_20_4h > ema_50_4h > bb_middle_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_21 ---
+            is_buy_indicator4_21 = (
+                (ema_200_4h > ema_100_4h > kc_upper_4h > bb_upper_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > bb_middle_4h > ema_20_4h > ichimoku_cloud_bottom_4h > bb_lower_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > kc_lower_4h > ichimoku_conversion_4h)
+            )
+
+            # --- is_buy_indicator4_22 ---
+            is_buy_indicator4_22 = (
+                (ema_200_4h > bb_upper_4h > kc_upper_4h > supertrend_4h > ema_100_4h > ema_50_4h > ichimoku_cloud_bottom_4h > parabolic_sar_4h > bb_middle_4h > ichimoku_base_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_23 ---
+            is_buy_indicator4_23 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > bb_middle_4h > supertrend_4h > ema_50_4h > ema_100_4h > parabolic_sar_4h > kc_lower_4h > ema_200_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_24 ---
+            is_buy_indicator4_24 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > bb_middle_4h > supertrend_4h > ema_200_4h > ema_50_4h > parabolic_sar_4h > ema_100_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_25 ---
+            is_buy_indicator4_25 = (
+                (supertrend_4h > parabolic_sar_4h > bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > ichimoku_cloud_bottom_4h > bb_middle_4h > ema_50_4h > ema_100_4h > ema_200_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_26 ---
+            is_buy_indicator4_26 = (
+                (ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > bb_upper_4h > kc_upper_4h > ema_200_4h > ema_100_4h > ema_20_4h > supertrend_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_27 ---
+            is_buy_indicator4_27 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > bb_middle_4h > ema_200_4h > ema_50_4h > ema_100_4h > parabolic_sar_4h > supertrend_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_28 ---
+            is_buy_indicator4_28 = (
+                (kc_upper_4h > bb_upper_4h > ichimoku_cloud_bottom_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ema_200_4h > ema_20_4h > ema_100_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > supertrend_4h > bb_lower_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator4_29 ---
+            is_buy_indicator4_29 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > parabolic_sar_4h > ema_20_4h > bb_middle_4h > ema_50_4h > supertrend_4h > ema_100_4h > kc_lower_4h > ema_200_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_30 ---
+            is_buy_indicator4_30 = (
+                (bb_upper_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_upper_4h > ema_200_4h > ema_100_4h > supertrend_4h > ema_20_4h > ema_50_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_31 ---
+            is_buy_indicator4_31 = (
+                (kc_upper_4h > bb_upper_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ema_200_4h > ichimoku_cloud_bottom_4h > ema_20_4h > bb_middle_4h > ema_100_4h > ema_50_4h > supertrend_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_32 ---
+            is_buy_indicator4_32 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > ichimoku_cloud_bottom_4h > parabolic_sar_4h > supertrend_4h > ema_50_4h > ema_100_4h > kc_lower_4h > ema_200_4h > bb_lower_4h)
+            )
+
+            # --- is_buy_indicator4_33 ---
+            is_buy_indicator4_33 = (
+                (ema_200_4h > ema_100_4h > kc_upper_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > bb_upper_4h > ema_50_4h > ichimoku_cloud_top_4h > bb_middle_4h > ema_20_4h > ichimoku_conversion_4h > bb_lower_4h > parabolic_sar_4h > kc_lower_4h > supertrend_4h)
+            )
+
+            # --- is_buy_indicator4_34 ---
+            is_buy_indicator4_34 = (
+                (supertrend_4h > kc_upper_4h > bb_upper_4h > parabolic_sar_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > bb_middle_4h > ema_20_4h > ema_50_4h > ema_100_4h > bb_lower_4h > ema_200_4h > kc_lower_4h)
+            )
+
+            # --- is_buy_indicator4_35 ---
+            is_buy_indicator4_35 = (
+                (ema_200_4h > ema_100_4h > ichimoku_cloud_bottom_4h > kc_upper_4h > ema_50_4h > bb_upper_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > bb_lower_4h > kc_lower_4h > supertrend_4h)
+            )
+
+            # --- is_buy_indicator4_36 ---
+            is_buy_indicator4_36 = (
+                (ema_200_4h > ema_100_4h > kc_upper_4h > bb_upper_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > ema_50_4h > ema_20_4h > bb_middle_4h > supertrend_4h > parabolic_sar_4h > bb_lower_4h > kc_lower_4h)
+            )
+
             # --- إدراج_شروط_مؤشرات_شراء ---
             # --- is_sell_indicator_1 ---
             
@@ -1931,6 +2111,116 @@ async def intelligence_scanner2():
             # --- is_sell_indicator2_24 ---
             is_sell_indicator2_24 = (
                 (ema_200_2h > ichimoku_cloud_bottom_2h > ema_100_2h > kc_upper_2h > bb_upper_2h > supertrend_2h > ichimoku_base_2h > ema_50_2h > parabolic_sar_2h > ichimoku_cloud_top_2h > bb_middle_2h > ema_20_2h > ichimoku_conversion_2h > bb_lower_2h > kc_lower_2h)
+            )
+
+            # --- is_sell_indicator4_1 ---
+            is_sell_indicator4_1 = (
+                (bb_upper_4h > ema_200_4h > kc_upper_4h > parabolic_sar_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_100_4h > bb_middle_4h > supertrend_4h > ichimoku_cloud_top_4h > ema_50_4h > ema_20_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_2 ---
+            is_sell_indicator4_2 = (
+                (bb_upper_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > kc_upper_4h > ichimoku_cloud_top_4h > ema_100_4h > ema_50_4h > ema_200_4h > ichimoku_conversion_4h > ema_20_4h > bb_middle_4h > parabolic_sar_4h > kc_lower_4h > bb_lower_4h > supertrend_4h)
+            )
+
+            # --- is_sell_indicator4_3 ---
+            is_sell_indicator4_3 = (
+                (parabolic_sar_4h > supertrend_4h > kc_upper_4h > bb_upper_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > bb_middle_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > ema_50_4h > bb_lower_4h > ema_100_4h > kc_lower_4h > ema_200_4h)
+            )
+
+            # --- is_sell_indicator4_4 ---
+            is_sell_indicator4_4 = (
+                (parabolic_sar_4h > ichimoku_conversion_4h > ichimoku_cloud_top_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > bb_upper_4h > supertrend_4h > kc_upper_4h > ema_20_4h > bb_middle_4h > ema_50_4h > ema_100_4h > ema_200_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_5 ---
+            is_sell_indicator4_5 = (
+                (bb_upper_4h > kc_upper_4h > ichimoku_cloud_bottom_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > bb_middle_4h > ema_20_4h > ema_50_4h > ema_100_4h > parabolic_sar_4h > ema_200_4h > kc_lower_4h > bb_lower_4h > supertrend_4h)
+            )
+
+            # --- is_sell_indicator4_6 ---
+            is_sell_indicator4_6 = (
+                (ema_200_4h > ema_100_4h > bb_upper_4h > ema_50_4h > kc_upper_4h > ichimoku_cloud_bottom_4h > parabolic_sar_4h > ichimoku_base_4h > supertrend_4h > bb_middle_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_7 ---
+            is_sell_indicator4_7 = (
+                (ema_200_4h > ema_100_4h > bb_upper_4h > kc_upper_4h > ema_50_4h > ichimoku_cloud_bottom_4h > bb_middle_4h > ichimoku_base_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > bb_lower_4h > kc_lower_4h > parabolic_sar_4h > supertrend_4h)
+            )
+
+            # --- is_sell_indicator4_8 ---
+            is_sell_indicator4_8 = (
+                (ema_200_4h > bb_upper_4h > kc_upper_4h > ema_100_4h > ema_50_4h > parabolic_sar_4h > bb_middle_4h > supertrend_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_9 ---
+            is_sell_indicator4_9 = (
+                (ema_200_4h > ema_100_4h > bb_upper_4h > ema_50_4h > kc_upper_4h > ichimoku_cloud_bottom_4h > parabolic_sar_4h > supertrend_4h > bb_middle_4h > ichimoku_base_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_10 ---
+            is_sell_indicator4_10 = (
+                (ema_200_4h > ema_100_4h > ichimoku_cloud_bottom_4h > ema_50_4h > bb_upper_4h > kc_upper_4h > ichimoku_base_4h > supertrend_4h > bb_middle_4h > parabolic_sar_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_11 ---
+            is_sell_indicator4_11 = (
+                (ema_200_4h > ichimoku_cloud_bottom_4h > ema_100_4h > parabolic_sar_4h > ema_50_4h > bb_upper_4h > kc_upper_4h > supertrend_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > bb_middle_4h > ema_20_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_12 ---
+            is_sell_indicator4_12 = (
+                (ichimoku_cloud_bottom_4h > ema_200_4h > ema_100_4h > ema_50_4h > bb_upper_4h > kc_upper_4h > bb_middle_4h > ema_20_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h > parabolic_sar_4h > supertrend_4h)
+            )
+
+            # --- is_sell_indicator4_13 ---
+            is_sell_indicator4_13 = (
+                (ema_200_4h > ema_100_4h > bb_upper_4h > ema_50_4h > ichimoku_cloud_bottom_4h > kc_upper_4h > ichimoku_base_4h > bb_middle_4h > ema_20_4h > supertrend_4h > parabolic_sar_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_14 ---
+            is_sell_indicator4_14 = (
+                (ema_200_4h > ema_100_4h > bb_upper_4h > ema_50_4h > kc_upper_4h > ichimoku_cloud_bottom_4h > bb_middle_4h > ema_20_4h > ichimoku_base_4h > parabolic_sar_4h > supertrend_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_15 ---
+            is_sell_indicator4_15 = (
+                (ema_200_4h > bb_upper_4h > ema_100_4h > kc_upper_4h > supertrend_4h > ema_50_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > bb_middle_4h > ichimoku_cloud_top_4h > parabolic_sar_4h > ema_20_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_16 ---
+            is_sell_indicator4_16 = (
+                (ema_200_4h > ema_100_4h > ema_50_4h > ichimoku_cloud_bottom_4h > bb_upper_4h > kc_upper_4h > ichimoku_base_4h > ema_20_4h > bb_middle_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h > parabolic_sar_4h > supertrend_4h)
+            )
+
+            # --- is_sell_indicator4_17 ---
+            is_sell_indicator4_17 = (
+                (ema_200_4h > ema_100_4h > bb_upper_4h > kc_upper_4h > ema_50_4h > ichimoku_cloud_bottom_4h > ichimoku_base_4h > supertrend_4h > bb_middle_4h > parabolic_sar_4h > ichimoku_cloud_top_4h > ema_20_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_18 ---
+            is_sell_indicator4_18 = (
+                (ema_200_4h > ema_100_4h > ichimoku_cloud_bottom_4h > bb_upper_4h > ema_50_4h > kc_upper_4h > ichimoku_base_4h > parabolic_sar_4h > supertrend_4h > bb_middle_4h > ema_20_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > bb_lower_4h > kc_lower_4h)
+            )
+
+            # --- is_sell_indicator4_19 ---
+            is_sell_indicator4_19 = (
+                (ema_200_4h > bb_upper_4h > ema_100_4h > kc_upper_4h > ichimoku_cloud_bottom_4h > ema_50_4h > parabolic_sar_4h > supertrend_4h > bb_middle_4h > ema_20_4h > ichimoku_base_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_20 ---
+            is_sell_indicator4_20 = (
+                (ema_200_4h > bb_upper_4h > ichimoku_cloud_bottom_4h > kc_upper_4h > supertrend_4h > ema_100_4h > ichimoku_base_4h > ema_50_4h > parabolic_sar_4h > bb_middle_4h > ichimoku_cloud_top_4h > ema_20_4h > ichimoku_conversion_4h > bb_lower_4h > kc_lower_4h)
+            )
+
+            # --- is_sell_indicator4_21 ---
+            is_sell_indicator4_21 = (
+                (ema_200_4h > ema_100_4h > ichimoku_cloud_bottom_4h > ema_50_4h > bb_upper_4h > kc_upper_4h > ichimoku_base_4h > supertrend_4h > parabolic_sar_4h > ema_20_4h > bb_middle_4h > ichimoku_cloud_top_4h > ichimoku_conversion_4h > kc_lower_4h > bb_lower_4h)
+            )
+
+            # --- is_sell_indicator4_22 ---
+            is_sell_indicator4_22 = (
+                (ema_200_4h > ema_100_4h > kc_upper_4h > bb_upper_4h > ema_50_4h > supertrend_4h > ichimoku_base_4h > ichimoku_cloud_bottom_4h > parabolic_sar_4h > bb_middle_4h > ichimoku_cloud_top_4h > ema_20_4h > ichimoku_conversion_4h > bb_lower_4h > kc_lower_4h)
             )
 
             # --- إدراج_شروط_مؤشرات_بيع ---            
@@ -2301,6 +2591,186 @@ async def intelligence_scanner2():
                 score += 50
                 reasons.append("المؤشرات 2h 35")
 
+            # --- تقييم_is_buy_indicator4_1 ---
+            elif is_buy_indicator4_1:
+                score += 50
+                reasons.append("المؤشرات 4h 1")
+
+            # --- تقييم_is_buy_indicator4_2 ---
+            elif is_buy_indicator4_2:
+                score += 50
+                reasons.append("المؤشرات 4h 2")
+
+            # --- تقييم_is_buy_indicator4_3 ---
+            elif is_buy_indicator4_3:
+                score += 50
+                reasons.append("المؤشرات 4h 3")
+
+            # --- تقييم_is_buy_indicator4_4 ---
+            elif is_buy_indicator4_4:
+                score += 50
+                reasons.append("المؤشرات 4h 4")
+
+            # --- تقييم_is_buy_indicator4_5 ---
+            elif is_buy_indicator4_5:
+                score += 50
+                reasons.append("المؤشرات 4h 5")
+
+            # --- تقييم_is_buy_indicator4_6 ---
+            elif is_buy_indicator4_6:
+                score += 50
+                reasons.append("المؤشرات 4h 6")
+
+            # --- تقييم_is_buy_indicator4_7 ---
+            elif is_buy_indicator4_7:
+                score += 50
+                reasons.append("المؤشرات 4h 7")
+
+            # --- تقييم_is_buy_indicator4_8 ---
+            elif is_buy_indicator4_8:
+                score += 50
+                reasons.append("المؤشرات 4h 8")
+
+            # --- تقييم_is_buy_indicator4_9 ---
+            elif is_buy_indicator4_9:
+                score += 50
+                reasons.append("المؤشرات 4h 9")
+
+            # --- تقييم_is_buy_indicator4_10 ---
+            elif is_buy_indicator4_10:
+                score += 50
+                reasons.append("المؤشرات 4h 10")
+
+            # --- تقييم_is_buy_indicator4_11 ---
+            elif is_buy_indicator4_11:
+                score += 50
+                reasons.append("المؤشرات 4h 11")
+
+            # --- تقييم_is_buy_indicator4_12 ---
+            elif is_buy_indicator4_12:
+                score += 50
+                reasons.append("المؤشرات 4h 12")
+
+            # --- تقييم_is_buy_indicator4_13 ---
+            elif is_buy_indicator4_13:
+                score += 50
+                reasons.append("المؤشرات 4h 13")
+
+            # --- تقييم_is_buy_indicator4_14 ---
+            elif is_buy_indicator4_14:
+                score += 50
+                reasons.append("المؤشرات 4h 14")
+
+            # --- تقييم_is_buy_indicator4_15 ---
+            elif is_buy_indicator4_15:
+                score += 50
+                reasons.append("المؤشرات 4h 15")
+
+            # --- تقييم_is_buy_indicator4_16 ---
+            elif is_buy_indicator4_16:
+                score += 50
+                reasons.append("المؤشرات 4h 16")
+
+            # --- تقييم_is_buy_indicator4_17 ---
+            elif is_buy_indicator4_17:
+                score += 50
+                reasons.append("المؤشرات 4h 17")
+
+            # --- تقييم_is_buy_indicator4_18 ---
+            elif is_buy_indicator4_18:
+                score += 50
+                reasons.append("المؤشرات 4h 18")
+
+            # --- تقييم_is_buy_indicator4_19 ---
+            elif is_buy_indicator4_19:
+                score += 50
+                reasons.append("المؤشرات 4h 19")
+
+            # --- تقييم_is_buy_indicator4_20 ---
+            elif is_buy_indicator4_20:
+                score += 50
+                reasons.append("المؤشرات 4h 20")
+
+            # --- تقييم_is_buy_indicator4_21 ---
+            elif is_buy_indicator4_21:
+                score += 50
+                reasons.append("المؤشرات 4h 21")
+
+            # --- تقييم_is_buy_indicator4_22 ---
+            elif is_buy_indicator4_22:
+                score += 50
+                reasons.append("المؤشرات 4h 22")
+
+            # --- تقييم_is_buy_indicator4_23 ---
+            elif is_buy_indicator4_23:
+                score += 50
+                reasons.append("المؤشرات 4h 23")
+
+            # --- تقييم_is_buy_indicator4_24 ---
+            elif is_buy_indicator4_24:
+                score += 50
+                reasons.append("المؤشرات 4h 24")
+
+            # --- تقييم_is_buy_indicator4_25 ---
+            elif is_buy_indicator4_25:
+                score += 50
+                reasons.append("المؤشرات 4h 25")
+
+            # --- تقييم_is_buy_indicator4_26 ---
+            elif is_buy_indicator4_26:
+                score += 50
+                reasons.append("المؤشرات 4h 26")
+
+            # --- تقييم_is_buy_indicator4_27 ---
+            elif is_buy_indicator4_27:
+                score += 50
+                reasons.append("المؤشرات 4h 27")
+
+            # --- تقييم_is_buy_indicator4_28 ---
+            elif is_buy_indicator4_28:
+                score += 50
+                reasons.append("المؤشرات 4h 28")
+
+            # --- تقييم_is_buy_indicator4_29 ---
+            elif is_buy_indicator4_29:
+                score += 50
+                reasons.append("المؤشرات 4h 29")
+
+            # --- تقييم_is_buy_indicator4_30 ---
+            elif is_buy_indicator4_30:
+                score += 50
+                reasons.append("المؤشرات 4h 30")
+
+            # --- تقييم_is_buy_indicator4_31 ---
+            elif is_buy_indicator4_31:
+                score += 50
+                reasons.append("المؤشرات 4h 31")
+
+            # --- تقييم_is_buy_indicator4_32 ---
+            elif is_buy_indicator4_32:
+                score += 50
+                reasons.append("المؤشرات 4h 32")
+
+            # --- تقييم_is_buy_indicator4_33 ---
+            elif is_buy_indicator4_33:
+                score += 50
+                reasons.append("المؤشرات 4h 33")
+
+            # --- تقييم_is_buy_indicator4_34 ---
+            elif is_buy_indicator4_34:
+                score += 50
+                reasons.append("المؤشرات 4h 34")
+
+            # --- تقييم_is_buy_indicator4_35 ---
+            elif is_buy_indicator4_35:
+                score += 50
+                reasons.append("المؤشرات 4h 35")
+
+            # --- تقييم_is_buy_indicator4_36 ---
+            elif is_buy_indicator4_36:
+                score += 50
+                reasons.append("المؤشرات 4h 36")
+
             # --- إدراج_تقييم_مؤشرات_شراء ---
 
             # --- تقييم_is_sell_indicator_1 ---
@@ -2542,6 +3012,116 @@ async def intelligence_scanner2():
             elif is_sell_indicator2_24:
                 score -= 50
                 reasons.append("المؤشرات 2h 24")
+
+            # --- تقييم_is_sell_indicator4_1 ---
+            elif is_sell_indicator4_1:
+                score -= 50
+                reasons.append("المؤشرات 4h 1")
+
+            # --- تقييم_is_sell_indicator4_2 ---
+            elif is_sell_indicator4_2:
+                score -= 50
+                reasons.append("المؤشرات 4h 2")
+
+            # --- تقييم_is_sell_indicator4_3 ---
+            elif is_sell_indicator4_3:
+                score -= 50
+                reasons.append("المؤشرات 4h 3")
+
+            # --- تقييم_is_sell_indicator4_4 ---
+            elif is_sell_indicator4_4:
+                score -= 50
+                reasons.append("المؤشرات 4h 4")
+
+            # --- تقييم_is_sell_indicator4_5 ---
+            elif is_sell_indicator4_5:
+                score -= 50
+                reasons.append("المؤشرات 4h 5")
+
+            # --- تقييم_is_sell_indicator4_6 ---
+            elif is_sell_indicator4_6:
+                score -= 50
+                reasons.append("المؤشرات 4h 6")
+
+            # --- تقييم_is_sell_indicator4_7 ---
+            elif is_sell_indicator4_7:
+                score -= 50
+                reasons.append("المؤشرات 4h 7")
+
+            # --- تقييم_is_sell_indicator4_8 ---
+            elif is_sell_indicator4_8:
+                score -= 50
+                reasons.append("المؤشرات 4h 8")
+
+            # --- تقييم_is_sell_indicator4_9 ---
+            elif is_sell_indicator4_9:
+                score -= 50
+                reasons.append("المؤشرات 4h 9")
+
+            # --- تقييم_is_sell_indicator4_10 ---
+            elif is_sell_indicator4_10:
+                score -= 50
+                reasons.append("المؤشرات 4h 10")
+
+            # --- تقييم_is_sell_indicator4_11 ---
+            elif is_sell_indicator4_11:
+                score -= 50
+                reasons.append("المؤشرات 4h 11")
+
+            # --- تقييم_is_sell_indicator4_12 ---
+            elif is_sell_indicator4_12:
+                score -= 50
+                reasons.append("المؤشرات 4h 12")
+
+            # --- تقييم_is_sell_indicator4_13 ---
+            elif is_sell_indicator4_13:
+                score -= 50
+                reasons.append("المؤشرات 4h 13")
+
+            # --- تقييم_is_sell_indicator4_14 ---
+            elif is_sell_indicator4_14:
+                score -= 50
+                reasons.append("المؤشرات 4h 14")
+
+            # --- تقييم_is_sell_indicator4_15 ---
+            elif is_sell_indicator4_15:
+                score -= 50
+                reasons.append("المؤشرات 4h 15")
+
+            # --- تقييم_is_sell_indicator4_16 ---
+            elif is_sell_indicator4_16:
+                score -= 50
+                reasons.append("المؤشرات 4h 16")
+
+            # --- تقييم_is_sell_indicator4_17 ---
+            elif is_sell_indicator4_17:
+                score -= 50
+                reasons.append("المؤشرات 4h 17")
+
+            # --- تقييم_is_sell_indicator4_18 ---
+            elif is_sell_indicator4_18:
+                score -= 50
+                reasons.append("المؤشرات 4h 18")
+
+            # --- تقييم_is_sell_indicator4_19 ---
+            elif is_sell_indicator4_19:
+                score -= 50
+                reasons.append("المؤشرات 4h 19")
+
+            # --- تقييم_is_sell_indicator4_20 ---
+            elif is_sell_indicator4_20:
+                score -= 50
+                reasons.append("المؤشرات 4h 20")
+
+            # --- تقييم_is_sell_indicator4_21 ---
+            elif is_sell_indicator4_21:
+                score -= 50
+                reasons.append("المؤشرات 4h 21")
+
+            # --- تقييم_is_sell_indicator4_22 ---
+            elif is_sell_indicator4_22:
+                score -= 50
+                reasons.append("المؤشرات 4h 22")
 
             # --- إدراج_تقييم_مؤشرات_بيع ---
             # ==========================================
@@ -3158,6 +3738,186 @@ async def intelligence_scanner3():
                 (rsi_2h >= 77 and macd_2h >= 0.00019 and macd_signal_2h <= -0.00025 and macd_hist_2h >= 0.00044 and obv_2h > 0 and obv_slope_2h > 0 and adx_2h >= 71 and stochastic_k_2h >= 92 and stochastic_d_2h >= 87 and williams_r_2h <= -2)
             )
 
+            # --- is_buy_momentum4_1 ---
+            is_buy_momentum4_1 = (
+                (rsi_4h >= 70 and macd_4h <= -0.00081 and macd_signal_4h <= -0.0016 and macd_hist_4h >= 0.00084 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 49 and stochastic_k_4h >= 41 and stochastic_d_4h >= 26 and williams_r_4h <= -18)
+            )
+
+            # --- is_buy_momentum4_2 ---
+            is_buy_momentum4_2 = (
+                (rsi_4h >= 84 and macd_4h >= 0.0000029 and macd_signal_4h >= 0.00000021 and macd_hist_4h >= 0.0000026 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 77 and stochastic_k_4h >= 58 and stochastic_d_4h >= 38 and williams_r_4h <= -24)
+            )
+
+            # --- is_buy_momentum4_3 ---
+            is_buy_momentum4_3 = (
+                (rsi_4h >= 87 and macd_4h >= 0.12 and macd_signal_4h >= 0.075 and macd_hist_4h >= 0.050 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 75 and stochastic_k_4h >= 69 and stochastic_d_4h >= 60 and williams_r_4h <= -26)
+            )
+
+            # --- is_buy_momentum4_4 ---
+            is_buy_momentum4_4 = (
+                (rsi_4h >= 69 and macd_4h >= 0.0080 and macd_signal_4h >= 0.0053 and macd_hist_4h >= 0.0027 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 77 and stochastic_k_4h >= 93 and stochastic_d_4h >= 91 and williams_r_4h <= -3)
+            )
+
+            # --- is_buy_momentum4_5 ---
+            is_buy_momentum4_5 = (
+                (rsi_4h >= 79 and macd_4h >= 0.0026 and macd_signal_4h >= 0.00041 and macd_hist_4h >= 0.0022 and obv_4h < 0 and obv_slope_4h > 0 and adx_4h >= 67 and stochastic_k_4h >= 33 and stochastic_d_4h >= 31 and williams_r_4h <= -33)
+            )
+
+            # --- is_buy_momentum4_6 ---
+            is_buy_momentum4_6 = (
+                (rsi_4h >= 66 and macd_4h >= 0.00049 and macd_signal_4h >= 0.00043 and macd_hist_4h >= 0.000060 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 50 and stochastic_k_4h >= 82 and stochastic_d_4h >= 80 and williams_r_4h <= -22)
+            )
+
+            # --- is_buy_momentum4_7 ---
+            is_buy_momentum4_7 = (
+                (rsi_4h >= 70 and macd_4h >= 0.00046 and macd_signal_4h >= 0.00027 and macd_hist_4h >= 0.00018 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 69 and stochastic_k_4h >= 75 and stochastic_d_4h >= 75 and williams_r_4h <= -29)
+            )
+
+            # --- is_buy_momentum4_8 ---
+            is_buy_momentum4_8 = (
+                (rsi_4h >= 76 and macd_4h >= 0.17 and macd_signal_4h >= 0.10 and macd_hist_4h >= 0.065 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 84 and stochastic_k_4h >= 75 and stochastic_d_4h >= 61 and williams_r_4h <= -29)
+            )
+
+            # --- is_buy_momentum4_9 ---
+            is_buy_momentum4_9 = (
+                (rsi_4h >= 91 and macd_4h >= 0.00089 and macd_signal_4h >= 0.00036 and macd_hist_4h >= 0.00053 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 97 and stochastic_k_4h >= 68 and stochastic_d_4h >= 61 and williams_r_4h <= -31)
+            )
+
+            # --- is_buy_momentum4_10 ---
+            is_buy_momentum4_10 = (
+                (rsi_4h >= 71 and macd_4h >= 0.00017 and macd_signal_4h >= 0.00012 and macd_hist_4h >= 0.000049 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 79 and stochastic_k_4h >= 79 and stochastic_d_4h >= 73 and williams_r_4h <= -15)
+            )
+
+            # --- is_buy_momentum4_11 ---
+            is_buy_momentum4_11 = (
+                (rsi_4h >= 66 and macd_4h >= 0.00062 and macd_signal_4h >= 0.00026 and macd_hist_4h >= 0.00036 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 88 and stochastic_k_4h >= 63 and stochastic_d_4h >= 77 and williams_r_4h <= -48)
+            )
+
+            # --- is_buy_momentum4_12 ---
+            is_buy_momentum4_12 = (
+                (rsi_4h >= 70 and macd_4h >= 0.0034 and macd_signal_4h >= 0.0015 and macd_hist_4h >= 0.0019 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 96 and stochastic_k_4h >= 68 and stochastic_d_4h >= 69 and williams_r_4h <= -34)
+            )
+
+            # --- is_buy_momentum4_13 ---
+            is_buy_momentum4_13 = (
+                (rsi_4h >= 64 and macd_4h >= 0.0042 and macd_signal_4h <= -0.0095 and macd_hist_4h >= 0.013 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 52 and stochastic_k_4h >= 83 and stochastic_d_4h >= 82 and williams_r_4h <= -20)
+            )
+
+            # --- is_buy_momentum4_14 ---
+            is_buy_momentum4_14 = (
+                (rsi_4h >= 71 and macd_4h >= 0.0030 and macd_signal_4h >= 0.00014 and macd_hist_4h >= 0.0029 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 82 and stochastic_k_4h >= 69 and stochastic_d_4h >= 69 and williams_r_4h <= -54)
+            )
+
+            # --- is_buy_momentum4_15 ---
+            is_buy_momentum4_15 = (
+                (rsi_4h >= 52 and macd_4h >= 0.000057 and macd_signal_4h <= -0.0000079 and macd_hist_4h >= 0.000065 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 64 and stochastic_k_4h >= 48 and stochastic_d_4h >= 64 and williams_r_4h <= -80)
+            )
+
+            # --- is_buy_momentum4_16 ---
+            is_buy_momentum4_16 = (
+                (rsi_4h >= 81 and macd_4h >= 0.0062 and macd_signal_4h >= 0.0023 and macd_hist_4h >= 0.0038 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 71 and stochastic_k_4h >= 92 and stochastic_d_4h >= 88 and williams_r_4h <= -3)
+            )
+
+            # --- is_buy_momentum4_17 ---
+            is_buy_momentum4_17 = (
+                (rsi_4h >= 73 and macd_4h >= 0.063 and macd_signal_4h >= 0.041 and macd_hist_4h >= 0.022 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 87 and stochastic_k_4h >= 90 and stochastic_d_4h >= 86 and williams_r_4h <= -1)
+            )
+
+            # --- is_buy_momentum4_18 ---
+            is_buy_momentum4_18 = (
+                (rsi_4h >= 72 and macd_4h >= 0.0029 and macd_signal_4h >= 0.0013 and macd_hist_4h >= 0.0016 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 84 and stochastic_k_4h >= 72 and stochastic_d_4h >= 80 and williams_r_4h <= -30)
+            )
+
+            # --- is_buy_momentum4_19 ---
+            is_buy_momentum4_19 = (
+                (rsi_4h >= 62 and macd_4h >= 0.00099 and macd_signal_4h >= 0.00054 and macd_hist_4h >= 0.00044 and obv_4h < 0 and obv_slope_4h > 0 and adx_4h >= 70 and stochastic_k_4h >= 45 and stochastic_d_4h >= 53 and williams_r_4h <= -54)
+            )
+
+            # --- is_buy_momentum4_20 ---
+            is_buy_momentum4_20 = (
+                (rsi_4h >= 57 and macd_4h >= 0.0043 and macd_signal_4h >= 0.0019 and macd_hist_4h >= 0.0023 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 61 and stochastic_k_4h >= 49 and stochastic_d_4h >= 57 and williams_r_4h <= -55)
+            )
+
+            # --- is_buy_momentum4_21 ---
+            is_buy_momentum4_21 = (
+                (rsi_4h >= 23 and macd_4h <= -0.0045 and macd_signal_4h <= -0.0034 and macd_hist_4h <= -0.0010 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 72 and stochastic_k_4h >= 51 and stochastic_d_4h >= 48 and williams_r_4h <= -61)
+            )
+
+            # --- is_buy_momentum4_22 ---
+            is_buy_momentum4_22 = (
+                (rsi_4h >= 33 and macd_4h <= -0.0034 and macd_signal_4h <= -0.0026 and macd_hist_4h <= -0.00074 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 57 and stochastic_k_4h >= 34 and stochastic_d_4h >= 36 and williams_r_4h <= -82)
+            )
+
+            # --- is_buy_momentum4_23 ---
+            is_buy_momentum4_23 = (
+                (rsi_4h >= 74 and macd_4h >= 0.032 and macd_signal_4h >= 0.012 and macd_hist_4h >= 0.020 and obv_4h < 0 and obv_slope_4h > 0 and adx_4h >= 53 and stochastic_k_4h >= 92 and stochastic_d_4h >= 91 and williams_r_4h <= -2)
+            )
+
+            # --- is_buy_momentum4_24 ---
+            is_buy_momentum4_24 = (
+                (rsi_4h >= 84 and macd_4h >= 0.00028 and macd_signal_4h >= 0.00017 and macd_hist_4h >= 0.00011 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 63 and stochastic_k_4h >= 81 and stochastic_d_4h >= 81 and williams_r_4h <= -20)
+            )
+
+            # --- is_buy_momentum4_25 ---
+            is_buy_momentum4_25 = (
+                (rsi_4h >= 69 and macd_4h >= 0.017 and macd_signal_4h >= 0.011 and macd_hist_4h >= 0.0060 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 66 and stochastic_k_4h >= 82 and stochastic_d_4h >= 84 and williams_r_4h <= -31)
+            )
+
+            # --- is_buy_momentum4_26 ---
+            is_buy_momentum4_26 = (
+                (rsi_4h >= 85 and macd_4h >= 0.0016 and macd_signal_4h <= -0.000019 and macd_hist_4h >= 0.0017 and obv_4h < 0 and obv_slope_4h > 0 and adx_4h >= 88 and stochastic_k_4h >= 68 and stochastic_d_4h >= 59 and williams_r_4h <= -20)
+            )
+
+            # --- is_buy_momentum4_27 ---
+            is_buy_momentum4_27 = (
+                (rsi_4h >= 67 and macd_4h >= 0.0047 and macd_signal_4h >= 0.0029 and macd_hist_4h >= 0.0017 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 73 and stochastic_k_4h >= 68 and stochastic_d_4h >= 68 and williams_r_4h <= -33)
+            )
+
+            # --- is_buy_momentum4_28 ---
+            is_buy_momentum4_28 = (
+                (rsi_4h >= 67 and macd_4h >= 0.00050 and macd_signal_4h <= -0.000059 and macd_hist_4h >= 0.00056 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 86 and stochastic_k_4h >= 63 and stochastic_d_4h >= 56 and williams_r_4h <= -14)
+            )
+
+            # --- is_buy_momentum4_29 ---
+            is_buy_momentum4_29 = (
+                (rsi_4h >= 67 and macd_4h >= 0.0091 and macd_signal_4h >= 0.0076 and macd_hist_4h >= 0.0015 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 58 and stochastic_k_4h >= 65 and stochastic_d_4h >= 73 and williams_r_4h <= -29)
+            )
+
+            # --- is_buy_momentum4_30 ---
+            is_buy_momentum4_30 = (
+                (rsi_4h >= 85 and macd_4h >= 0.00025 and macd_signal_4h <= -0.000070 and macd_hist_4h >= 0.00032 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 71 and stochastic_k_4h >= 64 and stochastic_d_4h >= 42 and williams_r_4h <= -16)
+            )
+
+            # --- is_buy_momentum4_31 ---
+            is_buy_momentum4_31 = (
+                (rsi_4h >= 71 and macd_4h >= 0.0051 and macd_signal_4h >= 0.0024 and macd_hist_4h >= 0.0026 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 56 and stochastic_k_4h >= 70 and stochastic_d_4h >= 72 and williams_r_4h <= -16)
+            )
+
+            # --- is_buy_momentum4_32 ---
+            is_buy_momentum4_32 = (
+                (rsi_4h >= 74 and macd_4h >= 0.11 and macd_signal_4h >= 0.085 and macd_hist_4h >= 0.031 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 91 and stochastic_k_4h >= 83 and stochastic_d_4h >= 78 and williams_r_4h <= -12)
+            )
+
+            # --- is_buy_momentum4_33 ---
+            is_buy_momentum4_33 = (
+                (rsi_4h >= 40 and macd_4h <= -0.0051 and macd_signal_4h <= -0.0039 and macd_hist_4h <= -0.0011 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 9 and stochastic_k_4h >= 13 and stochastic_d_4h >= 7 and williams_r_4h <= -69)
+            )
+
+            # --- is_buy_momentum4_34 ---
+            is_buy_momentum4_34 = (
+                (rsi_4h >= 43 and macd_4h >= 0.0017 and macd_signal_4h >= 0.0023 and macd_hist_4h <= -0.00062 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 56 and stochastic_k_4h >= 35 and stochastic_d_4h >= 43 and williams_r_4h <= -94)
+            )
+
+            # --- is_buy_momentum4_35 ---
+            is_buy_momentum4_35 = (
+                (rsi_4h >= 68 and macd_4h <= -0.068 and macd_signal_4h <= -0.16 and macd_hist_4h >= 0.10 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 69 and stochastic_k_4h >= 42 and stochastic_d_4h >= 25 and williams_r_4h <= -11)
+            )
+
+            # --- is_buy_momentum4_36 ---
+            is_buy_momentum4_36 = (
+                (rsi_4h >= 68 and macd_4h <= -0.00034 and macd_signal_4h <= -0.00078 and macd_hist_4h >= 0.00044 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 56 and stochastic_k_4h >= 50 and stochastic_d_4h >= 36 and williams_r_4h <= -27)
+            )
+
             # --- إدراج_شروط_زخم_شراء ---
 
             # --- is_sell_momentum_1 ---
@@ -3398,6 +4158,121 @@ async def intelligence_scanner3():
             # --- is_sell_momentum2_24 ---
             is_sell_momentum2_24 = (
                 (rsi_2h >= 27 and macd_2h <= -0.016 and macd_signal_2h <= -0.011 and macd_hist_2h <= -0.0047 and obv_2h < 0 and obv_slope_2h < 0 and adx_2h >= 50 and stochastic_k_2h >= 14 and stochastic_d_2h >= 17 and williams_r_2h <= -86)
+            )
+
+            # --- is_sell_momentum4_1 ---
+            is_sell_momentum4_1 = (
+                (rsi_4h >= 29 and macd_4h <= -0.0026 and macd_signal_4h <= -0.00065 and macd_hist_4h <= -0.0020 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 16 and stochastic_k_4h >= 1 and stochastic_d_4h >= 2 and williams_r_4h <= -99)
+            )
+
+            # --- is_sell_momentum4_2 ---
+            is_sell_momentum4_2 = (
+                (rsi_4h >= 40 and macd_4h <= -0.044 and macd_signal_4h <= -0.038 and macd_hist_4h <= -0.0061 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 20 and stochastic_k_4h >= 8 and stochastic_d_4h >= 9 and williams_r_4h <= -89)
+            )
+
+            # --- is_sell_momentum4_3 ---
+            is_sell_momentum4_3 = (
+                (rsi_4h >= 45 and macd_4h >= 0.000012 and macd_signal_4h >= 0.000023 and macd_hist_4h <= -0.000010 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 30 and stochastic_k_4h >= 22 and stochastic_d_4h >= 30 and williams_r_4h <= -86)
+            )
+
+            # --- is_sell_momentum4_4 ---
+            is_sell_momentum4_4 = (
+                (rsi_4h >= 47 and macd_4h >= 0.0013 and macd_signal_4h >= 0.0027 and macd_hist_4h <= -0.0013 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 76 and stochastic_k_4h >= 6 and stochastic_d_4h >= 6 and williams_r_4h <= -93)
+            )
+
+            # --- is_sell_momentum4_5 ---
+            is_sell_momentum4_5 = (
+                (rsi_4h >= 39 and macd_4h <= -0.0038 and macd_signal_4h >= 0.0016 and macd_hist_4h <= -0.0054 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 12 and stochastic_k_4h >= 5 and stochastic_d_4h >= 6 and williams_r_4h <= -96)
+            )
+
+            # --- is_sell_momentum4_6 ---
+            is_sell_momentum4_6 = (
+                (rsi_4h >= 21 and macd_4h <= -0.00052 and macd_signal_4h <= -0.00042 and macd_hist_4h <= -0.00010 and obv_4h < 0 and obv_slope_4h == 0 and adx_4h >= 5 and stochastic_k_4h >= 9 and stochastic_d_4h >= 7 and williams_r_4h <= -86)
+            )
+
+            # --- is_sell_momentum4_7 ---
+            is_sell_momentum4_7 = (
+                (rsi_4h >= 25 and macd_4h <= -0.000052 and macd_signal_4h <= -0.000031 and macd_hist_4h <= -0.000020 and obv_4h > 0 and obv_slope_4h > 0 and adx_4h >= 13 and stochastic_k_4h >= 7 and stochastic_d_4h >= 7 and williams_r_4h <= -90)
+            )
+
+            # --- is_sell_momentum4_8 ---
+            is_sell_momentum4_8 = (
+                (rsi_4h >= 22 and macd_4h <= -0.00042 and macd_signal_4h <= -0.00019 and macd_hist_4h <= -0.00023 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 64 and stochastic_k_4h >= 5 and stochastic_d_4h >= 6 and williams_r_4h <= -97)
+            )
+
+            # --- is_sell_momentum4_9 ---
+            is_sell_momentum4_9 = (
+                (rsi_4h >= 19 and macd_4h <= -0.011 and macd_signal_4h <= -0.0092 and macd_hist_4h <= -0.0022 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 49 and stochastic_k_4h >= 7 and stochastic_d_4h >= 8 and williams_r_4h <= -99)
+            )
+
+            # --- is_sell_momentum4_10 ---
+            is_sell_momentum4_10 = (
+                (rsi_4h >= 18 and macd_4h <= -0.00030 and macd_signal_4h <= -0.00028 and macd_hist_4h <= -0.000028 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 36 and stochastic_k_4h >= 13 and stochastic_d_4h >= 13 and williams_r_4h <= -88)
+            )
+
+            # --- is_sell_momentum4_11 ---
+            is_sell_momentum4_11 = (
+                (rsi_4h >= 30 and macd_4h <= -0.0084 and macd_signal_4h <= -0.0092 and macd_hist_4h >= 0.00086 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 11 and stochastic_k_4h >= 10 and stochastic_d_4h >= 11 and williams_r_4h <= -98)
+            )
+
+            # --- is_sell_momentum4_12 ---
+            is_sell_momentum4_12 = (
+                (rsi_4h >= 21 and macd_4h <= -0.00060 and macd_signal_4h <= -0.00048 and macd_hist_4h <= -0.00012 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 61 and stochastic_k_4h >= 6 and stochastic_d_4h >= 9 and williams_r_4h <= -100)
+            )
+
+            # --- is_sell_momentum4_13 ---
+            is_sell_momentum4_13 = (
+                (rsi_4h >= 23 and macd_4h <= -0.000045 and macd_signal_4h <= -0.000039 and macd_hist_4h <= -0.0000054 and obv_4h < 0 and obv_slope_4h > 0 and adx_4h >= 57 and stochastic_k_4h >= 5 and stochastic_d_4h >= 4 and williams_r_4h <= -92)
+            )
+
+            # --- is_sell_momentum4_14 ---
+            is_sell_momentum4_14 = (
+                (rsi_4h >= 18 and macd_4h <= -0.00056 and macd_signal_4h <= -0.00048 and macd_hist_4h <= -0.000083 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 90 and stochastic_k_4h >= 11 and stochastic_d_4h >= 9 and williams_r_4h <= -85)
+            )
+
+            # --- is_sell_momentum4_15 ---
+            is_sell_momentum4_15 = (
+                (rsi_4h >= 15 and macd_4h <= -0.00090 and macd_signal_4h <= -0.00071 and macd_hist_4h <= -0.00019 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 85 and stochastic_k_4h >= 7 and stochastic_d_4h >= 7 and williams_r_4h <= -91)
+            )
+
+            # --- is_sell_momentum4_16 ---
+            is_sell_momentum4_16 = (
+                (rsi_4h >= 28 and macd_4h <= -0.00027 and macd_signal_4h <= -0.00021 and macd_hist_4h <= -0.000060 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 34 and stochastic_k_4h >= 3 and stochastic_d_4h >= 4 and williams_r_4h <= -96)
+            )
+
+            # --- is_sell_momentum4_17 ---
+            is_sell_momentum4_17 = (
+                (rsi_4h >= 19 and macd_4h <= -0.019 and macd_signal_4h <= -0.018 and macd_hist_4h <= -0.0010 and obv_4h < 0 and obv_slope_4h > 0 and adx_4h >= 32 and stochastic_k_4h >= 4 and stochastic_d_4h >= 6 and williams_r_4h <= -93)
+            )
+
+            # --- is_sell_momentum4_18 ---
+            is_sell_momentum4_18 = (
+                (rsi_4h >= 20 and macd_4h <= -0.00031 and macd_signal_4h <= -0.00024 and macd_hist_4h <= -0.000074 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 87 and stochastic_k_4h >= 3 and stochastic_d_4h >= 5 and williams_r_4h <= -100)
+            )
+
+            # --- is_sell_momentum4_19 ---
+            is_sell_momentum4_19 = (
+                (rsi_4h >= 22 and macd_4h <= -0.0000086 and macd_signal_4h <= -0.0000072 and macd_hist_4h <= -0.0000013 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 17 and stochastic_k_4h >= 5 and stochastic_d_4h >= 7 and williams_r_4h <= -94)
+            )
+
+            # --- is_sell_momentum4_20 ---
+            is_sell_momentum4_20 = (
+                (rsi_4h >= 20 and macd_4h <= -0.0090 and macd_signal_4h <= -0.0058 and macd_hist_4h <= -0.0032 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 62 and stochastic_k_4h >= 6 and stochastic_d_4h >= 12 and williams_r_4h <= -100)
+            )
+
+            # --- is_sell_momentum4_21 ---
+            is_sell_momentum4_21 = (
+                (rsi_4h >= 28 and macd_4h <= -0.0031 and macd_signal_4h <= -0.0019 and macd_hist_4h <= -0.0012 and obv_4h > 0 and obv_slope_4h < 0 and adx_4h >= 3 and stochastic_k_4h >= 2 and stochastic_d_4h >= 3 and williams_r_4h <= -98)
+            )
+
+            # --- is_sell_momentum4_22 ---
+            is_sell_momentum4_22 = (
+                (rsi_4h >= 19 and macd_4h <= -0.0011 and macd_signal_4h <= -0.0013 and macd_hist_4h >= 0.00015 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 23 and stochastic_k_4h >= 2 and stochastic_d_4h >= 3 and williams_r_4h <= -97)
+            )
+
+            # --- is_sell_momentum4_23 ---
+            is_sell_momentum4_23 = (
+                (rsi_4h >= 24 and macd_4h <= -0.027 and macd_signal_4h <= -0.018 and macd_hist_4h <= -0.0090 and obv_4h < 0 and obv_slope_4h < 0 and adx_4h >= 38 and stochastic_k_4h >= 10 and stochastic_d_4h >= 14 and williams_r_4h <= -92)
             )
 
             # --- إدراج_شروط_زخم_بيع ---
@@ -3777,6 +4652,186 @@ async def intelligence_scanner3():
                 score += 50
                 reasons.append("زخم شراء إيجابي 2h 36")
 
+            # --- تقييم_is_buy_momentum4_1 ---
+            elif is_buy_momentum4_1:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 1")
+
+            # --- تقييم_is_buy_momentum4_2 ---
+            elif is_buy_momentum4_2:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 2")
+
+            # --- تقييم_is_buy_momentum4_3 ---
+            elif is_buy_momentum4_3:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 3")
+
+            # --- تقييم_is_buy_momentum4_4 ---
+            elif is_buy_momentum4_4:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 4")
+
+            # --- تقييم_is_buy_momentum4_5 ---
+            elif is_buy_momentum4_5:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 5")
+
+            # --- تقييم_is_buy_momentum4_6 ---
+            elif is_buy_momentum4_6:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 6")
+
+            # --- تقييم_is_buy_momentum4_7 ---
+            elif is_buy_momentum4_7:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 7")
+
+            # --- تقييم_is_buy_momentum4_8 ---
+            elif is_buy_momentum4_8:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 8")
+
+            # --- تقييم_is_buy_momentum4_9 ---
+            elif is_buy_momentum4_9:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 9")
+
+            # --- تقييم_is_buy_momentum4_10 ---
+            elif is_buy_momentum4_10:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 10")
+
+            # --- تقييم_is_buy_momentum4_11 ---
+            elif is_buy_momentum4_11:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 11")
+
+            # --- تقييم_is_buy_momentum4_12 ---
+            elif is_buy_momentum4_12:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 12")
+
+            # --- تقييم_is_buy_momentum4_13 ---
+            elif is_buy_momentum4_13:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 13")
+
+            # --- تقييم_is_buy_momentum4_14 ---
+            elif is_buy_momentum4_14:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 14")
+
+            # --- تقييم_is_buy_momentum4_15 ---
+            elif is_buy_momentum4_15:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 15")
+
+            # --- تقييم_is_buy_momentum4_16 ---
+            elif is_buy_momentum4_16:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 16")
+
+            # --- تقييم_is_buy_momentum4_17 ---
+            elif is_buy_momentum4_17:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 17")
+
+            # --- تقييم_is_buy_momentum4_18 ---
+            elif is_buy_momentum4_18:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 18")
+
+            # --- تقييم_is_buy_momentum4_19 ---
+            elif is_buy_momentum4_19:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 19")
+
+            # --- تقييم_is_buy_momentum4_20 ---
+            elif is_buy_momentum4_20:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 20")
+
+            # --- تقييم_is_buy_momentum4_21 ---
+            elif is_buy_momentum4_21:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 21")
+
+            # --- تقييم_is_buy_momentum4_22 ---
+            elif is_buy_momentum4_22:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 22")
+
+            # --- تقييم_is_buy_momentum4_23 ---
+            elif is_buy_momentum4_23:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 23")
+
+            # --- تقييم_is_buy_momentum4_24 ---
+            elif is_buy_momentum4_24:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 24")
+
+            # --- تقييم_is_buy_momentum4_25 ---
+            elif is_buy_momentum4_25:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 25")
+
+            # --- تقييم_is_buy_momentum4_26 ---
+            elif is_buy_momentum4_26:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 26")
+
+            # --- تقييم_is_buy_momentum4_27 ---
+            elif is_buy_momentum4_27:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 27")
+
+            # --- تقييم_is_buy_momentum4_28 ---
+            elif is_buy_momentum4_28:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 28")
+
+            # --- تقييم_is_buy_momentum4_29 ---
+            elif is_buy_momentum4_29:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 29")
+
+            # --- تقييم_is_buy_momentum4_30 ---
+            elif is_buy_momentum4_30:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 30")
+
+            # --- تقييم_is_buy_momentum4_31 ---
+            elif is_buy_momentum4_31:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 31")
+
+            # --- تقييم_is_buy_momentum4_32 ---
+            elif is_buy_momentum4_32:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 32")
+
+            # --- تقييم_is_buy_momentum4_33 ---
+            elif is_buy_momentum4_33:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 33")
+
+            # --- تقييم_is_buy_momentum4_34 ---
+            elif is_buy_momentum4_34:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 34")
+
+            # --- تقييم_is_buy_momentum4_35 ---
+            elif is_buy_momentum4_35:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 35")
+
+            # --- تقييم_is_buy_momentum4_36 ---
+            elif is_buy_momentum4_36:
+                score += 50
+                reasons.append("زخم شراء إيجابي 4h 36")
+
             # --- إدراج_تقييم_زخم_شراء ---
             
             # --- تقييم_is_sell_momentum_1 ---
@@ -4018,6 +5073,121 @@ async def intelligence_scanner3():
             elif is_sell_momentum2_24:
                 score -= 50
                 reasons.append("زخم بيع سلبي 2h 24")
+
+            # --- تقييم_is_sell_momentum4_1 ---
+            elif is_sell_momentum4_1:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 1")
+
+            # --- تقييم_is_sell_momentum4_2 ---
+            elif is_sell_momentum4_2:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 2")
+
+            # --- تقييم_is_sell_momentum4_3 ---
+            elif is_sell_momentum4_3:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 3")
+
+            # --- تقييم_is_sell_momentum4_4 ---
+            elif is_sell_momentum4_4:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 4")
+
+            # --- تقييم_is_sell_momentum4_5 ---
+            elif is_sell_momentum4_5:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 5")
+
+            # --- تقييم_is_sell_momentum4_6 ---
+            elif is_sell_momentum4_6:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 6")
+
+            # --- تقييم_is_sell_momentum4_7 ---
+            elif is_sell_momentum4_7:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 7")
+
+            # --- تقييم_is_sell_momentum4_8 ---
+            elif is_sell_momentum4_8:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 8")
+
+            # --- تقييم_is_sell_momentum4_9 ---
+            elif is_sell_momentum4_9:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 9")
+
+            # --- تقييم_is_sell_momentum4_10 ---
+            elif is_sell_momentum4_10:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 10")
+
+            # --- تقييم_is_sell_momentum4_11 ---
+            elif is_sell_momentum4_11:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 11")
+
+            # --- تقييم_is_sell_momentum4_12 ---
+            elif is_sell_momentum4_12:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 12")
+
+            # --- تقييم_is_sell_momentum4_13 ---
+            elif is_sell_momentum4_13:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 13")
+
+            # --- تقييم_is_sell_momentum4_14 ---
+            elif is_sell_momentum4_14:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 14")
+
+            # --- تقييم_is_sell_momentum4_15 ---
+            elif is_sell_momentum4_15:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 15")
+
+            # --- تقييم_is_sell_momentum4_16 ---
+            elif is_sell_momentum4_16:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 16")
+
+            # --- تقييم_is_sell_momentum4_17 ---
+            elif is_sell_momentum4_17:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 17")
+
+            # --- تقييم_is_sell_momentum4_18 ---
+            elif is_sell_momentum4_18:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 18")
+
+            # --- تقييم_is_sell_momentum4_19 ---
+            elif is_sell_momentum4_19:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 19")
+
+            # --- تقييم_is_sell_momentum4_20 ---
+            elif is_sell_momentum4_20:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 20")
+
+            # --- تقييم_is_sell_momentum4_21 ---
+            elif is_sell_momentum4_21:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 21")
+
+            # --- تقييم_is_sell_momentum4_22 ---
+            elif is_sell_momentum4_22:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 22")
+
+            # --- تقييم_is_sell_momentum4_23 ---
+            elif is_sell_momentum4_23:
+                score -= 50
+                reasons.append("زخم بيع سلبي 4h 23")
 
             # --- إدراج_تقييم_زخم_بيع ---        
             # ==========================================
